@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://brdyttm2vckhq"]
+
+[ext_resource type="Texture2D" uid="uid://doq0tfmh1evbl" path="res://icon.svg" id="2_74fad"]
+
+[sub_resource type="GDScript" id="GDScript_vea5t"]
+script/source = "extends StaticBody2D
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a600y"]
+size = Vector2(40, 40)
+
+[node name="foods" type="Area2D" unique_id=1392180074]
+script = SubResource("GDScript_vea5t")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2125418599]
+scale = Vector2(0.31250018, 0.31250012)
+texture = ExtResource("2_74fad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1823130102]
+shape = SubResource("RectangleShape2D_a600y")
