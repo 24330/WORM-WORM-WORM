@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://carfrvp7x5nwh"]
+
+[ext_resource type="Script" uid="uid://yb5lk213n2gt" path="res://button.gd" id="1_uubjt"]
+
+[node name="Node2D" type="Node2D" unique_id=2020036312]
+
+[node name="Button" type="Button" parent="." unique_id=1902640629]
+offset_left = 288.0
+offset_top = 136.0
+offset_right = 360.0
+offset_bottom = 176.0
+text = "Play"
+script = ExtResource("1_uubjt")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=142356026]
+position = Vector2(320, 152)
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
