@@ -15,5 +15,14 @@ script = ExtResource("1_uubjt")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=142356026]
 position = Vector2(320, 152)
 
+[node name="TextEdit" type="TextEdit" parent="." unique_id=2073690771]
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 632.0
+offset_bottom = 64.0
+text = "😁😁😁😁🪱🪱🪱🥳🥳🥳worm worm worm 😁😁😁😁🪱🪱🪱🥳🥳🥳"
+editable = false
+selecting_enabled = false
+
 [connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
