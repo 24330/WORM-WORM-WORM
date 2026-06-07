@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://doq0tfmh1evbl" path="res://icon.svg" id="1_w1qci"]
 [ext_resource type="PackedScene" uid="uid://brdyttm2vckhq" path="res://foods.tscn" id="3_a600y"]
 [ext_resource type="Script" uid="uid://dudmy48p4mymh" path="res://foods.gd" id="4_2moaj"]
+[ext_resource type="Script" uid="uid://cd5t570kom77r" path="res://enemy.gd" id="5_g6ks6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dfxr"]
 size = Vector2(61, 60)
@@ -13,6 +14,9 @@ size = Vector2(67, 67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6ks6"]
 size = Vector2(32, 440)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tflyj"]
+size = Vector2(32, 32)
 
 [node name="Node2D" type="Node2D" unique_id=86963004]
 
@@ -813,6 +817,19 @@ metadata/_edit_group_ = true
 position = Vector2(8, -51.999996)
 scale = Vector2(0.25, 3.4375)
 texture = ExtResource("1_w1qci")
+
+[node name="Enemy" type="StaticBody2D" parent="." unique_id=896046490]
+position = Vector2(608, 624)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy" unique_id=12893696]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=201005649]
+shape = SubResource("RectangleShape2D_tflyj")
 
 [connection signal="area_entered" from="Playa/Area2D" to="Playa" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="foods310" to="Playa" method="_on_foods_area_entered"]

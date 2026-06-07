@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
+var start_position = Vector2(0,0)
 
 
 
@@ -23,3 +24,9 @@ func _physics_process(delta: float) -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("food"):
 		area.queue_free()
+		
+
+#handle respawn
+
+func respawn():
+	position = start_position
