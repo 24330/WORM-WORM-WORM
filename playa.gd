@@ -28,5 +28,9 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 #handle respawn
 
+func _on_enemy_area_entered(area: StaticBody2D) -> void:
+	print("Ouch")
+	respawn()
+	
 func respawn():
 	position = start_position
