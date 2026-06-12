@@ -9,3 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func _on_Playa_area_entered(area: CharacterBody2D) -> void:
+		print("Ouch")
+		area.get_parent().respawn()

@@ -1,0 +1,807 @@
+[gd_scene format=3 uid="uid://r2l52en0qmig"]
+
+[ext_resource type="Texture2D" uid="uid://doq0tfmh1evbl" path="res://icon.svg" id="1_w1qci"]
+[ext_resource type="PackedScene" uid="uid://brdyttm2vckhq" path="res://foods.tscn" id="3_a600y"]
+[ext_resource type="Script" uid="uid://dudmy48p4mymh" path="res://foods.gd" id="4_2moaj"]
+[ext_resource type="Script" uid="uid://cd5t570kom77r" path="res://enemy.gd" id="5_g6ks6"]
+[ext_resource type="PackedScene" uid="uid://crkf5mdvii3x0" path="res://player_Spawner.tscn" id="5_tflyj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6ks6"]
+size = Vector2(32, 440)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tflyj"]
+size = Vector2(32, 32)
+
+[node name="Node2D" type="Node2D" unique_id=86963004]
+
+[node name="foods310" parent="." unique_id=954020358 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods311" parent="." unique_id=95361164 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods312" parent="." unique_id=2136889306 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods313" parent="." unique_id=1689331006 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods314" parent="." unique_id=2106713184 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods315" parent="." unique_id=2111794243 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods316" parent="." unique_id=477652302 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods317" parent="." unique_id=257119431 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods318" parent="." unique_id=746230751 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods319" parent="." unique_id=2571552 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods320" parent="." unique_id=1934805147 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods321" parent="." unique_id=414804264 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods322" parent="." unique_id=1248904481 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods323" parent="." unique_id=1766051649 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods324" parent="." unique_id=206289233 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods325" parent="." unique_id=1890675993 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods326" parent="." unique_id=69510255 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 152)
+script = ExtResource("4_2moaj")
+
+[node name="foods327" parent="." unique_id=1392180074 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods328" parent="." unique_id=1260694854 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods329" parent="." unique_id=2038930713 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods330" parent="." unique_id=295265531 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods331" parent="." unique_id=2104744811 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods332" parent="." unique_id=1722436204 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods333" parent="." unique_id=1561133903 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods334" parent="." unique_id=999881703 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods335" parent="." unique_id=573367798 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods336" parent="." unique_id=1060456144 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods337" parent="." unique_id=2044127074 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods338" parent="." unique_id=140617030 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods339" parent="." unique_id=1838634918 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods340" parent="." unique_id=331632132 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods341" parent="." unique_id=1169674133 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods342" parent="." unique_id=1750238943 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods343" parent="." unique_id=1247762264 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 192)
+script = ExtResource("4_2moaj")
+
+[node name="foods344" parent="." unique_id=1278565671 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods345" parent="." unique_id=836253491 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods346" parent="." unique_id=196161153 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods347" parent="." unique_id=524042 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods348" parent="." unique_id=1047836697 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods349" parent="." unique_id=1072673665 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods350" parent="." unique_id=1458017394 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods351" parent="." unique_id=2018468701 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods352" parent="." unique_id=1057292162 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods353" parent="." unique_id=1982829595 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods354" parent="." unique_id=247222424 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods355" parent="." unique_id=1997087186 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods356" parent="." unique_id=1294888749 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods357" parent="." unique_id=1277347697 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods358" parent="." unique_id=1285924446 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods359" parent="." unique_id=1953436101 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods360" parent="." unique_id=1734318688 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 232)
+script = ExtResource("4_2moaj")
+
+[node name="foods361" parent="." unique_id=2145627344 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods362" parent="." unique_id=1400786109 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods363" parent="." unique_id=850325100 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods364" parent="." unique_id=1490543727 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods365" parent="." unique_id=2036583523 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods366" parent="." unique_id=1370798734 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods367" parent="." unique_id=100721612 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods368" parent="." unique_id=1958727113 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods369" parent="." unique_id=1209732604 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods370" parent="." unique_id=1396945211 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods371" parent="." unique_id=999925340 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods372" parent="." unique_id=544847401 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods373" parent="." unique_id=1866650942 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods374" parent="." unique_id=1886444201 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods375" parent="." unique_id=1321057599 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods376" parent="." unique_id=1119896216 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods377" parent="." unique_id=1030410035 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 272)
+script = ExtResource("4_2moaj")
+
+[node name="foods378" parent="." unique_id=903862267 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods379" parent="." unique_id=1524855073 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods380" parent="." unique_id=2007534092 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods381" parent="." unique_id=443329714 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods382" parent="." unique_id=1575603045 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods383" parent="." unique_id=579622329 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods384" parent="." unique_id=473313322 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods385" parent="." unique_id=1198943166 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods386" parent="." unique_id=1583790897 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods387" parent="." unique_id=1202868206 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods388" parent="." unique_id=1182622912 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods389" parent="." unique_id=1270788535 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods390" parent="." unique_id=162846459 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods391" parent="." unique_id=299881833 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods392" parent="." unique_id=561904700 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods393" parent="." unique_id=1774093663 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods394" parent="." unique_id=1401810150 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 312)
+script = ExtResource("4_2moaj")
+
+[node name="foods395" parent="." unique_id=2031067985 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods396" parent="." unique_id=826817072 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods397" parent="." unique_id=727661571 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods398" parent="." unique_id=1675181594 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods399" parent="." unique_id=734660889 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods400" parent="." unique_id=650729864 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods401" parent="." unique_id=58971051 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods402" parent="." unique_id=475579248 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods403" parent="." unique_id=165550487 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods404" parent="." unique_id=1193324545 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods405" parent="." unique_id=985005360 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods406" parent="." unique_id=1315368205 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods407" parent="." unique_id=661972615 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods408" parent="." unique_id=1034898120 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods409" parent="." unique_id=183112483 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods410" parent="." unique_id=1940534409 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods411" parent="." unique_id=1827569538 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 352)
+script = ExtResource("4_2moaj")
+
+[node name="foods412" parent="." unique_id=1685962334 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods413" parent="." unique_id=2104818062 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods414" parent="." unique_id=713580503 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods415" parent="." unique_id=790214026 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods416" parent="." unique_id=1723263564 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods417" parent="." unique_id=409812237 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods418" parent="." unique_id=1605635345 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods419" parent="." unique_id=1632211431 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods420" parent="." unique_id=148309935 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods421" parent="." unique_id=1836780477 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods422" parent="." unique_id=841525790 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods423" parent="." unique_id=1850044022 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods424" parent="." unique_id=267444310 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods425" parent="." unique_id=1708640707 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods426" parent="." unique_id=232769567 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods427" parent="." unique_id=930480304 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods428" parent="." unique_id=1682403630 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 392)
+script = ExtResource("4_2moaj")
+
+[node name="foods429" parent="." unique_id=795655432 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods430" parent="." unique_id=822941326 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods431" parent="." unique_id=692185334 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods432" parent="." unique_id=1117210181 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods433" parent="." unique_id=1980679854 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods434" parent="." unique_id=990235810 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods435" parent="." unique_id=1646328885 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods436" parent="." unique_id=636782438 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods437" parent="." unique_id=62899890 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods438" parent="." unique_id=80919196 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods439" parent="." unique_id=314519166 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods440" parent="." unique_id=490436211 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods441" parent="." unique_id=1660238597 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods442" parent="." unique_id=1125069274 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods443" parent="." unique_id=496407001 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods444" parent="." unique_id=1350294781 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods445" parent="." unique_id=1237293094 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 432)
+script = ExtResource("4_2moaj")
+
+[node name="foods446" parent="." unique_id=1617738428 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods447" parent="." unique_id=930141197 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods448" parent="." unique_id=176286458 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods449" parent="." unique_id=494888217 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods450" parent="." unique_id=452198291 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods451" parent="." unique_id=891779742 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods452" parent="." unique_id=1612287554 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods453" parent="." unique_id=1761402803 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods454" parent="." unique_id=1507011248 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods455" parent="." unique_id=1551940128 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods456" parent="." unique_id=1098198208 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods457" parent="." unique_id=1653107931 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods458" parent="." unique_id=1782429684 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods459" parent="." unique_id=139932672 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods460" parent="." unique_id=1661108172 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods461" parent="." unique_id=70671936 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods462" parent="." unique_id=2121623180 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 472)
+script = ExtResource("4_2moaj")
+
+[node name="foods463" parent="." unique_id=2146484575 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods464" parent="." unique_id=1927954491 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods465" parent="." unique_id=1520700169 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods466" parent="." unique_id=1468916056 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods467" parent="." unique_id=30687749 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods468" parent="." unique_id=1649373815 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods469" parent="." unique_id=1960474766 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods470" parent="." unique_id=887513661 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods471" parent="." unique_id=1603024890 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods472" parent="." unique_id=928197406 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods473" parent="." unique_id=1174551965 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods474" parent="." unique_id=1536704831 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods475" parent="." unique_id=1278866480 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods476" parent="." unique_id=773141189 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods477" parent="." unique_id=1249246655 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods478" parent="." unique_id=1413974952 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods479" parent="." unique_id=1352793638 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 512)
+script = ExtResource("4_2moaj")
+
+[node name="foods480" parent="." unique_id=904842554 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods481" parent="." unique_id=421954324 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods482" parent="." unique_id=668113798 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods483" parent="." unique_id=1207737149 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods484" parent="." unique_id=614913064 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods485" parent="." unique_id=1116266551 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods486" parent="." unique_id=1300931623 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods487" parent="." unique_id=406684933 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods488" parent="." unique_id=652654596 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods489" parent="." unique_id=660497387 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods490" parent="." unique_id=1935859664 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods491" parent="." unique_id=2091351936 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods492" parent="." unique_id=82209001 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods493" parent="." unique_id=225937330 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods494" parent="." unique_id=1901465422 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods495" parent="." unique_id=642477375 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 552)
+script = ExtResource("4_2moaj")
+
+[node name="foods496" parent="." unique_id=1716377491 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 552)
+script = ExtResource("4_2moaj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=454453295]
+position = Vector2(240, 8)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=403762156]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=670934855]
+position = Vector2(8, -51.999996)
+scale = Vector2(0.25, 3.4375)
+texture = ExtResource("1_w1qci")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1566880564]
+position = Vector2(952, 16)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1662076705]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=831575479]
+position = Vector2(8, -51.999996)
+scale = Vector2(0.25, 3.4375)
+texture = ExtResource("1_w1qci")
+
+[node name="Enemy" type="StaticBody2D" parent="." unique_id=896046490]
+position = Vector2(608, 624)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy" unique_id=12893696]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=201005649]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Node2D" parent="." unique_id=1035901348 instance=ExtResource("5_tflyj")]
+position = Vector2(616, 0)
