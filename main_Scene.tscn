@@ -2,18 +2,24 @@
 
 [ext_resource type="Texture2D" uid="uid://doq0tfmh1evbl" path="res://icon.svg" id="1_w1qci"]
 [ext_resource type="PackedScene" uid="uid://brdyttm2vckhq" path="res://foods.tscn" id="3_a600y"]
-[ext_resource type="Script" uid="uid://dudmy48p4mymh" path="res://foods.gd" id="4_2moaj"]
 [ext_resource type="Script" uid="uid://cd5t570kom77r" path="res://enemy.gd" id="5_g6ks6"]
 [ext_resource type="Script" uid="uid://dvv6rqqll3adg" path="res://playa.gd" id="5_tflyj"]
+[ext_resource type="Script" uid="uid://r5crbgb2rems" path="res://text_edit.gd" id="5_ubiuv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6ks6"]
 size = Vector2(32, 440)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubiuv"]
+size = Vector2(42, 42)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g6ks6"]
+radius = 32.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tflyj"]
 size = Vector2(32, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubiuv"]
-size = Vector2(42, 42)
+[sub_resource type="CircleShape2D" id="CircleShape2D_2moaj"]
+radius = 32.0
 
 [node name="Node2D" type="Node2D" unique_id=86963004]
 
@@ -45,770 +51,598 @@ position = Vector2(8, -51.999996)
 scale = Vector2(0.25, 3.4375)
 texture = ExtResource("1_w1qci")
 
-[node name="Enemy" type="StaticBody2D" parent="." unique_id=896046490]
-position = Vector2(608, 624)
-script = ExtResource("5_g6ks6")
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1469974789]
+position = Vector2(240, 448)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy" unique_id=12893696]
-position = Vector2(0, 4.7683716e-07)
-scale = Vector2(0.3125, 0.3125)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=684546580]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" unique_id=98171812]
+position = Vector2(8, -51.999996)
+scale = Vector2(0.25, 3.4375)
 texture = ExtResource("1_w1qci")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=201005649]
-shape = SubResource("RectangleShape2D_tflyj")
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1217696814]
+position = Vector2(944, 456)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=597695180]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4" unique_id=1240873985]
+position = Vector2(8, -51.999996)
+scale = Vector2(0.25, 3.4375)
+texture = ExtResource("1_w1qci")
 
 [node name="Food" type="Node2D" parent="." unique_id=1132884232]
 
 [node name="foods310" parent="Food" unique_id=954020358 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(280, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods311" parent="Food" unique_id=95361164 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(320, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods312" parent="Food" unique_id=2136889306 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(360, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods313" parent="Food" unique_id=1689331006 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(400, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods314" parent="Food" unique_id=2106713184 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(440, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods315" parent="Food" unique_id=2111794243 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(480, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods316" parent="Food" unique_id=477652302 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(520, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods317" parent="Food" unique_id=257119431 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(560, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods318" parent="Food" unique_id=746230751 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(600, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods319" parent="Food" unique_id=2571552 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(640, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods320" parent="Food" unique_id=1934805147 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(680, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods321" parent="Food" unique_id=414804264 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(720, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods322" parent="Food" unique_id=1248904481 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(760, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods323" parent="Food" unique_id=1766051649 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(800, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods324" parent="Food" unique_id=206289233 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(840, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods325" parent="Food" unique_id=1890675993 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(880, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods326" parent="Food" unique_id=69510255 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(920, 152)
-script = ExtResource("4_2moaj")
 
 [node name="foods327" parent="Food" unique_id=1392180074 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(280, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods328" parent="Food" unique_id=1260694854 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(320, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods329" parent="Food" unique_id=2038930713 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(360, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods330" parent="Food" unique_id=295265531 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(400, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods331" parent="Food" unique_id=2104744811 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(440, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods332" parent="Food" unique_id=1722436204 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(480, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods333" parent="Food" unique_id=1561133903 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(520, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods334" parent="Food" unique_id=999881703 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(560, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods335" parent="Food" unique_id=573367798 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(600, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods336" parent="Food" unique_id=1060456144 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(640, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods337" parent="Food" unique_id=2044127074 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(680, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods338" parent="Food" unique_id=140617030 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(720, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods339" parent="Food" unique_id=1838634918 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(760, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods340" parent="Food" unique_id=331632132 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(800, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods341" parent="Food" unique_id=1169674133 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(840, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods342" parent="Food" unique_id=1750238943 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(880, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods343" parent="Food" unique_id=1247762264 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(920, 192)
-script = ExtResource("4_2moaj")
 
 [node name="foods344" parent="Food" unique_id=1278565671 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(280, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods345" parent="Food" unique_id=836253491 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(320, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods346" parent="Food" unique_id=196161153 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(360, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods347" parent="Food" unique_id=524042 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(400, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods348" parent="Food" unique_id=1047836697 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(440, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods349" parent="Food" unique_id=1072673665 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(480, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods350" parent="Food" unique_id=1458017394 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(520, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods351" parent="Food" unique_id=2018468701 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(560, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods352" parent="Food" unique_id=1057292162 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(600, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods353" parent="Food" unique_id=1982829595 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(640, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods354" parent="Food" unique_id=247222424 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(680, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods355" parent="Food" unique_id=1997087186 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(720, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods356" parent="Food" unique_id=1294888749 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(760, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods357" parent="Food" unique_id=1277347697 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(800, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods358" parent="Food" unique_id=1285924446 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(840, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods359" parent="Food" unique_id=1953436101 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(880, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods360" parent="Food" unique_id=1734318688 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(920, 232)
-script = ExtResource("4_2moaj")
 
 [node name="foods361" parent="Food" unique_id=2145627344 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(280, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods362" parent="Food" unique_id=1400786109 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(320, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods363" parent="Food" unique_id=850325100 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(360, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods364" parent="Food" unique_id=1490543727 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(400, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods365" parent="Food" unique_id=2036583523 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(440, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods366" parent="Food" unique_id=1370798734 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(480, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods367" parent="Food" unique_id=100721612 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(520, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods368" parent="Food" unique_id=1958727113 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(560, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods369" parent="Food" unique_id=1209732604 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(600, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods370" parent="Food" unique_id=1396945211 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(640, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods371" parent="Food" unique_id=999925340 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(680, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods372" parent="Food" unique_id=544847401 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(720, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods373" parent="Food" unique_id=1866650942 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(760, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods374" parent="Food" unique_id=1886444201 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(800, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods375" parent="Food" unique_id=1321057599 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(840, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods376" parent="Food" unique_id=1119896216 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(880, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods377" parent="Food" unique_id=1030410035 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(920, 272)
-script = ExtResource("4_2moaj")
 
 [node name="foods378" parent="Food" unique_id=903862267 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(280, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods379" parent="Food" unique_id=1524855073 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(320, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods380" parent="Food" unique_id=2007534092 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(360, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods381" parent="Food" unique_id=443329714 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(400, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods382" parent="Food" unique_id=1575603045 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(440, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods383" parent="Food" unique_id=579622329 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(480, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods384" parent="Food" unique_id=473313322 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(520, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods385" parent="Food" unique_id=1198943166 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(560, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods386" parent="Food" unique_id=1583790897 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(600, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods387" parent="Food" unique_id=1202868206 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(640, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods388" parent="Food" unique_id=1182622912 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(680, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods389" parent="Food" unique_id=1270788535 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(720, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods390" parent="Food" unique_id=162846459 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(760, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods391" parent="Food" unique_id=299881833 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(800, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods392" parent="Food" unique_id=561904700 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(840, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods393" parent="Food" unique_id=1774093663 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(880, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods394" parent="Food" unique_id=1401810150 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(920, 312)
-script = ExtResource("4_2moaj")
 
 [node name="foods395" parent="Food" unique_id=2031067985 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(280, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods396" parent="Food" unique_id=826817072 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(320, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods397" parent="Food" unique_id=727661571 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(360, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods398" parent="Food" unique_id=1675181594 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(400, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods399" parent="Food" unique_id=734660889 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(440, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods400" parent="Food" unique_id=650729864 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(480, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods401" parent="Food" unique_id=58971051 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(520, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods402" parent="Food" unique_id=475579248 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(560, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods403" parent="Food" unique_id=165550487 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(600, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods404" parent="Food" unique_id=1193324545 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(640, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods405" parent="Food" unique_id=985005360 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(680, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods406" parent="Food" unique_id=1315368205 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(720, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods407" parent="Food" unique_id=661972615 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(760, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods408" parent="Food" unique_id=1034898120 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(800, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods409" parent="Food" unique_id=183112483 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(840, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods410" parent="Food" unique_id=1940534409 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(880, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods411" parent="Food" unique_id=1827569538 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(920, 352)
-script = ExtResource("4_2moaj")
 
 [node name="foods412" parent="Food" unique_id=1685962334 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(280, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods413" parent="Food" unique_id=2104818062 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(320, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods414" parent="Food" unique_id=713580503 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(360, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods415" parent="Food" unique_id=790214026 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(400, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods416" parent="Food" unique_id=1723263564 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(440, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods417" parent="Food" unique_id=409812237 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(480, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods418" parent="Food" unique_id=1605635345 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(520, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods419" parent="Food" unique_id=1632211431 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(560, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods420" parent="Food" unique_id=148309935 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(600, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods421" parent="Food" unique_id=1836780477 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(640, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods422" parent="Food" unique_id=841525790 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(680, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods423" parent="Food" unique_id=1850044022 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(720, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods424" parent="Food" unique_id=267444310 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(760, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods425" parent="Food" unique_id=1708640707 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(800, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods426" parent="Food" unique_id=232769567 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(840, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods427" parent="Food" unique_id=930480304 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(880, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods428" parent="Food" unique_id=1682403630 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(920, 392)
-script = ExtResource("4_2moaj")
 
 [node name="foods429" parent="Food" unique_id=795655432 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(280, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods430" parent="Food" unique_id=822941326 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(320, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods431" parent="Food" unique_id=692185334 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(360, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods432" parent="Food" unique_id=1117210181 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(400, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods433" parent="Food" unique_id=1980679854 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(440, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods434" parent="Food" unique_id=990235810 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(480, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods435" parent="Food" unique_id=1646328885 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(520, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods436" parent="Food" unique_id=636782438 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(560, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods437" parent="Food" unique_id=62899890 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(600, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods438" parent="Food" unique_id=80919196 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(640, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods439" parent="Food" unique_id=314519166 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(680, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods440" parent="Food" unique_id=490436211 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(720, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods441" parent="Food" unique_id=1660238597 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(760, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods442" parent="Food" unique_id=1125069274 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(800, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods443" parent="Food" unique_id=496407001 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(840, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods444" parent="Food" unique_id=1350294781 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(880, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods445" parent="Food" unique_id=1237293094 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(920, 432)
-script = ExtResource("4_2moaj")
 
 [node name="foods446" parent="Food" unique_id=1617738428 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(280, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods447" parent="Food" unique_id=930141197 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(320, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods448" parent="Food" unique_id=176286458 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(360, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods449" parent="Food" unique_id=494888217 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(400, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods450" parent="Food" unique_id=452198291 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(440, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods451" parent="Food" unique_id=891779742 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(480, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods452" parent="Food" unique_id=1612287554 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(520, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods453" parent="Food" unique_id=1761402803 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(560, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods454" parent="Food" unique_id=1507011248 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(600, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods455" parent="Food" unique_id=1551940128 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(640, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods456" parent="Food" unique_id=1098198208 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(680, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods457" parent="Food" unique_id=1653107931 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(720, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods458" parent="Food" unique_id=1782429684 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(760, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods459" parent="Food" unique_id=139932672 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(800, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods460" parent="Food" unique_id=1661108172 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(840, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods461" parent="Food" unique_id=70671936 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(880, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods462" parent="Food" unique_id=2121623180 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(920, 472)
-script = ExtResource("4_2moaj")
 
 [node name="foods463" parent="Food" unique_id=2146484575 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(280, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods464" parent="Food" unique_id=1927954491 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(320, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods465" parent="Food" unique_id=1520700169 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(360, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods466" parent="Food" unique_id=1468916056 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(400, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods467" parent="Food" unique_id=30687749 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(440, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods468" parent="Food" unique_id=1649373815 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(480, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods469" parent="Food" unique_id=1960474766 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(520, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods470" parent="Food" unique_id=887513661 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(560, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods471" parent="Food" unique_id=1603024890 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(600, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods472" parent="Food" unique_id=928197406 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(640, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods473" parent="Food" unique_id=1174551965 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(680, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods474" parent="Food" unique_id=1536704831 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(720, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods475" parent="Food" unique_id=1278866480 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(760, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods476" parent="Food" unique_id=773141189 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(800, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods477" parent="Food" unique_id=1249246655 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(840, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods478" parent="Food" unique_id=1413974952 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(880, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods479" parent="Food" unique_id=1352793638 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(920, 512)
-script = ExtResource("4_2moaj")
 
 [node name="foods480" parent="Food" unique_id=904842554 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(280, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods481" parent="Food" unique_id=421954324 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(320, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods482" parent="Food" unique_id=668113798 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(360, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods483" parent="Food" unique_id=1207737149 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(400, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods484" parent="Food" unique_id=614913064 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(440, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods485" parent="Food" unique_id=1116266551 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(480, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods486" parent="Food" unique_id=1300931623 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(520, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods487" parent="Food" unique_id=406684933 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(560, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods488" parent="Food" unique_id=652654596 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(600, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods489" parent="Food" unique_id=660497387 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(640, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods490" parent="Food" unique_id=1935859664 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(680, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods491" parent="Food" unique_id=2091351936 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(720, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods492" parent="Food" unique_id=82209001 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(760, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods493" parent="Food" unique_id=225937330 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(800, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods494" parent="Food" unique_id=1901465422 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(840, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods495" parent="Food" unique_id=642477375 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(880, 552)
-script = ExtResource("4_2moaj")
 
 [node name="foods496" parent="Food" unique_id=1716377491 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(920, 552)
-script = ExtResource("4_2moaj")
 
-[node name="Playa" type="CharacterBody2D" parent="." unique_id=1204611772]
+[node name="Playa" type="CharacterBody2D" parent="." unique_id=1204611772 groups=["player"]]
 position = Vector2(608, 8)
 script = ExtResource("5_tflyj")
 metadata/_edit_group_ = true
@@ -820,3 +654,341 @@ texture = ExtResource("1_w1qci")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Playa" unique_id=1482834218]
 shape = SubResource("RectangleShape2D_ubiuv")
+
+[node name="Area2D" type="Area2D" parent="Playa" unique_id=1147266588 groups=["player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Playa/Area2D" unique_id=1825302473]
+shape = SubResource("CircleShape2D_g6ks6")
+
+[node name="Enemy" type="Node2D" parent="." unique_id=1839517401]
+
+[node name="Enemy1" type="StaticBody2D" parent="Enemy" unique_id=1637784535]
+position = Vector2(272, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy1" unique_id=459226692]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy1" unique_id=905297441]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy1" unique_id=1960518093]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy1/Area2D" unique_id=347712144]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy2" type="StaticBody2D" parent="Enemy" unique_id=1670470878]
+position = Vector2(312, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy2" unique_id=1945213356]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy2" unique_id=1033671459]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy2" unique_id=408423277]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy2/Area2D" unique_id=1655270959]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy3" type="StaticBody2D" parent="Enemy" unique_id=1149823935]
+position = Vector2(352, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy3" unique_id=1104700815]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy3" unique_id=1093761212]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy3" unique_id=492502594]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy3/Area2D" unique_id=1953843383]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy4" type="StaticBody2D" parent="Enemy" unique_id=673784950]
+position = Vector2(392, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy4" unique_id=1085831208]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy4" unique_id=1685908555]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy4" unique_id=1199910232]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy4/Area2D" unique_id=1636490399]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy5" type="StaticBody2D" parent="Enemy" unique_id=662249824]
+position = Vector2(432, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy5" unique_id=763673409]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy5" unique_id=880952413]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy5" unique_id=430401949]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy5/Area2D" unique_id=1808267379]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy6" type="StaticBody2D" parent="Enemy" unique_id=595132288]
+position = Vector2(472, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy6" unique_id=133177776]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy6" unique_id=948275974]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy6" unique_id=1483116883]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy6/Area2D" unique_id=420811008]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy7" type="StaticBody2D" parent="Enemy" unique_id=1793577559]
+position = Vector2(512, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy7" unique_id=389906807]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy7" unique_id=695819659]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy7" unique_id=1682380597]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy7/Area2D" unique_id=181702435]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy8" type="StaticBody2D" parent="Enemy" unique_id=1498850425]
+position = Vector2(552, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy8" unique_id=1120301211]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy8" unique_id=1789976133]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy8" unique_id=1160302457]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy8/Area2D" unique_id=2090959232]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy9" type="StaticBody2D" parent="Enemy" unique_id=228854655]
+position = Vector2(592, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy9" unique_id=460529930]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy9" unique_id=1443601492]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy9" unique_id=1948688266]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy9/Area2D" unique_id=601647423]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy10" type="StaticBody2D" parent="Enemy" unique_id=980941240]
+position = Vector2(632, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy10" unique_id=171438849]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy10" unique_id=1927539331]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy10" unique_id=140519424]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy10/Area2D" unique_id=2101975798]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy11" type="StaticBody2D" parent="Enemy" unique_id=1274577603]
+position = Vector2(672, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy11" unique_id=609694528]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy11" unique_id=1014782190]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy11" unique_id=2010084334]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy11/Area2D" unique_id=2040500679]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy12" type="StaticBody2D" parent="Enemy" unique_id=1408142662]
+position = Vector2(712, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy12" unique_id=343651864]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy12" unique_id=629220139]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy12" unique_id=200377260]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy12/Area2D" unique_id=1345254819]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy13" type="StaticBody2D" parent="Enemy" unique_id=751629435]
+position = Vector2(752, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy13" unique_id=1025896360]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy13" unique_id=1803417088]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy13" unique_id=1651280744]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy13/Area2D" unique_id=1735602461]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy14" type="StaticBody2D" parent="Enemy" unique_id=1018738486]
+position = Vector2(792, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy14" unique_id=1293367236]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy14" unique_id=1440341422]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy14" unique_id=1454040878]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy14/Area2D" unique_id=1047989806]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy15" type="StaticBody2D" parent="Enemy" unique_id=853450327]
+position = Vector2(832, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy15" unique_id=1051858681]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy15" unique_id=1928134089]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy15" unique_id=895674585]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy15/Area2D" unique_id=844369731]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy16" type="StaticBody2D" parent="Enemy" unique_id=1351740283]
+position = Vector2(872, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy16" unique_id=1320687447]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy16" unique_id=448941474]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy16" unique_id=1110778798]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy16/Area2D" unique_id=1419639890]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="Enemy17" type="StaticBody2D" parent="Enemy" unique_id=838353398]
+position = Vector2(912, 632)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy17" unique_id=1430994197]
+position = Vector2(0, 4.7683716e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_w1qci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy17" unique_id=1994318369]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy17" unique_id=655269599]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy17/Area2D" unique_id=1603010471]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1597348907]
+offset_left = 72.0
+offset_top = 32.0
+offset_right = 208.0
+offset_bottom = 104.0
+script = ExtResource("5_ubiuv")
+
+[connection signal="area_entered" from="Enemy/Enemy1/Area2D" to="Enemy/Enemy1" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy2/Area2D" to="Enemy/Enemy2" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy3/Area2D" to="Enemy/Enemy3" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy4/Area2D" to="Enemy/Enemy4" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy5/Area2D" to="Enemy/Enemy5" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy6/Area2D" to="Enemy/Enemy6" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy7/Area2D" to="Enemy/Enemy7" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy8/Area2D" to="Enemy/Enemy8" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy9/Area2D" to="Enemy/Enemy9" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy10/Area2D" to="Enemy/Enemy10" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy11/Area2D" to="Enemy/Enemy11" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy12/Area2D" to="Enemy/Enemy12" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy13/Area2D" to="Enemy/Enemy13" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy14/Area2D" to="Enemy/Enemy14" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy15/Area2D" to="Enemy/Enemy15" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy16/Area2D" to="Enemy/Enemy16" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy17/Area2D" to="Enemy/Enemy17" method="_on_area_2d_area_entered"]

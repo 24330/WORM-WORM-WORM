@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-var start_position = Vector2(0,0)
+var start_position = Vector2(600,0)
 
 
 

@@ -10,6 +10,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_Playa_area_entered(area: CharacterBody2D) -> void:
-		print("Ouch")
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("player"):
 		area.get_parent().respawn()
