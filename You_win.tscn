@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bakpkjmmphgip"]
+
+[node name="Node2D" type="Node2D" unique_id=1312651037]
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=527370485]
+offset_left = 168.0
+offset_top = 128.0
+offset_right = 976.0
+offset_bottom = 296.0
+text = "                                                                            YOU WINNNNNNNN
+                                                                                    ദ്ദി(⌐■_■)✧
+🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱🪱"

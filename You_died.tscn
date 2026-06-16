@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dik8l0xms3que"]
+
+[ext_resource type="Script" uid="uid://bgyu61vl8xq85" path="res://play_again_button.gd" id="1_fxltq"]
+
+[node name="Node2D" type="Node2D" unique_id=654742626]
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1058475576]
+offset_left = 352.0
+offset_top = 224.0
+offset_right = 744.0
+offset_bottom = 312.0
+text = "            😹😹😹😹 YOU DIED 😹😹😹😹😹
+                                     worm"
+editable = false
+
+[node name="Play again button" type="Button" parent="." unique_id=1947307781]
+offset_left = 480.0
+offset_top = 352.0
+offset_right = 601.0
+offset_bottom = 408.0
+text = "Play again
+(Doesn't work)"
+script = ExtResource("1_fxltq")

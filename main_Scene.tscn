@@ -5,9 +5,7 @@
 [ext_resource type="Script" uid="uid://cd5t570kom77r" path="res://enemy.gd" id="5_g6ks6"]
 [ext_resource type="Script" uid="uid://dvv6rqqll3adg" path="res://playa.gd" id="5_tflyj"]
 [ext_resource type="Script" uid="uid://r5crbgb2rems" path="res://text_edit.gd" id="5_ubiuv"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6ks6"]
-size = Vector2(32, 440)
+[ext_resource type="Script" uid="uid://cvvo7jqavcmyd" path="res://lives.gd" id="6_tflyj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubiuv"]
 size = Vector2(42, 42)
@@ -21,63 +19,10 @@ size = Vector2(32, 32)
 [sub_resource type="CircleShape2D" id="CircleShape2D_2moaj"]
 radius = 32.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6ks6"]
+size = Vector2(32, 440)
+
 [node name="Node2D" type="Node2D" unique_id=86963004]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=454453295]
-position = Vector2(240, 8)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=403762156]
-position = Vector2(8, -52)
-shape = SubResource("RectangleShape2D_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=670934855]
-position = Vector2(8, -51.999996)
-scale = Vector2(0.25, 3.4375)
-texture = ExtResource("1_w1qci")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1566880564]
-position = Vector2(944, 16)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1662076705]
-position = Vector2(8, -52)
-shape = SubResource("RectangleShape2D_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=831575479]
-position = Vector2(8, -51.999996)
-scale = Vector2(0.25, 3.4375)
-texture = ExtResource("1_w1qci")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1469974789]
-position = Vector2(240, 448)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=684546580]
-position = Vector2(8, -52)
-shape = SubResource("RectangleShape2D_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" unique_id=98171812]
-position = Vector2(8, -51.999996)
-scale = Vector2(0.25, 3.4375)
-texture = ExtResource("1_w1qci")
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1217696814]
-position = Vector2(944, 456)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=597695180]
-position = Vector2(8, -52)
-shape = SubResource("RectangleShape2D_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4" unique_id=1240873985]
-position = Vector2(8, -51.999996)
-scale = Vector2(0.25, 3.4375)
-texture = ExtResource("1_w1qci")
 
 [node name="Food" type="Node2D" parent="." unique_id=1132884232]
 
@@ -642,6 +587,567 @@ position = Vector2(880, 552)
 [node name="foods496" parent="Food" unique_id=1716377491 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(920, 552)
 
+[node name="foods497" parent="Food" unique_id=459357921 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 592)
+
+[node name="foods498" parent="Food" unique_id=1332459455 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 592)
+
+[node name="foods499" parent="Food" unique_id=432414226 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 592)
+
+[node name="foods500" parent="Food" unique_id=1002604629 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 592)
+
+[node name="foods501" parent="Food" unique_id=25916232 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 592)
+
+[node name="foods502" parent="Food" unique_id=417653757 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 592)
+
+[node name="foods503" parent="Food" unique_id=1604741629 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 592)
+
+[node name="foods504" parent="Food" unique_id=525740666 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 592)
+
+[node name="foods505" parent="Food" unique_id=1997906237 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 592)
+
+[node name="foods506" parent="Food" unique_id=807984299 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 592)
+
+[node name="foods507" parent="Food" unique_id=1994395098 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 592)
+
+[node name="foods508" parent="Food" unique_id=709765060 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 592)
+
+[node name="foods509" parent="Food" unique_id=507868399 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 592)
+
+[node name="foods510" parent="Food" unique_id=1189119552 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 592)
+
+[node name="foods511" parent="Food" unique_id=730431333 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 592)
+
+[node name="foods512" parent="Food" unique_id=1114463411 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 592)
+
+[node name="foods513" parent="Food" unique_id=2058889727 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 592)
+
+[node name="foods514" parent="Food" unique_id=1498133222 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 632)
+
+[node name="foods515" parent="Food" unique_id=70760389 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 632)
+
+[node name="foods516" parent="Food" unique_id=220405511 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 632)
+
+[node name="foods517" parent="Food" unique_id=1094319985 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 632)
+
+[node name="foods518" parent="Food" unique_id=221138881 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 632)
+
+[node name="foods519" parent="Food" unique_id=1891698520 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 632)
+
+[node name="foods520" parent="Food" unique_id=161205776 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 632)
+
+[node name="foods521" parent="Food" unique_id=2120667826 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 632)
+
+[node name="foods522" parent="Food" unique_id=1854850012 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 632)
+
+[node name="foods523" parent="Food" unique_id=721884075 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 632)
+
+[node name="foods524" parent="Food" unique_id=361359809 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 632)
+
+[node name="foods525" parent="Food" unique_id=1894713641 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 632)
+
+[node name="foods526" parent="Food" unique_id=1029584951 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 632)
+
+[node name="foods527" parent="Food" unique_id=1283519127 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 632)
+
+[node name="foods528" parent="Food" unique_id=730699878 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 632)
+
+[node name="foods529" parent="Food" unique_id=359202787 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 632)
+
+[node name="foods530" parent="Food" unique_id=1554451619 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 632)
+
+[node name="foods531" parent="Food" unique_id=2108143034 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 672)
+
+[node name="foods532" parent="Food" unique_id=1736384570 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 672)
+
+[node name="foods533" parent="Food" unique_id=1183285374 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 672)
+
+[node name="foods534" parent="Food" unique_id=134804066 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 672)
+
+[node name="foods535" parent="Food" unique_id=1470980210 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 672)
+
+[node name="foods536" parent="Food" unique_id=102954520 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 672)
+
+[node name="foods537" parent="Food" unique_id=167166606 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 672)
+
+[node name="foods538" parent="Food" unique_id=582075996 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 672)
+
+[node name="foods539" parent="Food" unique_id=1275332366 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 672)
+
+[node name="foods540" parent="Food" unique_id=243872065 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 672)
+
+[node name="foods541" parent="Food" unique_id=1881424598 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 672)
+
+[node name="foods542" parent="Food" unique_id=1444824844 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 672)
+
+[node name="foods543" parent="Food" unique_id=1729252282 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 672)
+
+[node name="foods544" parent="Food" unique_id=183268077 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 672)
+
+[node name="foods545" parent="Food" unique_id=1428787547 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 672)
+
+[node name="foods546" parent="Food" unique_id=386349699 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 672)
+
+[node name="foods547" parent="Food" unique_id=1482288398 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 672)
+
+[node name="foods548" parent="Food" unique_id=1366083056 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 712)
+
+[node name="foods549" parent="Food" unique_id=138178089 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 712)
+
+[node name="foods550" parent="Food" unique_id=1478675583 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 712)
+
+[node name="foods551" parent="Food" unique_id=105328592 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 712)
+
+[node name="foods552" parent="Food" unique_id=1049714901 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 712)
+
+[node name="foods553" parent="Food" unique_id=1459288481 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 712)
+
+[node name="foods554" parent="Food" unique_id=134728082 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 712)
+
+[node name="foods555" parent="Food" unique_id=1974278930 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 712)
+
+[node name="foods556" parent="Food" unique_id=622619344 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 712)
+
+[node name="foods557" parent="Food" unique_id=771258191 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 712)
+
+[node name="foods558" parent="Food" unique_id=346901589 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 712)
+
+[node name="foods559" parent="Food" unique_id=263455347 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 712)
+
+[node name="foods560" parent="Food" unique_id=1324938586 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 712)
+
+[node name="foods561" parent="Food" unique_id=1090812522 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 712)
+
+[node name="foods562" parent="Food" unique_id=1359259609 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 712)
+
+[node name="foods563" parent="Food" unique_id=1774923088 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 712)
+
+[node name="foods564" parent="Food" unique_id=1449090164 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 712)
+
+[node name="foods565" parent="Food" unique_id=1740781382 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 752)
+
+[node name="foods566" parent="Food" unique_id=1964322438 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 752)
+
+[node name="foods567" parent="Food" unique_id=438297594 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 752)
+
+[node name="foods568" parent="Food" unique_id=1136598153 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 752)
+
+[node name="foods569" parent="Food" unique_id=1997472167 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 752)
+
+[node name="foods570" parent="Food" unique_id=2072020545 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 752)
+
+[node name="foods571" parent="Food" unique_id=621921974 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 752)
+
+[node name="foods572" parent="Food" unique_id=1347649083 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 752)
+
+[node name="foods573" parent="Food" unique_id=83939737 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 752)
+
+[node name="foods574" parent="Food" unique_id=1480865723 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 752)
+
+[node name="foods575" parent="Food" unique_id=1694163422 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 752)
+
+[node name="foods576" parent="Food" unique_id=1344040463 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 752)
+
+[node name="foods577" parent="Food" unique_id=1206755620 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 752)
+
+[node name="foods578" parent="Food" unique_id=1286327234 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 752)
+
+[node name="foods579" parent="Food" unique_id=1284317611 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 752)
+
+[node name="foods580" parent="Food" unique_id=717509041 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 752)
+
+[node name="foods581" parent="Food" unique_id=958806383 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 752)
+
+[node name="foods582" parent="Food" unique_id=1697118793 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 792)
+
+[node name="foods583" parent="Food" unique_id=553162075 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 792)
+
+[node name="foods584" parent="Food" unique_id=741727347 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 792)
+
+[node name="foods585" parent="Food" unique_id=580430646 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 792)
+
+[node name="foods586" parent="Food" unique_id=247111576 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 792)
+
+[node name="foods587" parent="Food" unique_id=876748720 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 792)
+
+[node name="foods588" parent="Food" unique_id=773486098 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 792)
+
+[node name="foods589" parent="Food" unique_id=1507262340 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 792)
+
+[node name="foods590" parent="Food" unique_id=269971553 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 792)
+
+[node name="foods591" parent="Food" unique_id=6805246 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 792)
+
+[node name="foods592" parent="Food" unique_id=1815215664 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 792)
+
+[node name="foods593" parent="Food" unique_id=1123709452 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 792)
+
+[node name="foods594" parent="Food" unique_id=1712632109 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 792)
+
+[node name="foods595" parent="Food" unique_id=276336261 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 792)
+
+[node name="foods596" parent="Food" unique_id=1700894545 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 792)
+
+[node name="foods597" parent="Food" unique_id=119244101 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 792)
+
+[node name="foods598" parent="Food" unique_id=1756066359 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 792)
+
+[node name="foods599" parent="Food" unique_id=1866425165 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 832)
+
+[node name="foods600" parent="Food" unique_id=1787069923 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 832)
+
+[node name="foods601" parent="Food" unique_id=2066156068 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 832)
+
+[node name="foods602" parent="Food" unique_id=789785134 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 832)
+
+[node name="foods603" parent="Food" unique_id=1807081216 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 832)
+
+[node name="foods604" parent="Food" unique_id=1382424219 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 832)
+
+[node name="foods605" parent="Food" unique_id=1383232220 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 832)
+
+[node name="foods606" parent="Food" unique_id=1816755395 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 832)
+
+[node name="foods607" parent="Food" unique_id=908175163 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 832)
+
+[node name="foods608" parent="Food" unique_id=1551557976 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 832)
+
+[node name="foods609" parent="Food" unique_id=1070293013 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 832)
+
+[node name="foods610" parent="Food" unique_id=1740581071 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 832)
+
+[node name="foods611" parent="Food" unique_id=2047121696 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 832)
+
+[node name="foods612" parent="Food" unique_id=245154829 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 832)
+
+[node name="foods613" parent="Food" unique_id=1536285961 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 832)
+
+[node name="foods614" parent="Food" unique_id=322164814 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 832)
+
+[node name="foods615" parent="Food" unique_id=1423182811 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 832)
+
+[node name="foods616" parent="Food" unique_id=1204454495 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 872)
+
+[node name="foods617" parent="Food" unique_id=1158801102 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 872)
+
+[node name="foods618" parent="Food" unique_id=403710832 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 872)
+
+[node name="foods619" parent="Food" unique_id=2003221587 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 872)
+
+[node name="foods620" parent="Food" unique_id=952067796 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 872)
+
+[node name="foods621" parent="Food" unique_id=300824451 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 872)
+
+[node name="foods622" parent="Food" unique_id=919081764 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 872)
+
+[node name="foods623" parent="Food" unique_id=518533201 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 872)
+
+[node name="foods624" parent="Food" unique_id=306425306 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 872)
+
+[node name="foods625" parent="Food" unique_id=772913877 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 872)
+
+[node name="foods626" parent="Food" unique_id=1851592767 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 872)
+
+[node name="foods627" parent="Food" unique_id=553248648 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 872)
+
+[node name="foods628" parent="Food" unique_id=1929082448 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 872)
+
+[node name="foods629" parent="Food" unique_id=435524212 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 872)
+
+[node name="foods630" parent="Food" unique_id=1711184536 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 872)
+
+[node name="foods631" parent="Food" unique_id=764435295 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 872)
+
+[node name="foods632" parent="Food" unique_id=1685486642 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 872)
+
+[node name="foods633" parent="Food" unique_id=1114321373 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 912)
+
+[node name="foods634" parent="Food" unique_id=1430835052 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 912)
+
+[node name="foods635" parent="Food" unique_id=958375369 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 912)
+
+[node name="foods636" parent="Food" unique_id=438587550 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 912)
+
+[node name="foods637" parent="Food" unique_id=1068465087 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 912)
+
+[node name="foods638" parent="Food" unique_id=897070541 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 912)
+
+[node name="foods639" parent="Food" unique_id=818617921 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 912)
+
+[node name="foods640" parent="Food" unique_id=1222884595 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 912)
+
+[node name="foods641" parent="Food" unique_id=1928101402 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 912)
+
+[node name="foods642" parent="Food" unique_id=1983944055 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 912)
+
+[node name="foods643" parent="Food" unique_id=1156642576 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 912)
+
+[node name="foods644" parent="Food" unique_id=844513176 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 912)
+
+[node name="foods645" parent="Food" unique_id=489710444 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 912)
+
+[node name="foods646" parent="Food" unique_id=1714190418 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 912)
+
+[node name="foods647" parent="Food" unique_id=800806610 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 912)
+
+[node name="foods648" parent="Food" unique_id=1708369766 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 912)
+
+[node name="foods649" parent="Food" unique_id=512887994 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 912)
+
+[node name="foods650" parent="Food" unique_id=1148539597 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 952)
+
+[node name="foods651" parent="Food" unique_id=18928481 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 952)
+
+[node name="foods652" parent="Food" unique_id=1412818782 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 952)
+
+[node name="foods653" parent="Food" unique_id=1501659690 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 952)
+
+[node name="foods654" parent="Food" unique_id=691248640 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 952)
+
+[node name="foods655" parent="Food" unique_id=696755664 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 952)
+
+[node name="foods656" parent="Food" unique_id=79609523 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 952)
+
+[node name="foods657" parent="Food" unique_id=1438066674 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 952)
+
+[node name="foods658" parent="Food" unique_id=1849474188 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 952)
+
+[node name="foods659" parent="Food" unique_id=1426802676 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 952)
+
+[node name="foods660" parent="Food" unique_id=2096693541 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 952)
+
+[node name="foods661" parent="Food" unique_id=228118944 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 952)
+
+[node name="foods662" parent="Food" unique_id=316356833 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 952)
+
+[node name="foods663" parent="Food" unique_id=1387313449 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 952)
+
+[node name="foods664" parent="Food" unique_id=855423396 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 952)
+
+[node name="foods665" parent="Food" unique_id=1137315395 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 952)
+
+[node name="foods666" parent="Food" unique_id=1650513544 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 952)
+
+[node name="foods667" parent="Food" unique_id=1286894321 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 992)
+
+[node name="foods668" parent="Food" unique_id=196322488 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 992)
+
+[node name="foods669" parent="Food" unique_id=506686423 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 992)
+
+[node name="foods670" parent="Food" unique_id=77827128 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 992)
+
+[node name="foods671" parent="Food" unique_id=157520978 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 992)
+
+[node name="foods672" parent="Food" unique_id=2013397005 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 992)
+
+[node name="foods673" parent="Food" unique_id=1978616259 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 992)
+
+[node name="foods674" parent="Food" unique_id=1407630803 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 992)
+
+[node name="foods675" parent="Food" unique_id=1687684113 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 992)
+
+[node name="foods676" parent="Food" unique_id=1996453055 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 992)
+
+[node name="foods677" parent="Food" unique_id=726698736 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 992)
+
+[node name="foods678" parent="Food" unique_id=555229131 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 992)
+
+[node name="foods679" parent="Food" unique_id=1124331162 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 992)
+
+[node name="foods680" parent="Food" unique_id=1005823792 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 992)
+
+[node name="foods681" parent="Food" unique_id=633794385 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 992)
+
+[node name="foods682" parent="Food" unique_id=385284327 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 992)
+
+[node name="foods683" parent="Food" unique_id=1928455526 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 992)
+
 [node name="Playa" type="CharacterBody2D" parent="." unique_id=1204611772 groups=["player"]]
 position = Vector2(608, 8)
 script = ExtResource("5_tflyj")
@@ -660,10 +1166,30 @@ shape = SubResource("RectangleShape2D_ubiuv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Playa/Area2D" unique_id=1825302473]
 shape = SubResource("CircleShape2D_g6ks6")
 
+[node name="Camera2D" type="Camera2D" parent="Playa" unique_id=349933565]
+
+[node name="Dirt ate" type="TextEdit" parent="Playa/Camera2D" unique_id=1597348907]
+z_index = 10
+offset_left = -536.0
+offset_top = 24.0
+offset_right = -400.0
+offset_bottom = 96.0
+script = ExtResource("5_ubiuv")
+metadata/_edit_use_anchors_ = true
+
+[node name="lives" type="TextEdit" parent="Playa/Camera2D" unique_id=1603021979]
+z_index = 10
+offset_left = -536.0
+offset_top = 112.0
+offset_right = -400.0
+offset_bottom = 184.0
+script = ExtResource("6_tflyj")
+metadata/_edit_use_anchors_ = true
+
 [node name="Enemy" type="Node2D" parent="." unique_id=1839517401]
 
 [node name="Enemy1" type="StaticBody2D" parent="Enemy" unique_id=1637784535]
-position = Vector2(272, 632)
+position = Vector2(280, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -681,7 +1207,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy2" type="StaticBody2D" parent="Enemy" unique_id=1670470878]
-position = Vector2(312, 632)
+position = Vector2(320, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -699,7 +1225,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy3" type="StaticBody2D" parent="Enemy" unique_id=1149823935]
-position = Vector2(352, 632)
+position = Vector2(360, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -717,7 +1243,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy4" type="StaticBody2D" parent="Enemy" unique_id=673784950]
-position = Vector2(392, 632)
+position = Vector2(400, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -735,7 +1261,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy5" type="StaticBody2D" parent="Enemy" unique_id=662249824]
-position = Vector2(432, 632)
+position = Vector2(440, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -753,7 +1279,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy6" type="StaticBody2D" parent="Enemy" unique_id=595132288]
-position = Vector2(472, 632)
+position = Vector2(480, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -771,7 +1297,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy7" type="StaticBody2D" parent="Enemy" unique_id=1793577559]
-position = Vector2(512, 632)
+position = Vector2(520, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -789,7 +1315,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy8" type="StaticBody2D" parent="Enemy" unique_id=1498850425]
-position = Vector2(552, 632)
+position = Vector2(560, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -807,7 +1333,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy9" type="StaticBody2D" parent="Enemy" unique_id=228854655]
-position = Vector2(592, 632)
+position = Vector2(600, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -825,7 +1351,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy10" type="StaticBody2D" parent="Enemy" unique_id=980941240]
-position = Vector2(632, 632)
+position = Vector2(640, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -843,7 +1369,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy11" type="StaticBody2D" parent="Enemy" unique_id=1274577603]
-position = Vector2(672, 632)
+position = Vector2(680, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -861,7 +1387,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy12" type="StaticBody2D" parent="Enemy" unique_id=1408142662]
-position = Vector2(712, 632)
+position = Vector2(720, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -879,7 +1405,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy13" type="StaticBody2D" parent="Enemy" unique_id=751629435]
-position = Vector2(752, 632)
+position = Vector2(760, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -897,7 +1423,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy14" type="StaticBody2D" parent="Enemy" unique_id=1018738486]
-position = Vector2(792, 632)
+position = Vector2(800, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -915,7 +1441,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy15" type="StaticBody2D" parent="Enemy" unique_id=853450327]
-position = Vector2(832, 632)
+position = Vector2(840, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -933,7 +1459,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy16" type="StaticBody2D" parent="Enemy" unique_id=1351740283]
-position = Vector2(872, 632)
+position = Vector2(880, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -951,7 +1477,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy17" type="StaticBody2D" parent="Enemy" unique_id=838353398]
-position = Vector2(912, 632)
+position = Vector2(920, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -968,12 +1494,91 @@ shape = SubResource("RectangleShape2D_tflyj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy17/Area2D" unique_id=1603010471]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="TextEdit" type="TextEdit" parent="." unique_id=1597348907]
-offset_left = 72.0
-offset_top = 32.0
-offset_right = 208.0
-offset_bottom = 104.0
-script = ExtResource("5_ubiuv")
+[node name="walls" type="Node2D" parent="." unique_id=1066200716]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="walls" unique_id=454453295]
+position = Vector2(240, 8)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D" unique_id=403762156]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="walls/StaticBody2D" unique_id=670934855]
+position = Vector2(8, -51.999996)
+scale = Vector2(0.25, 3.4375)
+texture = ExtResource("1_w1qci")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="walls" unique_id=1566880564]
+position = Vector2(944, 16)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D2" unique_id=1662076705]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="walls/StaticBody2D2" unique_id=831575479]
+position = Vector2(8, -51.999996)
+scale = Vector2(0.25, 3.4375)
+texture = ExtResource("1_w1qci")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="walls" unique_id=1469974789]
+position = Vector2(240, 448)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D3" unique_id=684546580]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="walls/StaticBody2D3" unique_id=98171812]
+position = Vector2(8, -51.999996)
+scale = Vector2(0.25, 3.4375)
+texture = ExtResource("1_w1qci")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="walls" unique_id=1217696814]
+position = Vector2(944, 456)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D4" unique_id=597695180]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="walls/StaticBody2D4" unique_id=1240873985]
+position = Vector2(8, -51.999996)
+scale = Vector2(0.25, 3.4375)
+texture = ExtResource("1_w1qci")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="walls" unique_id=1781916304]
+position = Vector2(240, 888)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D5" unique_id=947077037]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="walls/StaticBody2D5" unique_id=1468086701]
+position = Vector2(8, -51.999996)
+scale = Vector2(0.25, 3.4375)
+texture = ExtResource("1_w1qci")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="walls" unique_id=168425005]
+position = Vector2(944, 896)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D6" unique_id=1438062243]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="walls/StaticBody2D6" unique_id=523410885]
+position = Vector2(8, -51.999996)
+scale = Vector2(0.25, 3.4375)
+texture = ExtResource("1_w1qci")
 
 [connection signal="area_entered" from="Enemy/Enemy1/Area2D" to="Enemy/Enemy1" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy2/Area2D" to="Enemy/Enemy2" method="_on_area_2d_area_entered"]
