@@ -34,3 +34,4 @@ func _on_enemy_area_entered(area: StaticBody2D) -> void:
 
 func respawn():
 	self.global_position = start_position
+	
