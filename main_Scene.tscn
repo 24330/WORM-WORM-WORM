@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://doq0tfmh1evbl" path="res://icon.svg" id="1_w1qci"]
 [ext_resource type="PackedScene" uid="uid://brdyttm2vckhq" path="res://foods.tscn" id="3_a600y"]
-[ext_resource type="Texture2D" uid="uid://cg5cvnkoml7bi" path="res://Woim2.png" id="3_vifsq"]
+[ext_resource type="Texture2D" uid="uid://3qdenbv5jw83" path="res://WOIM_3.png" id="3_vifsq"]
 [ext_resource type="Script" uid="uid://cd5t570kom77r" path="res://enemy.gd" id="5_g6ks6"]
 [ext_resource type="Script" uid="uid://dvv6rqqll3adg" path="res://playa.gd" id="5_tflyj"]
 [ext_resource type="Script" uid="uid://r5crbgb2rems" path="res://text_edit.gd" id="5_ubiuv"]
@@ -1156,8 +1156,8 @@ script = ExtResource("5_tflyj")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Playa" unique_id=1642465474]
-position = Vector2(2.193451e-05, -1.9073486e-06)
-scale = Vector2(4, 1.9999999)
+position = Vector2(8.000019, 0)
+scale = Vector2(0.14285715, 0.09523811)
 texture = ExtResource("3_vifsq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Playa" unique_id=1482834218]
