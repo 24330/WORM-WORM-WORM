@@ -1,14 +1,51 @@
 [gd_scene format=3 uid="uid://carfrvp7x5nwh"]
 
+[ext_resource type="Texture2D" uid="uid://duf5vd1iktdab" path="res://3D Piskel.png" id="1_5yleq"]
 [ext_resource type="Script" uid="uid://yb5lk213n2gt" path="res://button.gd" id="1_uubjt"]
+[ext_resource type="Texture2D" uid="uid://c8h0b2jf77h2j" path="res://Dirt.png" id="2_ylpcl"]
 
 [node name="Node2D" type="Node2D" unique_id=2020036312]
 
+[node name="3dPiskel" type="Sprite2D" parent="." unique_id=1724736169]
+position = Vector2(320, 151.99997)
+scale = Vector2(1.7142857, 0.97619045)
+texture = ExtResource("1_5yleq")
+
+[node name="Dirt" type="Sprite2D" parent="." unique_id=546016626]
+position = Vector2(324, 20.000004)
+scale = Vector2(0.2738095, 0.13095236)
+texture = ExtResource("2_ylpcl")
+
+[node name="Dirt2" type="Sprite2D" parent="." unique_id=103090245]
+position = Vector2(336, -132)
+scale = Vector2(0.90476197, 0.059523802)
+texture = ExtResource("2_ylpcl")
+
+[node name="Dirt3" type="Sprite2D" parent="." unique_id=779390293]
+position = Vector2(324, 152)
+scale = Vector2(0.10714284, 0.07142862)
+texture = ExtResource("2_ylpcl")
+
+[node name="Dirt4" type="Sprite2D" parent="." unique_id=1685130285]
+position = Vector2(324, 152)
+scale = Vector2(0.10714284, 0.07142862)
+texture = ExtResource("2_ylpcl")
+
+[node name="Dirt5" type="Sprite2D" parent="." unique_id=1507461387]
+position = Vector2(376.00003, 236)
+scale = Vector2(0.14285716, 0.13095239)
+texture = ExtResource("2_ylpcl")
+
+[node name="Dirt6" type="Sprite2D" parent="." unique_id=1464917379]
+position = Vector2(272, 236)
+scale = Vector2(0.1428571, 0.13095239)
+texture = ExtResource("2_ylpcl")
+
 [node name="Button" type="Button" parent="." unique_id=1902640629]
 offset_left = 288.0
-offset_top = 136.0
+offset_top = -96.0
 offset_right = 360.0
-offset_bottom = 176.0
+offset_bottom = -56.0
 text = "Play"
 script = ExtResource("1_uubjt")
 
@@ -17,12 +54,48 @@ position = Vector2(320, 152)
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=2073690771]
 offset_left = 32.0
-offset_top = 24.0
+offset_top = -152.0
 offset_right = 632.0
-offset_bottom = 64.0
+offset_bottom = -112.0
 text = "😁😁😁😁🪱🪱🪱🥳🥳🥳worm worm worm 😁😁😁😁🪱🪱🪱🥳🥳🥳"
 editable = false
 selecting_enabled = false
+
+[node name="TextEdit2" type="TextEdit" parent="." unique_id=1664207228]
+offset_left = 288.0
+offset_top = 128.0
+offset_right = 360.0
+offset_bottom = 176.0
+text = "controls"
+editable = false
+
+[node name="TextEdit3" type="TextEdit" parent="." unique_id=1027550104]
+offset_left = 224.0
+offset_top = 192.0
+offset_right = 320.0
+offset_bottom = 280.0
+text = " left arrow
+      left"
+editable = false
+
+[node name="TextEdit5" type="TextEdit" parent="." unique_id=1144404632]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 232.0
+offset_top = -24.0
+offset_right = 416.0
+offset_bottom = 64.0
+text = "                 goal
+              eat dirt"
+editable = false
+
+[node name="TextEdit4" type="TextEdit" parent="." unique_id=1043285080]
+offset_left = 328.0
+offset_top = 192.0
+offset_right = 424.0
+offset_bottom = 280.0
+text = "right arrow
+      right"
+editable = false
 
 [connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://bakpkjmmphgip"]
 
+[ext_resource type="Texture2D" uid="uid://bqov0eohgm00m" path="res://fill-dirt-01.jpg" id="1_t20xw"]
+
 [node name="Node2D" type="Node2D" unique_id=1312651037]
+
+[node name="FillDirt01" type="Sprite2D" parent="." unique_id=654675786]
+position = Vector2(573, 331.75)
+scale = Vector2(1.5481284, 1.184492)
+texture = ExtResource("1_t20xw")
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=527370485]
 offset_left = 168.0

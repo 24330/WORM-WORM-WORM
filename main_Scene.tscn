@@ -1150,6 +1150,57 @@ position = Vector2(880, 992)
 [node name="foods683" parent="Food" unique_id=1928455526 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(920, 992)
 
+[node name="foods684" parent="Food" unique_id=262843711 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 1032)
+
+[node name="foods685" parent="Food" unique_id=1689652070 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 1032)
+
+[node name="foods686" parent="Food" unique_id=1433967250 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 1032)
+
+[node name="foods687" parent="Food" unique_id=1158329650 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 1032)
+
+[node name="foods688" parent="Food" unique_id=2110173299 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 1032)
+
+[node name="foods689" parent="Food" unique_id=349490859 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 1032)
+
+[node name="foods690" parent="Food" unique_id=1183402082 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 1032)
+
+[node name="foods691" parent="Food" unique_id=1244758183 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 1032)
+
+[node name="foods692" parent="Food" unique_id=1688958175 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 1032)
+
+[node name="foods693" parent="Food" unique_id=985122139 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 1032)
+
+[node name="foods694" parent="Food" unique_id=601162498 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 1032)
+
+[node name="foods695" parent="Food" unique_id=1797615634 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 1032)
+
+[node name="foods696" parent="Food" unique_id=1183723543 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 1032)
+
+[node name="foods697" parent="Food" unique_id=1353548615 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 1032)
+
+[node name="foods698" parent="Food" unique_id=942117775 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 1032)
+
+[node name="foods699" parent="Food" unique_id=1937716773 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 1032)
+
+[node name="foods700" parent="Food" unique_id=134930985 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 1032)
+
 [node name="Playa" type="CharacterBody2D" parent="." unique_id=1204611772 groups=["player"]]
 position = Vector2(608, 8)
 script = ExtResource("5_tflyj")
@@ -1209,7 +1260,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy2" type="StaticBody2D" parent="Enemy" unique_id=1670470878]
-position = Vector2(320, 1104)
+position = Vector2(312, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1227,7 +1278,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy3" type="StaticBody2D" parent="Enemy" unique_id=1149823935]
-position = Vector2(360, 1144)
+position = Vector2(344, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1245,7 +1296,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy4" type="StaticBody2D" parent="Enemy" unique_id=673784950]
-position = Vector2(400, 1184)
+position = Vector2(376, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1264,7 +1315,7 @@ shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy5" type="StaticBody2D" parent="Enemy" unique_id=662249824]
 z_index = 4
-position = Vector2(440, 1216)
+position = Vector2(408, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1282,7 +1333,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy6" type="StaticBody2D" parent="Enemy" unique_id=595132288]
-position = Vector2(480, 1248)
+position = Vector2(440, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1300,7 +1351,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy7" type="StaticBody2D" parent="Enemy" unique_id=1793577559]
-position = Vector2(520, 1288)
+position = Vector2(472, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1318,7 +1369,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy8" type="StaticBody2D" parent="Enemy" unique_id=1498850425]
-position = Vector2(560, 1328)
+position = Vector2(504, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1336,7 +1387,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy9" type="StaticBody2D" parent="Enemy" unique_id=228854655]
-position = Vector2(600, 1368)
+position = Vector2(568, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1354,7 +1405,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy18" type="StaticBody2D" parent="Enemy" unique_id=1590254577]
-position = Vector2(960, 1112)
+position = Vector2(600, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1372,7 +1423,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy19" type="StaticBody2D" parent="Enemy" unique_id=2073334045]
-position = Vector2(1000, 1152)
+position = Vector2(888, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1390,7 +1441,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy20" type="StaticBody2D" parent="Enemy" unique_id=1204964790]
-position = Vector2(1040, 1192)
+position = Vector2(920, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1407,117 +1458,8 @@ shape = SubResource("RectangleShape2D_tflyj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy20/Area2D" unique_id=1204265527]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy21" type="StaticBody2D" parent="Enemy" unique_id=122308167]
-position = Vector2(1080, 1232)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy21" unique_id=1306312735]
-position = Vector2(1.8119812e-05, -5.722046e-06)
-scale = Vector2(0.14222226, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy21" unique_id=748391149]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy21" unique_id=949259429]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy21/Area2D" unique_id=1964231198]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy22" type="StaticBody2D" parent="Enemy" unique_id=832095397]
-z_index = 4
-position = Vector2(1120, 1264)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy22" unique_id=298304491]
-position = Vector2(7.1525574e-06, -4.044422e-05)
-scale = Vector2(0.14222224, 0.14222233)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy22" unique_id=1471021105]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy22" unique_id=1537510930]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy22/Area2D" unique_id=1642683078]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy23" type="StaticBody2D" parent="Enemy" unique_id=831396849]
-position = Vector2(1160, 1296)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy23" unique_id=1408325798]
-position = Vector2(1.8119812e-05, -5.9127808e-05)
-scale = Vector2(0.14222226, 0.14222224)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy23" unique_id=211977416]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy23" unique_id=414306033]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy23/Area2D" unique_id=1372763070]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy24" type="StaticBody2D" parent="Enemy" unique_id=1599124660]
-position = Vector2(1200, 1336)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy24" unique_id=1438862302]
-position = Vector2(3.2424927e-05, -5.722046e-06)
-scale = Vector2(0.14222214, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy24" unique_id=272605159]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy24" unique_id=819555992]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy24/Area2D" unique_id=141112271]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy25" type="StaticBody2D" parent="Enemy" unique_id=2021275388]
-position = Vector2(1240, 1376)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy25" unique_id=1387238161]
-position = Vector2(4.7683716e-06, 4.5776367e-05)
-scale = Vector2(0.14222237, 0.14222182)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy25" unique_id=1796241829]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy25" unique_id=1461734455]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy25/Area2D" unique_id=284693389]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy26" type="StaticBody2D" parent="Enemy" unique_id=1567768676]
-position = Vector2(1280, 1416)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy26" unique_id=1979856827]
-position = Vector2(5.722046e-06, 0.00010108948)
-scale = Vector2(0.14222203, 0.14222232)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy26" unique_id=883000258]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy26" unique_id=2143265275]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy26/Area2D" unique_id=1550000763]
-shape = SubResource("CircleShape2D_2moaj")
-
 [node name="Enemy10" type="StaticBody2D" parent="Enemy" unique_id=980941240]
-position = Vector2(640, 1064)
+position = Vector2(632, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1535,7 +1477,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy11" type="StaticBody2D" parent="Enemy" unique_id=1274577603]
-position = Vector2(680, 1064)
+position = Vector2(664, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1553,7 +1495,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy12" type="StaticBody2D" parent="Enemy" unique_id=1408142662]
-position = Vector2(720, 1064)
+position = Vector2(696, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1571,7 +1513,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy13" type="StaticBody2D" parent="Enemy" unique_id=751629435]
-position = Vector2(760, 1064)
+position = Vector2(728, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1589,7 +1531,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy14" type="StaticBody2D" parent="Enemy" unique_id=1018738486]
-position = Vector2(800, 1064)
+position = Vector2(760, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1607,7 +1549,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy15" type="StaticBody2D" parent="Enemy" unique_id=853450327]
-position = Vector2(840, 1064)
+position = Vector2(824, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1625,7 +1567,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy16" type="StaticBody2D" parent="Enemy" unique_id=1351740283]
-position = Vector2(880, 1064)
+position = Vector2(792, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1643,7 +1585,7 @@ shape = SubResource("RectangleShape2D_tflyj")
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="Enemy17" type="StaticBody2D" parent="Enemy" unique_id=838353398]
-position = Vector2(920, 1064)
+position = Vector2(856, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1660,116 +1602,8 @@ shape = SubResource("RectangleShape2D_tflyj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy17/Area2D" unique_id=1603010471]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy27" type="StaticBody2D" parent="Enemy" unique_id=2019490133]
-position = Vector2(600, 1432)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy27" unique_id=2112258363]
-position = Vector2(4.7683716e-06, -5.722046e-06)
-scale = Vector2(0.14222237, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy27" unique_id=162673986]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy27" unique_id=1055158791]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy27/Area2D" unique_id=1693914715]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy28" type="StaticBody2D" parent="Enemy" unique_id=1368124255]
-position = Vector2(600, 1464)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy28" unique_id=1916440775]
-position = Vector2(5.9127808e-05, -5.722046e-06)
-scale = Vector2(0.14222224, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy28" unique_id=1573158134]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy28" unique_id=129302230]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy28/Area2D" unique_id=1837236922]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy35" type="StaticBody2D" parent="Enemy" unique_id=1377594905]
-position = Vector2(760, 1560)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy35" unique_id=1475080598]
-position = Vector2(5.9127808e-05, -5.722046e-06)
-scale = Vector2(0.14222224, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy35" unique_id=934742085]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy35" unique_id=2144854014]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy35/Area2D" unique_id=1217564943]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy36" type="StaticBody2D" parent="Enemy" unique_id=2045020434]
-position = Vector2(760, 1592)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy36" unique_id=636596271]
-position = Vector2(5.9127808e-05, -5.722046e-06)
-scale = Vector2(0.14222224, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy36" unique_id=914650975]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy36" unique_id=1521650244]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy36/Area2D" unique_id=356878431]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy37" type="StaticBody2D" parent="Enemy" unique_id=1717670345]
-position = Vector2(760, 1624)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy37" unique_id=1420075339]
-position = Vector2(5.9127808e-05, -5.722046e-06)
-scale = Vector2(0.14222224, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy37" unique_id=1218382076]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy37" unique_id=1819135339]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy37/Area2D" unique_id=955124687]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy38" type="StaticBody2D" parent="Enemy" unique_id=1379181575]
-position = Vector2(600, 1496)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy38" unique_id=1391752067]
-position = Vector2(5.9127808e-05, -5.722046e-06)
-scale = Vector2(0.14222224, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy38" unique_id=1253059457]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy38" unique_id=868805271]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy38/Area2D" unique_id=1001454597]
-shape = SubResource("CircleShape2D_2moaj")
-
 [node name="Enemy29" type="StaticBody2D" parent="Enemy" unique_id=2038012060]
-position = Vector2(600, 1400)
+position = Vector2(536, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1784,168 +1618,6 @@ shape = SubResource("RectangleShape2D_tflyj")
 [node name="Area2D" type="Area2D" parent="Enemy/Enemy29" unique_id=376351736]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy29/Area2D" unique_id=32468644]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy30" type="StaticBody2D" parent="Enemy" unique_id=212261340]
-position = Vector2(760, 1528)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy30" unique_id=783331185]
-position = Vector2(5.9127808e-05, -5.722046e-06)
-scale = Vector2(0.14222224, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy30" unique_id=1059486809]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy30" unique_id=1654019765]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy30/Area2D" unique_id=176986784]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy39" type="StaticBody2D" parent="Enemy" unique_id=1146122937]
-position = Vector2(600, 1560)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy39" unique_id=1073490764]
-position = Vector2(5.9127808e-05, -5.722046e-06)
-scale = Vector2(0.14222224, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy39" unique_id=711463803]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy39" unique_id=678615992]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy39/Area2D" unique_id=462828509]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy40" type="StaticBody2D" parent="Enemy" unique_id=31496886]
-position = Vector2(600, 1592)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy40" unique_id=1146400859]
-position = Vector2(5.9127808e-05, -5.722046e-06)
-scale = Vector2(0.14222224, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy40" unique_id=672015736]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy40" unique_id=266172211]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy40/Area2D" unique_id=1131619642]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy41" type="StaticBody2D" parent="Enemy" unique_id=440404013]
-position = Vector2(600, 1624)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy41" unique_id=1982827679]
-position = Vector2(5.9127808e-05, -5.722046e-06)
-scale = Vector2(0.14222224, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy41" unique_id=1614114793]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy41" unique_id=1134596766]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy41/Area2D" unique_id=255113299]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy42" type="StaticBody2D" parent="Enemy" unique_id=815605244]
-position = Vector2(600, 1528)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy42" unique_id=2025696485]
-position = Vector2(5.9127808e-05, -5.722046e-06)
-scale = Vector2(0.14222224, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy42" unique_id=506653760]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy42" unique_id=215981161]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy42/Area2D" unique_id=853853176]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy31" type="StaticBody2D" parent="Enemy" unique_id=1309649288]
-position = Vector2(800, 1568)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy31" unique_id=1390843840]
-position = Vector2(3.1471252e-05, -5.722046e-06)
-scale = Vector2(0.1422225, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy31" unique_id=2113317932]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy31" unique_id=898228886]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy31/Area2D" unique_id=1020785496]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy32" type="StaticBody2D" parent="Enemy" unique_id=2033673750]
-position = Vector2(840, 1608)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy32" unique_id=662171985]
-position = Vector2(3.1471252e-05, -5.722046e-06)
-scale = Vector2(0.1422225, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy32" unique_id=352601963]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy32" unique_id=153680097]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy32/Area2D" unique_id=1789659017]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy33" type="StaticBody2D" parent="Enemy" unique_id=858050679]
-position = Vector2(880, 1648)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy33" unique_id=1735609345]
-position = Vector2(-2.193451e-05, -5.722046e-06)
-scale = Vector2(0.14222227, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy33" unique_id=1381089152]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy33" unique_id=25596384]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy33/Area2D" unique_id=332042379]
-shape = SubResource("CircleShape2D_2moaj")
-
-[node name="Enemy34" type="StaticBody2D" parent="Enemy" unique_id=929687584]
-position = Vector2(920, 1688)
-script = ExtResource("5_g6ks6")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy34" unique_id=583925318]
-position = Vector2(-5.722046e-06, -5.722046e-06)
-scale = Vector2(0.14222203, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy34" unique_id=691197959]
-shape = SubResource("RectangleShape2D_tflyj")
-
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy34" unique_id=1847941515]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy34/Area2D" unique_id=216913927]
 shape = SubResource("CircleShape2D_2moaj")
 
 [node name="walls" type="Node2D" parent="." unique_id=1066200716]
@@ -2046,12 +1718,6 @@ texture = ExtResource("1_w1qci")
 [connection signal="area_entered" from="Enemy/Enemy18/Area2D" to="Enemy/Enemy18" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy19/Area2D" to="Enemy/Enemy19" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy20/Area2D" to="Enemy/Enemy20" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy21/Area2D" to="Enemy/Enemy21" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy22/Area2D" to="Enemy/Enemy22" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy23/Area2D" to="Enemy/Enemy23" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy24/Area2D" to="Enemy/Enemy24" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy25/Area2D" to="Enemy/Enemy25" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy26/Area2D" to="Enemy/Enemy26" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy10/Area2D" to="Enemy/Enemy10" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy11/Area2D" to="Enemy/Enemy11" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy12/Area2D" to="Enemy/Enemy12" method="_on_area_2d_area_entered"]
@@ -2060,19 +1726,4 @@ texture = ExtResource("1_w1qci")
 [connection signal="area_entered" from="Enemy/Enemy15/Area2D" to="Enemy/Enemy15" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy16/Area2D" to="Enemy/Enemy16" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy17/Area2D" to="Enemy/Enemy17" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy27/Area2D" to="Enemy/Enemy27" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy28/Area2D" to="Enemy/Enemy28" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy35/Area2D" to="Enemy/Enemy35" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy36/Area2D" to="Enemy/Enemy36" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy37/Area2D" to="Enemy/Enemy37" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy38/Area2D" to="Enemy/Enemy38" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy29/Area2D" to="Enemy/Enemy29" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy30/Area2D" to="Enemy/Enemy30" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy39/Area2D" to="Enemy/Enemy39" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy40/Area2D" to="Enemy/Enemy40" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy41/Area2D" to="Enemy/Enemy41" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy42/Area2D" to="Enemy/Enemy42" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy31/Area2D" to="Enemy/Enemy31" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy32/Area2D" to="Enemy/Enemy32" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy33/Area2D" to="Enemy/Enemy33" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy34/Area2D" to="Enemy/Enemy34" method="_on_area_2d_area_entered"]
