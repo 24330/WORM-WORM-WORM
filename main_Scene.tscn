@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://dvv6rqqll3adg" path="res://playa.gd" id="5_tflyj"]
 [ext_resource type="Script" uid="uid://r5crbgb2rems" path="res://text_edit.gd" id="5_ubiuv"]
 [ext_resource type="Script" uid="uid://cvvo7jqavcmyd" path="res://lives.gd" id="6_tflyj"]
-[ext_resource type="Texture2D" uid="uid://dfrl4i717rhnp" path="res://images.jpg" id="8_vifsq"]
+[ext_resource type="Texture2D" uid="uid://c4d4efmffids4" path="res://evil_thing.png" id="7_vifsq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubiuv"]
 size = Vector2(42, 42)
@@ -20,6 +20,70 @@ size = Vector2(32, 32)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2moaj"]
 radius = 32.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3sg4"]
+atlas = ExtResource("7_vifsq")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3fp0"]
+atlas = ExtResource("7_vifsq")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3h1m"]
+atlas = ExtResource("7_vifsq")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qivu"]
+atlas = ExtResource("7_vifsq")
+region = Rect2(0, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b73lq"]
+atlas = ExtResource("7_vifsq")
+region = Rect2(8, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nrkb"]
+atlas = ExtResource("7_vifsq")
+region = Rect2(16, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkf8i"]
+atlas = ExtResource("7_vifsq")
+region = Rect2(0, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hyk8"]
+atlas = ExtResource("7_vifsq")
+region = Rect2(8, 16, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jkvpn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3sg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3fp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3h1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qivu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b73lq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nrkb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkf8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hyk8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6ks6"]
 size = Vector2(32, 440)
@@ -241,20 +305,11 @@ position = Vector2(320, 312)
 [node name="foods380" parent="Food" unique_id=2007534092 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(360, 312)
 
-[node name="foods381" parent="Food" unique_id=443329714 groups=["food"] instance=ExtResource("3_a600y")]
-position = Vector2(400, 312)
-
 [node name="foods382" parent="Food" unique_id=1575603045 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(440, 312)
 
 [node name="foods383" parent="Food" unique_id=579622329 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(480, 312)
-
-[node name="foods384" parent="Food" unique_id=473313322 groups=["food"] instance=ExtResource("3_a600y")]
-position = Vector2(520, 312)
-
-[node name="foods385" parent="Food" unique_id=1198943166 groups=["food"] instance=ExtResource("3_a600y")]
-position = Vector2(560, 312)
 
 [node name="foods386" parent="Food" unique_id=1583790897 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(600, 312)
@@ -306,6 +361,15 @@ position = Vector2(520, 352)
 
 [node name="foods402" parent="Food" unique_id=475579248 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(560, 352)
+
+[node name="foods440" parent="Food" unique_id=1090172853 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 312)
+
+[node name="foods441" parent="Food" unique_id=387275030 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 312)
+
+[node name="foods480" parent="Food" unique_id=833061754 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 312)
 
 [node name="foods403" parent="Food" unique_id=165550487 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(600, 352)
@@ -417,12 +481,6 @@ position = Vector2(640, 432)
 
 [node name="foods439" parent="Food" unique_id=314519166 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(680, 432)
-
-[node name="foods440" parent="Food" unique_id=490436211 groups=["food"] instance=ExtResource("3_a600y")]
-position = Vector2(720, 432)
-
-[node name="foods441" parent="Food" unique_id=1660238597 groups=["food"] instance=ExtResource("3_a600y")]
-position = Vector2(760, 432)
 
 [node name="foods442" parent="Food" unique_id=1125069274 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(800, 432)
@@ -537,18 +595,6 @@ position = Vector2(880, 512)
 
 [node name="foods479" parent="Food" unique_id=1352793638 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(920, 512)
-
-[node name="foods480" parent="Food" unique_id=904842554 groups=["food"] instance=ExtResource("3_a600y")]
-position = Vector2(280, 552)
-
-[node name="foods481" parent="Food" unique_id=421954324 groups=["food"] instance=ExtResource("3_a600y")]
-position = Vector2(320, 552)
-
-[node name="foods482" parent="Food" unique_id=668113798 groups=["food"] instance=ExtResource("3_a600y")]
-position = Vector2(360, 552)
-
-[node name="foods483" parent="Food" unique_id=1207737149 groups=["food"] instance=ExtResource("3_a600y")]
-position = Vector2(400, 552)
 
 [node name="foods484" parent="Food" unique_id=614913064 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(440, 552)
@@ -768,15 +814,6 @@ position = Vector2(560, 712)
 
 [node name="foods556" parent="Food" unique_id=622619344 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(600, 712)
-
-[node name="foods557" parent="Food" unique_id=771258191 groups=["food"] instance=ExtResource("3_a600y")]
-position = Vector2(640, 712)
-
-[node name="foods558" parent="Food" unique_id=346901589 groups=["food"] instance=ExtResource("3_a600y")]
-position = Vector2(680, 712)
-
-[node name="foods559" parent="Food" unique_id=263455347 groups=["food"] instance=ExtResource("3_a600y")]
-position = Vector2(720, 712)
 
 [node name="foods560" parent="Food" unique_id=1324938586 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(760, 712)
@@ -1027,15 +1064,6 @@ position = Vector2(600, 912)
 [node name="foods642" parent="Food" unique_id=1983944055 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(640, 912)
 
-[node name="foods643" parent="Food" unique_id=1156642576 groups=["food"] instance=ExtResource("3_a600y")]
-position = Vector2(680, 912)
-
-[node name="foods644" parent="Food" unique_id=844513176 groups=["food"] instance=ExtResource("3_a600y")]
-position = Vector2(720, 912)
-
-[node name="foods645" parent="Food" unique_id=489710444 groups=["food"] instance=ExtResource("3_a600y")]
-position = Vector2(760, 912)
-
 [node name="foods646" parent="Food" unique_id=1714190418 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(800, 912)
 
@@ -1192,6 +1220,42 @@ position = Vector2(760, 1032)
 [node name="foods697" parent="Food" unique_id=1353548615 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(800, 1032)
 
+[node name="foods701" parent="Food" unique_id=1448386268 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 1072)
+
+[node name="foods702" parent="Food" unique_id=1040626302 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 1072)
+
+[node name="foods703" parent="Food" unique_id=1654170032 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 1072)
+
+[node name="foods704" parent="Food" unique_id=698551420 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 1072)
+
+[node name="foods705" parent="Food" unique_id=514208570 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 1072)
+
+[node name="foods706" parent="Food" unique_id=1974684676 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 1072)
+
+[node name="foods707" parent="Food" unique_id=711090508 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 1072)
+
+[node name="foods708" parent="Food" unique_id=630449989 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 1072)
+
+[node name="foods709" parent="Food" unique_id=8581780 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 1072)
+
+[node name="foods710" parent="Food" unique_id=1683379646 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 1072)
+
+[node name="foods711" parent="Food" unique_id=332176748 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 1072)
+
+[node name="foods712" parent="Food" unique_id=1704637170 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 1072)
+
 [node name="foods698" parent="Food" unique_id=942117775 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(840, 1032)
 
@@ -1201,14 +1265,320 @@ position = Vector2(880, 1032)
 [node name="foods700" parent="Food" unique_id=134930985 groups=["food"] instance=ExtResource("3_a600y")]
 position = Vector2(920, 1032)
 
+[node name="foods713" parent="Food" unique_id=1993335989 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 1112)
+
+[node name="foods714" parent="Food" unique_id=966259629 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 1112)
+
+[node name="foods715" parent="Food" unique_id=1763735104 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 1112)
+
+[node name="foods716" parent="Food" unique_id=1903870069 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 1112)
+
+[node name="foods717" parent="Food" unique_id=763890289 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 1112)
+
+[node name="foods718" parent="Food" unique_id=1497784010 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 1112)
+
+[node name="foods719" parent="Food" unique_id=1406275438 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 1112)
+
+[node name="foods720" parent="Food" unique_id=1115491373 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 1112)
+
+[node name="foods721" parent="Food" unique_id=1588163667 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 1112)
+
+[node name="foods722" parent="Food" unique_id=2060047123 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 1112)
+
+[node name="foods723" parent="Food" unique_id=501489448 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 1112)
+
+[node name="foods724" parent="Food" unique_id=1886673342 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 1112)
+
+[node name="foods725" parent="Food" unique_id=1949812276 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 1112)
+
+[node name="foods726" parent="Food" unique_id=2101451695 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 1112)
+
+[node name="foods727" parent="Food" unique_id=83367808 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 1112)
+
+[node name="foods728" parent="Food" unique_id=429058742 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 1112)
+
+[node name="foods729" parent="Food" unique_id=570833216 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 1112)
+
+[node name="foods730" parent="Food" unique_id=771004575 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 1152)
+
+[node name="foods731" parent="Food" unique_id=2016100226 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 1152)
+
+[node name="foods732" parent="Food" unique_id=1592686056 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 1152)
+
+[node name="foods733" parent="Food" unique_id=1121064170 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 1152)
+
+[node name="foods734" parent="Food" unique_id=1584833922 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 1152)
+
+[node name="foods735" parent="Food" unique_id=1130794394 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 1152)
+
+[node name="foods736" parent="Food" unique_id=1531357263 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 1152)
+
+[node name="foods737" parent="Food" unique_id=161104290 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 1152)
+
+[node name="foods738" parent="Food" unique_id=1294760306 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 1152)
+
+[node name="foods739" parent="Food" unique_id=1152179846 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 1152)
+
+[node name="foods740" parent="Food" unique_id=1711431163 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 1152)
+
+[node name="foods741" parent="Food" unique_id=1852555329 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 1152)
+
+[node name="foods742" parent="Food" unique_id=768447993 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 1152)
+
+[node name="foods743" parent="Food" unique_id=1268054542 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 1152)
+
+[node name="foods744" parent="Food" unique_id=1817634011 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 1152)
+
+[node name="foods745" parent="Food" unique_id=2022576482 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 1152)
+
+[node name="foods746" parent="Food" unique_id=241820743 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 1152)
+
+[node name="foods747" parent="Food" unique_id=2122095516 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 1192)
+
+[node name="foods748" parent="Food" unique_id=681545515 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 1192)
+
+[node name="foods749" parent="Food" unique_id=1140262747 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 1192)
+
+[node name="foods750" parent="Food" unique_id=1779493590 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 1192)
+
+[node name="foods751" parent="Food" unique_id=761793831 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 1192)
+
+[node name="foods752" parent="Food" unique_id=1350427280 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 1192)
+
+[node name="foods753" parent="Food" unique_id=1825928813 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 1192)
+
+[node name="foods754" parent="Food" unique_id=1619338618 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 1192)
+
+[node name="foods755" parent="Food" unique_id=1774991772 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 1192)
+
+[node name="foods756" parent="Food" unique_id=484754831 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 1192)
+
+[node name="foods757" parent="Food" unique_id=156128924 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 1192)
+
+[node name="foods758" parent="Food" unique_id=624498953 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 1192)
+
+[node name="foods759" parent="Food" unique_id=1935599239 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 1192)
+
+[node name="foods760" parent="Food" unique_id=1544068438 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 1192)
+
+[node name="foods761" parent="Food" unique_id=643020761 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 1192)
+
+[node name="foods762" parent="Food" unique_id=1131500598 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 1192)
+
+[node name="foods763" parent="Food" unique_id=712121888 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 1192)
+
+[node name="foods764" parent="Food" unique_id=2030105786 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 1232)
+
+[node name="foods765" parent="Food" unique_id=620581092 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 1232)
+
+[node name="foods766" parent="Food" unique_id=1292407388 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 1232)
+
+[node name="foods767" parent="Food" unique_id=1724864186 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 1232)
+
+[node name="foods768" parent="Food" unique_id=745669459 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 1232)
+
+[node name="foods769" parent="Food" unique_id=1263290514 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 1232)
+
+[node name="foods770" parent="Food" unique_id=1176083474 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 1232)
+
+[node name="foods771" parent="Food" unique_id=395875456 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 1232)
+
+[node name="foods772" parent="Food" unique_id=1625980948 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 1232)
+
+[node name="foods773" parent="Food" unique_id=1579366599 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 1232)
+
+[node name="foods774" parent="Food" unique_id=734955581 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 1232)
+
+[node name="foods775" parent="Food" unique_id=53157335 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 1232)
+
+[node name="foods776" parent="Food" unique_id=970715505 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 1232)
+
+[node name="foods777" parent="Food" unique_id=218367338 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 1232)
+
+[node name="foods778" parent="Food" unique_id=852431927 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 1232)
+
+[node name="foods779" parent="Food" unique_id=122944808 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 1232)
+
+[node name="foods780" parent="Food" unique_id=1920279761 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 1232)
+
+[node name="foods781" parent="Food" unique_id=1053418848 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 1272)
+
+[node name="foods782" parent="Food" unique_id=661999732 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 1272)
+
+[node name="foods783" parent="Food" unique_id=335363779 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 1272)
+
+[node name="foods784" parent="Food" unique_id=2013842391 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 1272)
+
+[node name="foods785" parent="Food" unique_id=80278243 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 1272)
+
+[node name="foods786" parent="Food" unique_id=1733628869 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 1272)
+
+[node name="foods787" parent="Food" unique_id=1198094686 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 1272)
+
+[node name="foods788" parent="Food" unique_id=2074674836 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 1272)
+
+[node name="foods789" parent="Food" unique_id=1287582866 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 1272)
+
+[node name="foods790" parent="Food" unique_id=1850894078 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 1272)
+
+[node name="foods791" parent="Food" unique_id=68920021 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 1272)
+
+[node name="foods792" parent="Food" unique_id=1563100519 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 1272)
+
+[node name="foods793" parent="Food" unique_id=653707591 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 1272)
+
+[node name="foods794" parent="Food" unique_id=1400691083 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 1272)
+
+[node name="foods795" parent="Food" unique_id=687586351 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 1272)
+
+[node name="foods796" parent="Food" unique_id=1950212632 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 1272)
+
+[node name="foods797" parent="Food" unique_id=1289589329 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 1272)
+
+[node name="foods798" parent="Food" unique_id=1023126821 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(280, 1312)
+
+[node name="foods799" parent="Food" unique_id=1115052009 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(320, 1312)
+
+[node name="foods800" parent="Food" unique_id=531812327 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(360, 1312)
+
+[node name="foods801" parent="Food" unique_id=1497340680 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(400, 1312)
+
+[node name="foods802" parent="Food" unique_id=374602589 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(440, 1312)
+
+[node name="foods803" parent="Food" unique_id=1663991650 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(480, 1312)
+
+[node name="foods804" parent="Food" unique_id=1836245722 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(520, 1312)
+
+[node name="foods805" parent="Food" unique_id=1565006139 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(560, 1312)
+
+[node name="foods806" parent="Food" unique_id=2074336113 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(600, 1312)
+
+[node name="foods807" parent="Food" unique_id=258238485 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(640, 1312)
+
+[node name="foods808" parent="Food" unique_id=1054789980 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(680, 1312)
+
+[node name="foods809" parent="Food" unique_id=1944729253 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(720, 1312)
+
+[node name="foods810" parent="Food" unique_id=2133865327 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(760, 1312)
+
+[node name="foods811" parent="Food" unique_id=10296307 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(800, 1312)
+
+[node name="foods812" parent="Food" unique_id=1707035135 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(840, 1312)
+
+[node name="foods813" parent="Food" unique_id=1081332622 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(880, 1312)
+
+[node name="foods814" parent="Food" unique_id=1635626529 groups=["food"] instance=ExtResource("3_a600y")]
+position = Vector2(920, 1312)
+
 [node name="Playa" type="CharacterBody2D" parent="." unique_id=1204611772 groups=["player"]]
 position = Vector2(608, 8)
 script = ExtResource("5_tflyj")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Playa" unique_id=1642465474]
-position = Vector2(8.000019, 0)
-scale = Vector2(0.14285715, 0.09523811)
+position = Vector2(8.000019, -16.000002)
+scale = Vector2(0.14285715, 0.14285715)
 texture = ExtResource("3_vifsq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Playa" unique_id=1482834218]
@@ -1246,11 +1616,6 @@ position = Vector2(280, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy1" unique_id=459226692]
-position = Vector2(6.67572e-06, -5.722046e-06)
-scale = Vector2(0.14222223, 0.14222203)
-texture = ExtResource("8_vifsq")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy1" unique_id=905297441]
 shape = SubResource("RectangleShape2D_tflyj")
 
@@ -1259,366 +1624,733 @@ shape = SubResource("RectangleShape2D_tflyj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy1/Area2D" unique_id=347712144]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy2" type="StaticBody2D" parent="Enemy" unique_id=1670470878]
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy1" unique_id=215970696]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.32227713
+
+[node name="Enemy2" type="StaticBody2D" parent="Enemy" unique_id=196966304]
 position = Vector2(312, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy2" unique_id=1945213356]
-position = Vector2(6.67572e-06, -5.722046e-06)
-scale = Vector2(0.14222223, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy2" unique_id=1033671459]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy2" unique_id=1302802757]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy2" unique_id=408423277]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy2" unique_id=515591434]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy2/Area2D" unique_id=1655270959]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy2/Area2D" unique_id=1148305903]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy3" type="StaticBody2D" parent="Enemy" unique_id=1149823935]
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy2" unique_id=1200759059]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy3" type="StaticBody2D" parent="Enemy" unique_id=103889209]
 position = Vector2(344, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy3" unique_id=1104700815]
-position = Vector2(1.8119812e-05, -5.722046e-06)
-scale = Vector2(0.14222226, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy3" unique_id=1093761212]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy3" unique_id=1456345535]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy3" unique_id=492502594]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy3" unique_id=1704946842]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy3/Area2D" unique_id=1953843383]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy3/Area2D" unique_id=119616770]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy4" type="StaticBody2D" parent="Enemy" unique_id=673784950]
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy3" unique_id=1898082060]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy4" type="StaticBody2D" parent="Enemy" unique_id=1959948885]
 position = Vector2(376, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy4" unique_id=1085831208]
-position = Vector2(1.8119812e-05, -5.722046e-06)
-scale = Vector2(0.14222226, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy4" unique_id=1685908555]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy4" unique_id=1972563789]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy4" unique_id=1199910232]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy4" unique_id=785564805]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy4/Area2D" unique_id=1636490399]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy4/Area2D" unique_id=238835066]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy5" type="StaticBody2D" parent="Enemy" unique_id=662249824]
-z_index = 4
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy4" unique_id=1084026015]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy5" type="StaticBody2D" parent="Enemy" unique_id=1540443605]
 position = Vector2(408, 1064)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy5" unique_id=763673409]
-position = Vector2(7.1525574e-06, -4.044422e-05)
-scale = Vector2(0.14222224, 0.14222233)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy5" unique_id=880952413]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy5" unique_id=160969339]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy5" unique_id=430401949]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy5" unique_id=1238294395]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy5/Area2D" unique_id=1808267379]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy5/Area2D" unique_id=739305704]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy6" type="StaticBody2D" parent="Enemy" unique_id=595132288]
-position = Vector2(440, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy5" unique_id=597120282]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy22" type="StaticBody2D" parent="Enemy" unique_id=2025283731]
+position = Vector2(280, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy6" unique_id=133177776]
-position = Vector2(1.8119812e-05, -5.9127808e-05)
-scale = Vector2(0.14222226, 0.14222224)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy6" unique_id=948275974]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy22" unique_id=1343193827]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy6" unique_id=1483116883]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy22" unique_id=1356234922]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy6/Area2D" unique_id=420811008]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy22/Area2D" unique_id=2127518369]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy7" type="StaticBody2D" parent="Enemy" unique_id=1793577559]
-position = Vector2(472, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy22" unique_id=296973826]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.48038903
+
+[node name="Enemy23" type="StaticBody2D" parent="Enemy" unique_id=664845431]
+position = Vector2(312, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy7" unique_id=389906807]
-position = Vector2(3.2424927e-05, -5.722046e-06)
-scale = Vector2(0.14222214, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy7" unique_id=695819659]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy23" unique_id=247363923]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy7" unique_id=1682380597]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy23" unique_id=182216251]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy7/Area2D" unique_id=181702435]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy23/Area2D" unique_id=1065297337]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy8" type="StaticBody2D" parent="Enemy" unique_id=1498850425]
-position = Vector2(504, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy23" unique_id=1698472341]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy24" type="StaticBody2D" parent="Enemy" unique_id=1648237248]
+position = Vector2(344, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy8" unique_id=1120301211]
-position = Vector2(4.7683716e-06, 4.5776367e-05)
-scale = Vector2(0.14222237, 0.14222182)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy8" unique_id=1789976133]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy24" unique_id=433823380]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy8" unique_id=1160302457]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy24" unique_id=1931452319]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy8/Area2D" unique_id=2090959232]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy24/Area2D" unique_id=827001653]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy9" type="StaticBody2D" parent="Enemy" unique_id=228854655]
-position = Vector2(568, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy24" unique_id=1277492944]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy25" type="StaticBody2D" parent="Enemy" unique_id=835039254]
+position = Vector2(376, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy9" unique_id=460529930]
-position = Vector2(5.722046e-06, 0.00010108948)
-scale = Vector2(0.14222203, 0.14222232)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy9" unique_id=1443601492]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy25" unique_id=1250043514]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy9" unique_id=1948688266]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy25" unique_id=560308397]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy9/Area2D" unique_id=601647423]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy25/Area2D" unique_id=1006916805]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy18" type="StaticBody2D" parent="Enemy" unique_id=1590254577]
-position = Vector2(600, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy25" unique_id=1156924336]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy26" type="StaticBody2D" parent="Enemy" unique_id=941117161]
+position = Vector2(408, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy18" unique_id=1194175281]
-position = Vector2(6.67572e-06, -5.722046e-06)
-scale = Vector2(0.14222223, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy18" unique_id=2116986017]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy26" unique_id=1528033718]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy18" unique_id=250717802]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy26" unique_id=117439498]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy18/Area2D" unique_id=243046475]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy26/Area2D" unique_id=302532989]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy19" type="StaticBody2D" parent="Enemy" unique_id=2073334045]
-position = Vector2(888, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy26" unique_id=1359060544]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy27" type="StaticBody2D" parent="Enemy" unique_id=1847055095]
+position = Vector2(440, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy19" unique_id=234957045]
-position = Vector2(6.67572e-06, -5.722046e-06)
-scale = Vector2(0.14222223, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy19" unique_id=1075932303]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy27" unique_id=476925772]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy19" unique_id=2018947791]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy27" unique_id=1450482200]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy19/Area2D" unique_id=1628228198]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy27/Area2D" unique_id=824982232]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy20" type="StaticBody2D" parent="Enemy" unique_id=1204964790]
-position = Vector2(920, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy27" unique_id=367433758]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.48038903
+
+[node name="Enemy28" type="StaticBody2D" parent="Enemy" unique_id=1930098837]
+position = Vector2(472, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy20" unique_id=258522961]
-position = Vector2(1.8119812e-05, -5.722046e-06)
-scale = Vector2(0.14222226, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy20" unique_id=555870426]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy28" unique_id=782158428]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy20" unique_id=997952369]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy28" unique_id=2061426093]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy20/Area2D" unique_id=1204265527]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy28/Area2D" unique_id=1445898287]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy10" type="StaticBody2D" parent="Enemy" unique_id=980941240]
-position = Vector2(632, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy28" unique_id=666732590]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy29" type="StaticBody2D" parent="Enemy" unique_id=2082105899]
+position = Vector2(504, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy10" unique_id=171438849]
-position = Vector2(4.7683716e-06, -5.722046e-06)
-scale = Vector2(0.14222237, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy10" unique_id=1927539331]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy29" unique_id=1376294098]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy10" unique_id=140519424]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy29" unique_id=1054746528]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy10/Area2D" unique_id=2101975798]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy29/Area2D" unique_id=1747019420]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy11" type="StaticBody2D" parent="Enemy" unique_id=1274577603]
-position = Vector2(664, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy29" unique_id=873761238]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy30" type="StaticBody2D" parent="Enemy" unique_id=389140659]
+position = Vector2(536, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy11" unique_id=609694528]
-position = Vector2(5.9127808e-05, -5.722046e-06)
-scale = Vector2(0.14222224, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy11" unique_id=1014782190]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy30" unique_id=2030738878]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy11" unique_id=2010084334]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy30" unique_id=1005343792]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy11/Area2D" unique_id=2040500679]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy30/Area2D" unique_id=747181813]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy12" type="StaticBody2D" parent="Enemy" unique_id=1408142662]
-position = Vector2(696, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy30" unique_id=469322998]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy31" type="StaticBody2D" parent="Enemy" unique_id=869790600]
+position = Vector2(568, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy12" unique_id=343651864]
-position = Vector2(5.9127808e-05, -5.722046e-06)
-scale = Vector2(0.14222224, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy12" unique_id=629220139]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy31" unique_id=1762114886]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy12" unique_id=200377260]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy31" unique_id=1844521586]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy12/Area2D" unique_id=1345254819]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy31/Area2D" unique_id=1846904481]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy13" type="StaticBody2D" parent="Enemy" unique_id=751629435]
-position = Vector2(728, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy31" unique_id=32513416]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy32" type="StaticBody2D" parent="Enemy" unique_id=439566743]
+position = Vector2(600, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy13" unique_id=1025896360]
-position = Vector2(5.9127808e-05, -5.722046e-06)
-scale = Vector2(0.14222224, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy13" unique_id=1803417088]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy32" unique_id=345968737]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy13" unique_id=1651280744]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy32" unique_id=460084948]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy13/Area2D" unique_id=1735602461]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy32/Area2D" unique_id=136695008]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy14" type="StaticBody2D" parent="Enemy" unique_id=1018738486]
-position = Vector2(760, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy32" unique_id=1736878941]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.48038903
+
+[node name="Enemy33" type="StaticBody2D" parent="Enemy" unique_id=661000605]
+position = Vector2(632, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy14" unique_id=1293367236]
-position = Vector2(3.1471252e-05, -5.722046e-06)
-scale = Vector2(0.1422225, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy14" unique_id=1440341422]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy33" unique_id=895357613]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy14" unique_id=1454040878]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy33" unique_id=140597878]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy14/Area2D" unique_id=1047989806]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy33/Area2D" unique_id=733580152]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy15" type="StaticBody2D" parent="Enemy" unique_id=853450327]
-position = Vector2(824, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy33" unique_id=2108841860]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy34" type="StaticBody2D" parent="Enemy" unique_id=1635939035]
+position = Vector2(664, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy15" unique_id=1051858681]
-position = Vector2(3.1471252e-05, -5.722046e-06)
-scale = Vector2(0.1422225, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy15" unique_id=1928134089]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy34" unique_id=547598125]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy15" unique_id=895674585]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy34" unique_id=1865386827]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy15/Area2D" unique_id=844369731]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy34/Area2D" unique_id=1090474265]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy16" type="StaticBody2D" parent="Enemy" unique_id=1351740283]
-position = Vector2(792, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy34" unique_id=281747379]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy35" type="StaticBody2D" parent="Enemy" unique_id=1269732479]
+position = Vector2(696, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy16" unique_id=1320687447]
-position = Vector2(-2.193451e-05, -5.722046e-06)
-scale = Vector2(0.14222227, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy16" unique_id=448941474]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy35" unique_id=117901456]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy16" unique_id=1110778798]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy35" unique_id=575701657]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy16/Area2D" unique_id=1419639890]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy35/Area2D" unique_id=98098872]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy17" type="StaticBody2D" parent="Enemy" unique_id=838353398]
-position = Vector2(856, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy35" unique_id=772385126]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy36" type="StaticBody2D" parent="Enemy" unique_id=1032480577]
+position = Vector2(728, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy17" unique_id=1430994197]
-position = Vector2(-5.722046e-06, -5.722046e-06)
-scale = Vector2(0.14222203, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy17" unique_id=1994318369]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy36" unique_id=1861414850]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy17" unique_id=655269599]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy36" unique_id=1646513180]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy17/Area2D" unique_id=1603010471]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy36/Area2D" unique_id=784336094]
 shape = SubResource("CircleShape2D_2moaj")
 
-[node name="Enemy29" type="StaticBody2D" parent="Enemy" unique_id=2038012060]
-position = Vector2(536, 1064)
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy36" unique_id=730437374]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy37" type="StaticBody2D" parent="Enemy" unique_id=357263159]
+position = Vector2(760, 1344)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy/Enemy29" unique_id=236560621]
-position = Vector2(5.9127808e-05, -5.722046e-06)
-scale = Vector2(0.14222224, 0.14222203)
-texture = ExtResource("8_vifsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy29" unique_id=1979571471]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy37" unique_id=427771553]
 shape = SubResource("RectangleShape2D_tflyj")
 
-[node name="Area2D" type="Area2D" parent="Enemy/Enemy29" unique_id=376351736]
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy37" unique_id=805476281]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy29/Area2D" unique_id=32468644]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy37/Area2D" unique_id=967778741]
 shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy37" unique_id=1486806105]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.48038903
+
+[node name="Enemy38" type="StaticBody2D" parent="Enemy" unique_id=1814094729]
+position = Vector2(792, 1344)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy38" unique_id=1854466470]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy38" unique_id=377338550]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy38/Area2D" unique_id=671375959]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy38" unique_id=1052778314]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy39" type="StaticBody2D" parent="Enemy" unique_id=831142439]
+position = Vector2(824, 1344)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy39" unique_id=364495576]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy39" unique_id=169101187]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy39/Area2D" unique_id=113825297]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy39" unique_id=789235743]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy40" type="StaticBody2D" parent="Enemy" unique_id=347419704]
+position = Vector2(856, 1344)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy40" unique_id=1555331026]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy40" unique_id=227930194]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy40/Area2D" unique_id=1735385714]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy40" unique_id=1284939199]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy41" type="StaticBody2D" parent="Enemy" unique_id=1175075938]
+position = Vector2(888, 1344)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy41" unique_id=511508792]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy41" unique_id=655244848]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy41/Area2D" unique_id=1049954252]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy41" unique_id=701119953]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy42" type="StaticBody2D" parent="Enemy" unique_id=1387048804]
+position = Vector2(920, 1344)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy42" unique_id=325807601]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy42" unique_id=725678738]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy42/Area2D" unique_id=861746017]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy42" unique_id=1727170460]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.48038903
+
+[node name="Enemy6" type="StaticBody2D" parent="Enemy" unique_id=1467562678]
+position = Vector2(920, 1072)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy6" unique_id=2105743335]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy6" unique_id=870486514]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy6/Area2D" unique_id=768982456]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy6" unique_id=109327922]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy7" type="StaticBody2D" parent="Enemy" unique_id=1802744435]
+position = Vector2(680, 912)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy7" unique_id=421156777]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy7" unique_id=1460874292]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy7/Area2D" unique_id=1491478864]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy7" unique_id=312390945]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy8" type="StaticBody2D" parent="Enemy" unique_id=1147127858]
+position = Vector2(720, 912)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy8" unique_id=1124518210]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy8" unique_id=1745748638]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy8/Area2D" unique_id=1422179916]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy8" unique_id=473310102]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy9" type="StaticBody2D" parent="Enemy" unique_id=545576735]
+position = Vector2(760, 912)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy9" unique_id=296730155]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy9" unique_id=737805418]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy9/Area2D" unique_id=72763289]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy9" unique_id=1342610782]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy10" type="StaticBody2D" parent="Enemy" unique_id=1237543160]
+position = Vector2(640, 712)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy10" unique_id=80915071]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy10" unique_id=515623984]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy10/Area2D" unique_id=1982356043]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy10" unique_id=1195851092]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy11" type="StaticBody2D" parent="Enemy" unique_id=863249514]
+position = Vector2(680, 712)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy11" unique_id=1506787328]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy11" unique_id=1066846568]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy11/Area2D" unique_id=2042928682]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy11" unique_id=2080148628]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy12" type="StaticBody2D" parent="Enemy" unique_id=773014153]
+position = Vector2(720, 712)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy12" unique_id=789238834]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy12" unique_id=398119478]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy12/Area2D" unique_id=1442757286]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy12" unique_id=1520862659]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy13" type="StaticBody2D" parent="Enemy" unique_id=552427986]
+position = Vector2(280, 552)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy13" unique_id=2100092083]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy13" unique_id=716562358]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy13/Area2D" unique_id=1001716522]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy13" unique_id=1709450342]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy14" type="StaticBody2D" parent="Enemy" unique_id=738027322]
+position = Vector2(320, 552)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy14" unique_id=2106919985]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy14" unique_id=821816936]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy14/Area2D" unique_id=1902120540]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy14" unique_id=346184410]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy15" type="StaticBody2D" parent="Enemy" unique_id=978510926]
+position = Vector2(360, 552)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy15" unique_id=1132620468]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy15" unique_id=1047558235]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy15/Area2D" unique_id=248842239]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy15" unique_id=663695447]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy16" type="StaticBody2D" parent="Enemy" unique_id=343931754]
+position = Vector2(400, 552)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy16" unique_id=1822879243]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy16" unique_id=128266688]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy16/Area2D" unique_id=367058160]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy16" unique_id=1849568590]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy17" type="StaticBody2D" parent="Enemy" unique_id=844390073]
+position = Vector2(720, 432)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy17" unique_id=2049468795]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy17" unique_id=1430473488]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy17/Area2D" unique_id=1067172392]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy17" unique_id=579123694]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
+
+[node name="Enemy18" type="StaticBody2D" parent="Enemy" unique_id=1665105550]
+position = Vector2(760, 432)
+script = ExtResource("5_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy18" unique_id=626915871]
+shape = SubResource("RectangleShape2D_tflyj")
+
+[node name="Area2D" type="Area2D" parent="Enemy/Enemy18" unique_id=1251338808]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy18/Area2D" unique_id=811686686]
+shape = SubResource("CircleShape2D_2moaj")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="Enemy/Enemy18" unique_id=1357728383]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_jkvpn")
+frame_progress = 0.1456368
 
 [node name="walls" type="Node2D" parent="." unique_id=1066200716]
 
@@ -1692,6 +2424,34 @@ position = Vector2(8, -51.999996)
 scale = Vector2(0.25, 3.4375)
 texture = ExtResource("1_w1qci")
 
+[node name="StaticBody2D7" type="StaticBody2D" parent="walls" unique_id=1227856307]
+position = Vector2(240, 1328)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D7" unique_id=1703742023]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="walls/StaticBody2D7" unique_id=1417463780]
+position = Vector2(8, -51.999996)
+scale = Vector2(0.25, 3.4375)
+texture = ExtResource("1_w1qci")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="walls" unique_id=689636392]
+position = Vector2(944, 1336)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D8" unique_id=1113836951]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_g6ks6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="walls/StaticBody2D8" unique_id=1051539065]
+position = Vector2(8, -51.999996)
+scale = Vector2(0.25, 3.4375)
+texture = ExtResource("1_w1qci")
+
 [node name="StaticBody2D6" type="StaticBody2D" parent="walls" unique_id=168425005]
 position = Vector2(944, 896)
 metadata/_edit_group_ = true
@@ -1711,13 +2471,31 @@ texture = ExtResource("1_w1qci")
 [connection signal="area_entered" from="Enemy/Enemy3/Area2D" to="Enemy/Enemy3" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy4/Area2D" to="Enemy/Enemy4" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy5/Area2D" to="Enemy/Enemy5" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy22/Area2D" to="Enemy/Enemy22" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy23/Area2D" to="Enemy/Enemy23" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy24/Area2D" to="Enemy/Enemy24" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy25/Area2D" to="Enemy/Enemy25" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy26/Area2D" to="Enemy/Enemy26" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy27/Area2D" to="Enemy/Enemy27" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy28/Area2D" to="Enemy/Enemy28" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy29/Area2D" to="Enemy/Enemy29" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy30/Area2D" to="Enemy/Enemy30" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy31/Area2D" to="Enemy/Enemy31" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy32/Area2D" to="Enemy/Enemy32" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy33/Area2D" to="Enemy/Enemy33" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy34/Area2D" to="Enemy/Enemy34" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy35/Area2D" to="Enemy/Enemy35" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy36/Area2D" to="Enemy/Enemy36" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy37/Area2D" to="Enemy/Enemy37" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy38/Area2D" to="Enemy/Enemy38" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy39/Area2D" to="Enemy/Enemy39" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy40/Area2D" to="Enemy/Enemy40" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy41/Area2D" to="Enemy/Enemy41" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy42/Area2D" to="Enemy/Enemy42" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy6/Area2D" to="Enemy/Enemy6" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy7/Area2D" to="Enemy/Enemy7" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy8/Area2D" to="Enemy/Enemy8" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy9/Area2D" to="Enemy/Enemy9" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy18/Area2D" to="Enemy/Enemy18" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy19/Area2D" to="Enemy/Enemy19" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy20/Area2D" to="Enemy/Enemy20" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy10/Area2D" to="Enemy/Enemy10" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy11/Area2D" to="Enemy/Enemy11" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy12/Area2D" to="Enemy/Enemy12" method="_on_area_2d_area_entered"]
@@ -1726,4 +2504,4 @@ texture = ExtResource("1_w1qci")
 [connection signal="area_entered" from="Enemy/Enemy15/Area2D" to="Enemy/Enemy15" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy16/Area2D" to="Enemy/Enemy16" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy17/Area2D" to="Enemy/Enemy17" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Enemy/Enemy29/Area2D" to="Enemy/Enemy29" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Enemy/Enemy18/Area2D" to="Enemy/Enemy18" method="_on_area_2d_area_entered"]
