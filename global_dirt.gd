@@ -1,4 +1,4 @@
 extends Node
 
-var dirt_dere = 0
+var dirt_dere = 300
 var lives = 10
