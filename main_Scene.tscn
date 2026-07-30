@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://cvvo7jqavcmyd" path="res://lives.gd" id="6_tflyj"]
 [ext_resource type="Texture2D" uid="uid://c4d4efmffids4" path="res://evil_thing.png" id="7_vifsq"]
 [ext_resource type="Texture2D" uid="uid://ctfryryi2qgtc" path="res://wall or something idk.png" id="8_vifsq"]
+[ext_resource type="Script" uid="uid://vooqb71nrpal" path="res://back_to_top.gd" id="9_q3fp0"]
+[ext_resource type="Texture2D" uid="uid://doq0tfmh1evbl" path="res://icon.svg" id="10_o3h1m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubiuv"]
 size = Vector2(42, 42)
@@ -87,6 +89,12 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6ks6"]
 size = Vector2(32, 440)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qivu"]
+size = Vector2(32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b73lq"]
+radius = 24.0
 
 [node name="Node2D" type="Node2D" unique_id=86963004]
 
@@ -1707,7 +1715,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy22" type="StaticBody2D" parent="Enemy" unique_id=2025283731]
-position = Vector2(280, 1344)
+position = Vector2(1312, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1726,7 +1734,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.48038903
 
 [node name="Enemy23" type="StaticBody2D" parent="Enemy" unique_id=664845431]
-position = Vector2(312, 1344)
+position = Vector2(1344, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1745,7 +1753,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy24" type="StaticBody2D" parent="Enemy" unique_id=1648237248]
-position = Vector2(344, 1344)
+position = Vector2(1376, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1764,7 +1772,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy25" type="StaticBody2D" parent="Enemy" unique_id=835039254]
-position = Vector2(376, 1344)
+position = Vector2(1408, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1783,7 +1791,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy26" type="StaticBody2D" parent="Enemy" unique_id=941117161]
-position = Vector2(408, 1344)
+position = Vector2(1440, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1802,7 +1810,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy27" type="StaticBody2D" parent="Enemy" unique_id=1847055095]
-position = Vector2(440, 1344)
+position = Vector2(1472, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1821,7 +1829,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.48038903
 
 [node name="Enemy28" type="StaticBody2D" parent="Enemy" unique_id=1930098837]
-position = Vector2(472, 1344)
+position = Vector2(1504, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1840,7 +1848,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy29" type="StaticBody2D" parent="Enemy" unique_id=2082105899]
-position = Vector2(504, 1344)
+position = Vector2(1536, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1859,7 +1867,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy30" type="StaticBody2D" parent="Enemy" unique_id=389140659]
-position = Vector2(536, 1344)
+position = Vector2(1568, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1878,7 +1886,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy31" type="StaticBody2D" parent="Enemy" unique_id=869790600]
-position = Vector2(568, 1344)
+position = Vector2(1600, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1897,7 +1905,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy32" type="StaticBody2D" parent="Enemy" unique_id=439566743]
-position = Vector2(600, 1344)
+position = Vector2(1632, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1916,7 +1924,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.48038903
 
 [node name="Enemy33" type="StaticBody2D" parent="Enemy" unique_id=661000605]
-position = Vector2(632, 1344)
+position = Vector2(1664, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1935,7 +1943,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy34" type="StaticBody2D" parent="Enemy" unique_id=1635939035]
-position = Vector2(664, 1344)
+position = Vector2(1696, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1954,7 +1962,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy35" type="StaticBody2D" parent="Enemy" unique_id=1269732479]
-position = Vector2(696, 1344)
+position = Vector2(1728, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1973,7 +1981,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy36" type="StaticBody2D" parent="Enemy" unique_id=1032480577]
-position = Vector2(728, 1344)
+position = Vector2(1760, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -1992,7 +2000,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy37" type="StaticBody2D" parent="Enemy" unique_id=357263159]
-position = Vector2(760, 1344)
+position = Vector2(1792, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -2011,7 +2019,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.48038903
 
 [node name="Enemy38" type="StaticBody2D" parent="Enemy" unique_id=1814094729]
-position = Vector2(792, 1344)
+position = Vector2(1824, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -2030,7 +2038,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy39" type="StaticBody2D" parent="Enemy" unique_id=831142439]
-position = Vector2(824, 1344)
+position = Vector2(1856, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -2049,7 +2057,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy40" type="StaticBody2D" parent="Enemy" unique_id=347419704]
-position = Vector2(856, 1344)
+position = Vector2(1888, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -2068,7 +2076,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy41" type="StaticBody2D" parent="Enemy" unique_id=1175075938]
-position = Vector2(888, 1344)
+position = Vector2(1920, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -2087,7 +2095,7 @@ sprite_frames = SubResource("SpriteFrames_jkvpn")
 frame_progress = 0.1456368
 
 [node name="Enemy42" type="StaticBody2D" parent="Enemy" unique_id=1387048804]
-position = Vector2(920, 1344)
+position = Vector2(1952, 1184)
 script = ExtResource("5_g6ks6")
 metadata/_edit_group_ = true
 
@@ -2466,6 +2474,428 @@ position = Vector2(7.9999943, -60)
 scale = Vector2(0.05882355, 0.8088235)
 texture = ExtResource("8_vifsq")
 
+[node name="BACK TO TOP" type="Node2D" parent="." unique_id=337295697]
+
+[node name="back to top" type="StaticBody2D" parent="BACK TO TOP" unique_id=491485215]
+position = Vector2(272, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top" unique_id=1015371017]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top" unique_id=1417529472]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top" unique_id=1992164422]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top/Area2D" unique_id=856423529]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top2" type="StaticBody2D" parent="BACK TO TOP" unique_id=1312285873]
+position = Vector2(304, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top2" unique_id=1422807029]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top2" unique_id=1794771460]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top2" unique_id=377048211]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top2/Area2D" unique_id=895105364]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top3" type="StaticBody2D" parent="BACK TO TOP" unique_id=117258827]
+position = Vector2(336, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top3" unique_id=891199823]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top3" unique_id=1899348995]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top3" unique_id=1854430084]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top3/Area2D" unique_id=265360304]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top4" type="StaticBody2D" parent="BACK TO TOP" unique_id=226963705]
+position = Vector2(368, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top4" unique_id=546392678]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top4" unique_id=968911640]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top4" unique_id=1159828794]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top4/Area2D" unique_id=1445920339]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top5" type="StaticBody2D" parent="BACK TO TOP" unique_id=1278814515]
+position = Vector2(400, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top5" unique_id=1542146503]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top5" unique_id=630229061]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top5" unique_id=1114539084]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top5/Area2D" unique_id=311869745]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top6" type="StaticBody2D" parent="BACK TO TOP" unique_id=27806025]
+position = Vector2(432, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top6" unique_id=2116364322]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top6" unique_id=1485909150]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top6" unique_id=165414504]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top6/Area2D" unique_id=779603774]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top7" type="StaticBody2D" parent="BACK TO TOP" unique_id=1332315052]
+position = Vector2(464, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top7" unique_id=258943394]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top7" unique_id=299900429]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top7" unique_id=1772138569]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top7/Area2D" unique_id=1867331035]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top8" type="StaticBody2D" parent="BACK TO TOP" unique_id=1183705080]
+position = Vector2(496, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top8" unique_id=2031015308]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top8" unique_id=2119854567]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top8" unique_id=166790978]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top8/Area2D" unique_id=1806851218]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top9" type="StaticBody2D" parent="BACK TO TOP" unique_id=1504377910]
+position = Vector2(528, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top9" unique_id=891879263]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top9" unique_id=33787632]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top9" unique_id=1581944934]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top9/Area2D" unique_id=363093587]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top10" type="StaticBody2D" parent="BACK TO TOP" unique_id=1741027166]
+position = Vector2(560, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top10" unique_id=2086145727]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top10" unique_id=1255442093]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top10" unique_id=563543233]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top10/Area2D" unique_id=1722680244]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top11" type="StaticBody2D" parent="BACK TO TOP" unique_id=2035006673]
+position = Vector2(592, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top11" unique_id=1401444741]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top11" unique_id=2015106932]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top11" unique_id=552571935]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top11/Area2D" unique_id=364863281]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top12" type="StaticBody2D" parent="BACK TO TOP" unique_id=443456307]
+position = Vector2(624, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top12" unique_id=447437205]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top12" unique_id=1808253334]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top12" unique_id=1899643984]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top12/Area2D" unique_id=572619390]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top13" type="StaticBody2D" parent="BACK TO TOP" unique_id=379871202]
+position = Vector2(656, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top13" unique_id=331238664]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top13" unique_id=828098711]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top13" unique_id=1216301019]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top13/Area2D" unique_id=1404535698]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top14" type="StaticBody2D" parent="BACK TO TOP" unique_id=108844533]
+position = Vector2(688, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top14" unique_id=1391814929]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top14" unique_id=1938855055]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top14" unique_id=443797610]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top14/Area2D" unique_id=1167745199]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top15" type="StaticBody2D" parent="BACK TO TOP" unique_id=1042910210]
+position = Vector2(720, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top15" unique_id=804773597]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top15" unique_id=1908150912]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top15" unique_id=2139421581]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top15/Area2D" unique_id=892845474]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top16" type="StaticBody2D" parent="BACK TO TOP" unique_id=2129962435]
+position = Vector2(752, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top16" unique_id=940213188]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top16" unique_id=2102903191]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top16" unique_id=915804697]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top16/Area2D" unique_id=1451224279]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top17" type="StaticBody2D" parent="BACK TO TOP" unique_id=1739325915]
+position = Vector2(784, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top17" unique_id=30213262]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top17" unique_id=443246277]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top17" unique_id=124682409]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top17/Area2D" unique_id=1205502600]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top18" type="StaticBody2D" parent="BACK TO TOP" unique_id=814110782]
+position = Vector2(816, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top18" unique_id=1170349545]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top18" unique_id=363115287]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top18" unique_id=1199123902]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top18/Area2D" unique_id=143571663]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top19" type="StaticBody2D" parent="BACK TO TOP" unique_id=90931047]
+position = Vector2(848, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top19" unique_id=1219275099]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top19" unique_id=167523494]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top19" unique_id=1668836210]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top19/Area2D" unique_id=551950926]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top20" type="StaticBody2D" parent="BACK TO TOP" unique_id=1052177480]
+position = Vector2(880, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top20" unique_id=1458373478]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top20" unique_id=829419015]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top20" unique_id=1863738698]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top20/Area2D" unique_id=1002297024]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
+[node name="back to top21" type="StaticBody2D" parent="BACK TO TOP" unique_id=896348553]
+position = Vector2(912, 1344)
+script = ExtResource("9_q3fp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACK TO TOP/back to top21" unique_id=542805225]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o3h1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top21" unique_id=13399625]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_4qivu")
+
+[node name="Area2D" type="Area2D" parent="BACK TO TOP/back to top21" unique_id=1651010121]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACK TO TOP/back to top21/Area2D" unique_id=222059652]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_b73lq")
+
 [connection signal="area_entered" from="Enemy/Enemy1/Area2D" to="Enemy/Enemy1" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy2/Area2D" to="Enemy/Enemy2" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy3/Area2D" to="Enemy/Enemy3" method="_on_area_2d_area_entered"]
@@ -2505,3 +2935,24 @@ texture = ExtResource("8_vifsq")
 [connection signal="area_entered" from="Enemy/Enemy16/Area2D" to="Enemy/Enemy16" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy17/Area2D" to="Enemy/Enemy17" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy18/Area2D" to="Enemy/Enemy18" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top/Area2D" to="BACK TO TOP/back to top" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top2/Area2D" to="BACK TO TOP/back to top2" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top3/Area2D" to="BACK TO TOP/back to top3" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top4/Area2D" to="BACK TO TOP/back to top4" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top5/Area2D" to="BACK TO TOP/back to top5" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top6/Area2D" to="BACK TO TOP/back to top6" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top7/Area2D" to="BACK TO TOP/back to top7" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top8/Area2D" to="BACK TO TOP/back to top8" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top9/Area2D" to="BACK TO TOP/back to top9" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top10/Area2D" to="BACK TO TOP/back to top10" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top11/Area2D" to="BACK TO TOP/back to top11" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top12/Area2D" to="BACK TO TOP/back to top12" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top13/Area2D" to="BACK TO TOP/back to top13" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top14/Area2D" to="BACK TO TOP/back to top14" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top15/Area2D" to="BACK TO TOP/back to top15" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top16/Area2D" to="BACK TO TOP/back to top16" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top17/Area2D" to="BACK TO TOP/back to top17" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top18/Area2D" to="BACK TO TOP/back to top18" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top19/Area2D" to="BACK TO TOP/back to top19" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top20/Area2D" to="BACK TO TOP/back to top20" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACK TO TOP/back to top21/Area2D" to="BACK TO TOP/back to top21" method="_on_area_2d_area_entered"]
