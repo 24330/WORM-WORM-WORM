@@ -18,3 +18,5 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		area.get_parent().respawn()
 		if GlobalDirt.lives == 0:
 			get_tree().change_scene_to_file("res://You_died.tscn")
+			GlobalDirt.lives = 10
+			GlobalDirt.dirt_dere = 300 
