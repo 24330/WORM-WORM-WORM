@@ -1,7 +1,652 @@
 [gd_scene format=3 uid="uid://xv2dssi8tste"]
 
-[ext_resource type="PackedScene" uid="uid://r2l52en0qmig" path="res://main_Scene.tscn" id="1_uiaec"]
+[ext_resource type="Script" uid="uid://dvv6rqqll3adg" path="res://playa.gd" id="1_aky0p"]
+[ext_resource type="Texture2D" uid="uid://3qdenbv5jw83" path="res://WOIM_3.png" id="2_tuelc"]
+[ext_resource type="Script" uid="uid://r5crbgb2rems" path="res://text_edit.gd" id="3_cl68u"]
+[ext_resource type="Script" uid="uid://cvvo7jqavcmyd" path="res://lives.gd" id="4_xtqvv"]
+[ext_resource type="Texture2D" uid="uid://ctfryryi2qgtc" path="res://wall or something idk.png" id="5_xtqvv"]
+[ext_resource type="Script" uid="uid://cd5t570kom77r" path="res://enemy.gd" id="6_4ew63"]
+[ext_resource type="Texture2D" uid="uid://c4d4efmffids4" path="res://evil_thing.png" id="7_bi3nv"]
 
-[node name="Node2D" type="Node2D" unique_id=1613090580]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p24lo"]
+size = Vector2(42, 42)
 
-[node name="Node2D" parent="." unique_id=86963004 instance=ExtResource("1_uiaec")]
+[sub_resource type="CircleShape2D" id="CircleShape2D_3iti4"]
+radius = 32.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6khxn"]
+size = Vector2(32, 440)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dv2v8"]
+size = Vector2(32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jen0v"]
+radius = 32.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3sg4"]
+atlas = ExtResource("7_bi3nv")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3fp0"]
+atlas = ExtResource("7_bi3nv")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3h1m"]
+atlas = ExtResource("7_bi3nv")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qivu"]
+atlas = ExtResource("7_bi3nv")
+region = Rect2(0, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b73lq"]
+atlas = ExtResource("7_bi3nv")
+region = Rect2(8, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nrkb"]
+atlas = ExtResource("7_bi3nv")
+region = Rect2(16, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkf8i"]
+atlas = ExtResource("7_bi3nv")
+region = Rect2(0, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hyk8"]
+atlas = ExtResource("7_bi3nv")
+region = Rect2(8, 16, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5nhn4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3sg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3fp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3h1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qivu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b73lq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nrkb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkf8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hyk8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=566336308]
+
+[node name="Playa" type="CharacterBody2D" parent="." unique_id=1254072393 groups=["player"]]
+position = Vector2(608, 8)
+script = ExtResource("1_aky0p")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Playa" unique_id=1053980332]
+position = Vector2(8.000019, -16.000002)
+scale = Vector2(0.14285715, 0.14285715)
+texture = ExtResource("2_tuelc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Playa" unique_id=1689010728]
+shape = SubResource("RectangleShape2D_p24lo")
+
+[node name="Area2D" type="Area2D" parent="Playa" unique_id=1402491642 groups=["player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Playa/Area2D" unique_id=1867653854]
+shape = SubResource("CircleShape2D_3iti4")
+
+[node name="Camera2D" type="Camera2D" parent="Playa" unique_id=1559229455]
+
+[node name="Dirt ate" type="TextEdit" parent="Playa/Camera2D" unique_id=1726811701]
+z_index = 10
+offset_left = -536.0
+offset_top = 24.0
+offset_right = -400.0
+offset_bottom = 96.0
+script = ExtResource("3_cl68u")
+metadata/_edit_use_anchors_ = true
+
+[node name="lives" type="TextEdit" parent="Playa/Camera2D" unique_id=822532528]
+z_index = 10
+offset_left = -536.0
+offset_top = 112.0
+offset_right = -400.0
+offset_bottom = 184.0
+script = ExtResource("4_xtqvv")
+metadata/_edit_use_anchors_ = true
+
+[node name="WALLS" type="Node2D" parent="." unique_id=1243039535]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WALLS" unique_id=467900566]
+position = Vector2(272, 32)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WALLS/StaticBody2D" unique_id=226158698]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_6khxn")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WALLS/StaticBody2D" unique_id=906712742]
+position = Vector2(7.9999943, -60)
+scale = Vector2(0.05882355, 0.8088235)
+texture = ExtResource("5_xtqvv")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="WALLS" unique_id=318941886]
+position = Vector2(272, 472)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WALLS/StaticBody2D2" unique_id=1543089134]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_6khxn")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WALLS/StaticBody2D2" unique_id=102371780]
+position = Vector2(7.9999943, -60)
+scale = Vector2(0.05882355, 0.8088235)
+texture = ExtResource("5_xtqvv")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="WALLS" unique_id=860488247]
+position = Vector2(272, 912)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WALLS/StaticBody2D3" unique_id=2116489826]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_6khxn")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WALLS/StaticBody2D3" unique_id=2117074504]
+position = Vector2(7.9999943, -60)
+scale = Vector2(0.05882355, 0.8088235)
+texture = ExtResource("5_xtqvv")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="WALLS" unique_id=2061781186]
+position = Vector2(272, 1352)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WALLS/StaticBody2D4" unique_id=1706626848]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_6khxn")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WALLS/StaticBody2D4" unique_id=1118186070]
+position = Vector2(7.9999943, -60)
+scale = Vector2(0.05882355, 0.8088235)
+texture = ExtResource("5_xtqvv")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="WALLS" unique_id=86235524]
+position = Vector2(968, 32)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WALLS/StaticBody2D5" unique_id=1410878579]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_6khxn")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WALLS/StaticBody2D5" unique_id=608676547]
+position = Vector2(7.9999943, -60)
+scale = Vector2(0.05882355, 0.8088235)
+texture = ExtResource("5_xtqvv")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="WALLS" unique_id=153641266]
+position = Vector2(968, 472)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WALLS/StaticBody2D6" unique_id=1660576803]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_6khxn")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WALLS/StaticBody2D6" unique_id=1003231368]
+position = Vector2(7.9999943, -60)
+scale = Vector2(0.05882355, 0.8088235)
+texture = ExtResource("5_xtqvv")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="WALLS" unique_id=1960979347]
+position = Vector2(968, 912)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WALLS/StaticBody2D7" unique_id=458312788]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_6khxn")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WALLS/StaticBody2D7" unique_id=859500475]
+position = Vector2(7.9999943, -60)
+scale = Vector2(0.05882355, 0.8088235)
+texture = ExtResource("5_xtqvv")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="WALLS" unique_id=1490581875]
+position = Vector2(968, 1352)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WALLS/StaticBody2D8" unique_id=658809235]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_6khxn")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WALLS/StaticBody2D8" unique_id=1366977415]
+position = Vector2(7.9999943, -60)
+scale = Vector2(0.05882355, 0.8088235)
+texture = ExtResource("5_xtqvv")
+
+[node name="enemies" type="Node2D" parent="." unique_id=1827924910]
+
+[node name="Enemy17" type="StaticBody2D" parent="enemies" unique_id=113097004]
+position = Vector2(312, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy17" unique_id=2080820863]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy17" unique_id=466244779]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy17/Area2D" unique_id=151903859]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy17" unique_id=200170934]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy18" type="StaticBody2D" parent="enemies" unique_id=1291842693]
+position = Vector2(344, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy18" unique_id=126306387]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy18" unique_id=136667844]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy18/Area2D" unique_id=2146228402]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy18" unique_id=800169041]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy19" type="StaticBody2D" parent="enemies" unique_id=217489333]
+position = Vector2(376, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy19" unique_id=278764050]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy19" unique_id=2083929851]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy19/Area2D" unique_id=1253913526]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy19" unique_id=1420457078]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy20" type="StaticBody2D" parent="enemies" unique_id=2059460403]
+position = Vector2(408, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy20" unique_id=1133367840]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy20" unique_id=288856203]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy20/Area2D" unique_id=1344559774]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy20" unique_id=1623625499]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy21" type="StaticBody2D" parent="enemies" unique_id=949064108]
+position = Vector2(440, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy21" unique_id=774485598]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy21" unique_id=1770600731]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy21/Area2D" unique_id=1114115120]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy21" unique_id=2127424192]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy22" type="StaticBody2D" parent="enemies" unique_id=1745144333]
+position = Vector2(472, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy22" unique_id=2123481289]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy22" unique_id=1049693130]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy22/Area2D" unique_id=1798650689]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy22" unique_id=1637879017]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy23" type="StaticBody2D" parent="enemies" unique_id=1823252247]
+position = Vector2(504, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy23" unique_id=2080134027]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy23" unique_id=1471665778]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy23/Area2D" unique_id=267553168]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy23" unique_id=958473628]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy24" type="StaticBody2D" parent="enemies" unique_id=1810653083]
+position = Vector2(536, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy24" unique_id=836542763]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy24" unique_id=1818647453]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy24/Area2D" unique_id=2122498834]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy24" unique_id=1331723805]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy25" type="StaticBody2D" parent="enemies" unique_id=1498313194]
+position = Vector2(568, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy25" unique_id=1186745604]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy25" unique_id=1472200249]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy25/Area2D" unique_id=990637343]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy25" unique_id=1019931014]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy26" type="StaticBody2D" parent="enemies" unique_id=2039518549]
+position = Vector2(600, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy26" unique_id=1846606468]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy26" unique_id=2025398586]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy26/Area2D" unique_id=84124911]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy26" unique_id=140279820]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy27" type="StaticBody2D" parent="enemies" unique_id=1285073571]
+position = Vector2(632, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy27" unique_id=2146233065]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy27" unique_id=1314604661]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy27/Area2D" unique_id=875201040]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy27" unique_id=869601189]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy28" type="StaticBody2D" parent="enemies" unique_id=1009353860]
+position = Vector2(664, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy28" unique_id=332308827]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy28" unique_id=826342643]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy28/Area2D" unique_id=449069839]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy28" unique_id=59782894]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy29" type="StaticBody2D" parent="enemies" unique_id=1854505876]
+position = Vector2(696, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy29" unique_id=501453538]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy29" unique_id=105882251]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy29/Area2D" unique_id=1062279756]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy29" unique_id=932948008]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy30" type="StaticBody2D" parent="enemies" unique_id=1626868695]
+position = Vector2(728, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy30" unique_id=1109521075]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy30" unique_id=682016261]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy30/Area2D" unique_id=1193787795]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy30" unique_id=1346557993]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy31" type="StaticBody2D" parent="enemies" unique_id=233920018]
+position = Vector2(760, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy31" unique_id=1685538553]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy31" unique_id=1671521496]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy31/Area2D" unique_id=1488813328]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy31" unique_id=681858512]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy32" type="StaticBody2D" parent="enemies" unique_id=1800726011]
+position = Vector2(792, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy32" unique_id=1954649310]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy32" unique_id=746065080]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy32/Area2D" unique_id=2100609166]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy32" unique_id=544525107]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy33" type="StaticBody2D" parent="enemies" unique_id=1160813782]
+position = Vector2(824, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy33" unique_id=1605450367]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy33" unique_id=1492959641]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy33/Area2D" unique_id=1899292155]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy33" unique_id=1431363303]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy34" type="StaticBody2D" parent="enemies" unique_id=1646519558]
+position = Vector2(856, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy34" unique_id=1443610049]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy34" unique_id=1653677785]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy34/Area2D" unique_id=1612107360]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy34" unique_id=1521588959]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy35" type="StaticBody2D" parent="enemies" unique_id=1853027927]
+position = Vector2(888, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy35" unique_id=1885574398]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy35" unique_id=1004785793]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy35/Area2D" unique_id=389650003]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy35" unique_id=2014226503]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy36" type="StaticBody2D" parent="enemies" unique_id=2082208622]
+position = Vector2(920, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy36" unique_id=1390559895]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy36" unique_id=325628972]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy36/Area2D" unique_id=1307871117]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy36" unique_id=236158226]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy37" type="StaticBody2D" parent="enemies" unique_id=964128937]
+position = Vector2(952, 736)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy37" unique_id=822172302]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy37" unique_id=1702185045]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy37/Area2D" unique_id=807369001]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy37" unique_id=1866547824]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1122627636]
+offset_left = 312.0
+offset_top = 112.0
+offset_right = 944.0
+offset_bottom = 368.0
+text = "LEVEL UNDER CONSTRUCTION"
+editable = false
+
+[connection signal="area_entered" from="enemies/Enemy17/Area2D" to="enemies/Enemy17" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy18/Area2D" to="enemies/Enemy18" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy19/Area2D" to="enemies/Enemy19" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy20/Area2D" to="enemies/Enemy20" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy21/Area2D" to="enemies/Enemy21" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy22/Area2D" to="enemies/Enemy22" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy23/Area2D" to="enemies/Enemy23" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy24/Area2D" to="enemies/Enemy24" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy25/Area2D" to="enemies/Enemy25" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy26/Area2D" to="enemies/Enemy26" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy27/Area2D" to="enemies/Enemy27" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy28/Area2D" to="enemies/Enemy28" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy29/Area2D" to="enemies/Enemy29" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy30/Area2D" to="enemies/Enemy30" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy31/Area2D" to="enemies/Enemy31" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy32/Area2D" to="enemies/Enemy32" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy33/Area2D" to="enemies/Enemy33" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy34/Area2D" to="enemies/Enemy34" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy35/Area2D" to="enemies/Enemy35" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy36/Area2D" to="enemies/Enemy36" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy37/Area2D" to="enemies/Enemy37" method="_on_area_2d_area_entered"]
