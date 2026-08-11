@@ -20,4 +20,6 @@ func _on_area_entered(area: Area2D) -> void:
 		if GlobalDirt.dirt_dere == 0:
 			get_tree().change_scene_to_file("res://Level 2.tscn")
 			GlobalDirt.dirt_dere = 300
-			
+		if scene_file_path == ("res://Level 2.tscn") and GlobalDirt.dirt_dere == 0:
+			get_tree().change_scene_to_file("res://level 3.tscn")
+			GlobalDirt.dirt_dere = 300
