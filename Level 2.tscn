@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://ctfryryi2qgtc" path="res://wall or something idk.png" id="5_xtqvv"]
 [ext_resource type="Script" uid="uid://cd5t570kom77r" path="res://enemy.gd" id="6_4ew63"]
 [ext_resource type="Texture2D" uid="uid://c4d4efmffids4" path="res://evil_thing.png" id="7_bi3nv"]
+[ext_resource type="PackedScene" uid="uid://brdyttm2vckhq" path="res://foods.tscn" id="8_4ew63"]
+[ext_resource type="Script" uid="uid://vooqb71nrpal" path="res://back_to_top.gd" id="9_p24lo"]
+[ext_resource type="Texture2D" uid="uid://doq0tfmh1evbl" path="res://icon.svg" id="10_3iti4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p24lo"]
 size = Vector2(42, 42)
@@ -87,10 +90,16 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jen0v"]
+size = Vector2(32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5nhn4"]
+radius = 24.0
+
 [node name="Node2D" type="Node2D" unique_id=566336308]
 
 [node name="Playa" type="CharacterBody2D" parent="." unique_id=1254072393 groups=["player"]]
-position = Vector2(608, 8)
+position = Vector2(640, 8)
 script = ExtResource("1_aky0p")
 metadata/_edit_group_ = true
 
@@ -186,7 +195,7 @@ scale = Vector2(0.05882355, 0.8088235)
 texture = ExtResource("5_xtqvv")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="WALLS" unique_id=86235524]
-position = Vector2(968, 32)
+position = Vector2(984, 32)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WALLS/StaticBody2D5" unique_id=1410878579]
@@ -200,7 +209,7 @@ scale = Vector2(0.05882355, 0.8088235)
 texture = ExtResource("5_xtqvv")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="WALLS" unique_id=153641266]
-position = Vector2(968, 472)
+position = Vector2(984, 472)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WALLS/StaticBody2D6" unique_id=1660576803]
@@ -214,7 +223,7 @@ scale = Vector2(0.05882355, 0.8088235)
 texture = ExtResource("5_xtqvv")
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="WALLS" unique_id=1960979347]
-position = Vector2(968, 912)
+position = Vector2(984, 912)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WALLS/StaticBody2D7" unique_id=458312788]
@@ -228,7 +237,7 @@ scale = Vector2(0.05882355, 0.8088235)
 texture = ExtResource("5_xtqvv")
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="WALLS" unique_id=1490581875]
-position = Vector2(968, 1352)
+position = Vector2(984, 1352)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WALLS/StaticBody2D8" unique_id=658809235]
@@ -244,7 +253,7 @@ texture = ExtResource("5_xtqvv")
 [node name="enemies" type="Node2D" parent="." unique_id=1827924910]
 
 [node name="Enemy17" type="StaticBody2D" parent="enemies" unique_id=113097004]
-position = Vector2(312, 736)
+position = Vector2(312, 504)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
@@ -261,373 +270,3233 @@ position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy18" type="StaticBody2D" parent="enemies" unique_id=1291842693]
-position = Vector2(344, 736)
+[node name="Enemy18" type="StaticBody2D" parent="enemies" unique_id=1935055699]
+position = Vector2(344, 504)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy18" unique_id=126306387]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy18" unique_id=1459424160]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy18" unique_id=136667844]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy18" unique_id=538946440]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy18/Area2D" unique_id=2146228402]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy18/Area2D" unique_id=712733285]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy18" unique_id=800169041]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy18" unique_id=1780754381]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy19" type="StaticBody2D" parent="enemies" unique_id=217489333]
-position = Vector2(376, 736)
+[node name="Enemy19" type="StaticBody2D" parent="enemies" unique_id=889525345]
+position = Vector2(376, 504)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy19" unique_id=278764050]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy19" unique_id=1863240246]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy19" unique_id=2083929851]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy19" unique_id=66270996]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy19/Area2D" unique_id=1253913526]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy19/Area2D" unique_id=1775503869]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy19" unique_id=1420457078]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy19" unique_id=2091403698]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy20" type="StaticBody2D" parent="enemies" unique_id=2059460403]
-position = Vector2(408, 736)
+[node name="Enemy20" type="StaticBody2D" parent="enemies" unique_id=1994020584]
+position = Vector2(408, 504)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy20" unique_id=1133367840]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy20" unique_id=312395685]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy20" unique_id=288856203]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy20" unique_id=1904220224]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy20/Area2D" unique_id=1344559774]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy20/Area2D" unique_id=2125560752]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy20" unique_id=1623625499]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy20" unique_id=836196311]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy21" type="StaticBody2D" parent="enemies" unique_id=949064108]
-position = Vector2(440, 736)
+[node name="Enemy21" type="StaticBody2D" parent="enemies" unique_id=1460014351]
+position = Vector2(440, 504)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy21" unique_id=774485598]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy21" unique_id=1088321278]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy21" unique_id=1770600731]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy21" unique_id=2109099882]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy21/Area2D" unique_id=1114115120]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy21/Area2D" unique_id=1366327328]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy21" unique_id=2127424192]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy21" unique_id=386864782]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy22" type="StaticBody2D" parent="enemies" unique_id=1745144333]
-position = Vector2(472, 736)
+[node name="Enemy22" type="StaticBody2D" parent="enemies" unique_id=1392218611]
+position = Vector2(472, 504)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy22" unique_id=2123481289]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy22" unique_id=594172996]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy22" unique_id=1049693130]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy22" unique_id=1813838374]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy22/Area2D" unique_id=1798650689]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy22/Area2D" unique_id=870972500]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy22" unique_id=1637879017]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy22" unique_id=1479925146]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy23" type="StaticBody2D" parent="enemies" unique_id=1823252247]
-position = Vector2(504, 736)
+[node name="Enemy23" type="StaticBody2D" parent="enemies" unique_id=1565839504]
+position = Vector2(792, 504)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy23" unique_id=2080134027]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy23" unique_id=54525375]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy23" unique_id=1471665778]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy23" unique_id=273695032]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy23/Area2D" unique_id=267553168]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy23/Area2D" unique_id=841068195]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy23" unique_id=958473628]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy23" unique_id=1755962134]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy24" type="StaticBody2D" parent="enemies" unique_id=1810653083]
-position = Vector2(536, 736)
+[node name="Enemy24" type="StaticBody2D" parent="enemies" unique_id=193480414]
+position = Vector2(824, 504)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy24" unique_id=836542763]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy24" unique_id=1495426895]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy24" unique_id=1818647453]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy24" unique_id=1073904388]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy24/Area2D" unique_id=2122498834]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy24/Area2D" unique_id=1337662404]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy24" unique_id=1331723805]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy24" unique_id=979096918]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy25" type="StaticBody2D" parent="enemies" unique_id=1498313194]
-position = Vector2(568, 736)
+[node name="Enemy25" type="StaticBody2D" parent="enemies" unique_id=688266263]
+position = Vector2(856, 504)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy25" unique_id=1186745604]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy25" unique_id=381426026]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy25" unique_id=1472200249]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy25" unique_id=373797322]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy25/Area2D" unique_id=990637343]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy25/Area2D" unique_id=221571804]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy25" unique_id=1019931014]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy25" unique_id=221250573]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy26" type="StaticBody2D" parent="enemies" unique_id=2039518549]
-position = Vector2(600, 736)
+[node name="Enemy26" type="StaticBody2D" parent="enemies" unique_id=708682583]
+position = Vector2(888, 504)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy26" unique_id=1846606468]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy26" unique_id=1188492393]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy26" unique_id=2025398586]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy26" unique_id=2065961309]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy26/Area2D" unique_id=84124911]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy26/Area2D" unique_id=1162738844]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy26" unique_id=140279820]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy26" unique_id=215523799]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy27" type="StaticBody2D" parent="enemies" unique_id=1285073571]
-position = Vector2(632, 736)
+[node name="Enemy27" type="StaticBody2D" parent="enemies" unique_id=2059407614]
+position = Vector2(920, 504)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy27" unique_id=2146233065]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy27" unique_id=836181481]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy27" unique_id=1314604661]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy27" unique_id=1502874327]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy27/Area2D" unique_id=875201040]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy27/Area2D" unique_id=409545359]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy27" unique_id=869601189]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy27" unique_id=1539836437]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy28" type="StaticBody2D" parent="enemies" unique_id=1009353860]
-position = Vector2(664, 736)
+[node name="Enemy28" type="StaticBody2D" parent="enemies" unique_id=1162909334]
+position = Vector2(952, 504)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy28" unique_id=332308827]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy28" unique_id=356507465]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy28" unique_id=826342643]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy28" unique_id=41664737]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy28/Area2D" unique_id=449069839]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy28/Area2D" unique_id=1655625900]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy28" unique_id=59782894]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy28" unique_id=947261688]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy29" type="StaticBody2D" parent="enemies" unique_id=1854505876]
-position = Vector2(696, 736)
+[node name="Enemy65" type="StaticBody2D" parent="enemies" unique_id=99554669]
+position = Vector2(312, 264)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy29" unique_id=501453538]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy65" unique_id=1618339481]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy29" unique_id=105882251]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy65" unique_id=918552608]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy29/Area2D" unique_id=1062279756]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy65/Area2D" unique_id=1809874897]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy29" unique_id=932948008]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy65" unique_id=1914256389]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy30" type="StaticBody2D" parent="enemies" unique_id=1626868695]
-position = Vector2(728, 736)
+[node name="Enemy66" type="StaticBody2D" parent="enemies" unique_id=905306971]
+position = Vector2(344, 264)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy30" unique_id=1109521075]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy66" unique_id=1771088360]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy30" unique_id=682016261]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy66" unique_id=1556267684]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy30/Area2D" unique_id=1193787795]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy66/Area2D" unique_id=1669669524]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy30" unique_id=1346557993]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy66" unique_id=1469085817]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy31" type="StaticBody2D" parent="enemies" unique_id=233920018]
-position = Vector2(760, 736)
+[node name="Enemy67" type="StaticBody2D" parent="enemies" unique_id=1506251945]
+position = Vector2(376, 264)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy31" unique_id=1685538553]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy67" unique_id=366372372]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy31" unique_id=1671521496]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy67" unique_id=1951739419]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy31/Area2D" unique_id=1488813328]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy67/Area2D" unique_id=1302728357]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy31" unique_id=681858512]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy67" unique_id=183370958]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy32" type="StaticBody2D" parent="enemies" unique_id=1800726011]
-position = Vector2(792, 736)
+[node name="Enemy68" type="StaticBody2D" parent="enemies" unique_id=2079021063]
+position = Vector2(408, 264)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy32" unique_id=1954649310]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy68" unique_id=270761995]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy32" unique_id=746065080]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy68" unique_id=100951880]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy32/Area2D" unique_id=2100609166]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy68/Area2D" unique_id=1619456351]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy32" unique_id=544525107]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy68" unique_id=664000107]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy33" type="StaticBody2D" parent="enemies" unique_id=1160813782]
-position = Vector2(824, 736)
+[node name="Enemy69" type="StaticBody2D" parent="enemies" unique_id=167603754]
+position = Vector2(440, 264)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy33" unique_id=1605450367]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy69" unique_id=1360650207]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy33" unique_id=1492959641]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy69" unique_id=722119301]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy33/Area2D" unique_id=1899292155]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy69/Area2D" unique_id=918349135]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy33" unique_id=1431363303]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy69" unique_id=300244477]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy34" type="StaticBody2D" parent="enemies" unique_id=1646519558]
-position = Vector2(856, 736)
+[node name="Enemy70" type="StaticBody2D" parent="enemies" unique_id=983658023]
+position = Vector2(472, 264)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy34" unique_id=1443610049]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy70" unique_id=851952133]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy34" unique_id=1653677785]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy70" unique_id=318349013]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy34/Area2D" unique_id=1612107360]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy70/Area2D" unique_id=838848350]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy34" unique_id=1521588959]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy70" unique_id=1466404659]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy35" type="StaticBody2D" parent="enemies" unique_id=1853027927]
-position = Vector2(888, 736)
+[node name="Enemy71" type="StaticBody2D" parent="enemies" unique_id=577480781]
+position = Vector2(792, 264)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy35" unique_id=1885574398]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy71" unique_id=228621645]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy35" unique_id=1004785793]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy71" unique_id=1198429518]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy35/Area2D" unique_id=389650003]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy71/Area2D" unique_id=839608125]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy35" unique_id=2014226503]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy71" unique_id=1783436848]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy36" type="StaticBody2D" parent="enemies" unique_id=2082208622]
-position = Vector2(920, 736)
+[node name="Enemy72" type="StaticBody2D" parent="enemies" unique_id=1313084627]
+position = Vector2(824, 264)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy36" unique_id=1390559895]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy72" unique_id=2049538025]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy36" unique_id=325628972]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy72" unique_id=581068167]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy36/Area2D" unique_id=1307871117]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy72/Area2D" unique_id=758005934]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy36" unique_id=236158226]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy72" unique_id=1235821485]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
-[node name="Enemy37" type="StaticBody2D" parent="enemies" unique_id=964128937]
-position = Vector2(952, 736)
+[node name="Enemy73" type="StaticBody2D" parent="enemies" unique_id=2138693622]
+position = Vector2(856, 264)
 script = ExtResource("6_4ew63")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy37" unique_id=822172302]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy73" unique_id=188878151]
 shape = SubResource("RectangleShape2D_dv2v8")
 
-[node name="Area2D" type="Area2D" parent="enemies/Enemy37" unique_id=1702185045]
+[node name="Area2D" type="Area2D" parent="enemies/Enemy73" unique_id=719992791]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy37/Area2D" unique_id=807369001]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy73/Area2D" unique_id=260000589]
 shape = SubResource("CircleShape2D_jen0v")
 
-[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy37" unique_id=1866547824]
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy73" unique_id=1081673913]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy74" type="StaticBody2D" parent="enemies" unique_id=1725289423]
+position = Vector2(888, 264)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy74" unique_id=1090529205]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy74" unique_id=1906225537]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy74/Area2D" unique_id=1896197350]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy74" unique_id=528264978]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy75" type="StaticBody2D" parent="enemies" unique_id=922364096]
+position = Vector2(920, 264)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy75" unique_id=1378577141]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy75" unique_id=419031911]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy75/Area2D" unique_id=1387675176]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy75" unique_id=1969421309]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy76" type="StaticBody2D" parent="enemies" unique_id=1806426839]
+position = Vector2(952, 264)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy76" unique_id=396544378]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy76" unique_id=851753809]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy76/Area2D" unique_id=285900198]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy76" unique_id=2005870963]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy29" type="StaticBody2D" parent="enemies" unique_id=1436561086]
+position = Vector2(312, 744)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy29" unique_id=538970771]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy29" unique_id=282932037]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy29/Area2D" unique_id=1167662436]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy29" unique_id=1979373859]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy30" type="StaticBody2D" parent="enemies" unique_id=1280053599]
+position = Vector2(344, 744)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy30" unique_id=1755298961]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy30" unique_id=1795448406]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy30/Area2D" unique_id=838437629]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy30" unique_id=1908016848]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy31" type="StaticBody2D" parent="enemies" unique_id=591599052]
+position = Vector2(376, 744)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy31" unique_id=141419397]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy31" unique_id=1489882685]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy31/Area2D" unique_id=2142841534]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy31" unique_id=1374603643]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy32" type="StaticBody2D" parent="enemies" unique_id=919572395]
+position = Vector2(408, 744)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy32" unique_id=1400926654]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy32" unique_id=799554779]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy32/Area2D" unique_id=1468299485]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy32" unique_id=121078914]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy33" type="StaticBody2D" parent="enemies" unique_id=1092516460]
+position = Vector2(440, 744)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy33" unique_id=778581274]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy33" unique_id=1748400770]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy33/Area2D" unique_id=1350396142]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy33" unique_id=449975548]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy34" type="StaticBody2D" parent="enemies" unique_id=1226112997]
+position = Vector2(472, 744)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy34" unique_id=1170500458]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy34" unique_id=1233282934]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy34/Area2D" unique_id=1347413471]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy34" unique_id=472589014]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy35" type="StaticBody2D" parent="enemies" unique_id=1176198972]
+position = Vector2(792, 744)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy35" unique_id=2046719408]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy35" unique_id=1934144806]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy35/Area2D" unique_id=264010057]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy35" unique_id=1188572801]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy36" type="StaticBody2D" parent="enemies" unique_id=643203208]
+position = Vector2(824, 744)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy36" unique_id=2118169418]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy36" unique_id=1512945358]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy36/Area2D" unique_id=424070540]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy36" unique_id=370655156]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy37" type="StaticBody2D" parent="enemies" unique_id=389931135]
+position = Vector2(856, 744)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy37" unique_id=519141098]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy37" unique_id=1788905941]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy37/Area2D" unique_id=44288792]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy37" unique_id=1161385198]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy38" type="StaticBody2D" parent="enemies" unique_id=1132037206]
+position = Vector2(888, 744)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy38" unique_id=1160005628]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy38" unique_id=145970337]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy38/Area2D" unique_id=1188313398]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy38" unique_id=1831029977]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy39" type="StaticBody2D" parent="enemies" unique_id=2087237374]
+position = Vector2(920, 744)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy39" unique_id=2065092207]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy39" unique_id=1292438134]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy39/Area2D" unique_id=2072026187]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy39" unique_id=428451166]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy40" type="StaticBody2D" parent="enemies" unique_id=1124322029]
+position = Vector2(952, 744)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy40" unique_id=1401931998]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy40" unique_id=777418302]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy40/Area2D" unique_id=864966844]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy40" unique_id=413194016]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy41" type="StaticBody2D" parent="enemies" unique_id=235326804]
+position = Vector2(312, 1064)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy41" unique_id=1923194292]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy41" unique_id=162021496]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy41/Area2D" unique_id=1606414040]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy41" unique_id=1972855350]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy42" type="StaticBody2D" parent="enemies" unique_id=1268900884]
+position = Vector2(344, 1064)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy42" unique_id=606839469]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy42" unique_id=1208775739]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy42/Area2D" unique_id=1778285546]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy42" unique_id=2082897726]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy43" type="StaticBody2D" parent="enemies" unique_id=1026511353]
+position = Vector2(376, 1064)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy43" unique_id=516528420]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy43" unique_id=1668602458]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy43/Area2D" unique_id=433263141]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy43" unique_id=1997736874]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy44" type="StaticBody2D" parent="enemies" unique_id=388715602]
+position = Vector2(408, 1064)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy44" unique_id=1305725328]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy44" unique_id=811027665]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy44/Area2D" unique_id=1126704510]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy44" unique_id=1592759045]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy45" type="StaticBody2D" parent="enemies" unique_id=1048141349]
+position = Vector2(440, 1064)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy45" unique_id=1566253923]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy45" unique_id=754518101]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy45/Area2D" unique_id=1891190259]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy45" unique_id=118865628]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy46" type="StaticBody2D" parent="enemies" unique_id=496380567]
+position = Vector2(472, 1064)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy46" unique_id=1416050492]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy46" unique_id=1855545421]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy46/Area2D" unique_id=2114849226]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy46" unique_id=2018576029]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy47" type="StaticBody2D" parent="enemies" unique_id=1931093352]
+position = Vector2(792, 1064)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy47" unique_id=1105747182]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy47" unique_id=705888975]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy47/Area2D" unique_id=571024906]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy47" unique_id=631668596]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy48" type="StaticBody2D" parent="enemies" unique_id=1721002330]
+position = Vector2(824, 1064)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy48" unique_id=1015161550]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy48" unique_id=1155909367]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy48/Area2D" unique_id=1905393419]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy48" unique_id=266855217]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy49" type="StaticBody2D" parent="enemies" unique_id=1650170654]
+position = Vector2(856, 1064)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy49" unique_id=320899081]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy49" unique_id=877069528]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy49/Area2D" unique_id=1915837653]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy49" unique_id=1206931466]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy50" type="StaticBody2D" parent="enemies" unique_id=876161519]
+position = Vector2(888, 1064)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy50" unique_id=152958598]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy50" unique_id=398845389]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy50/Area2D" unique_id=1624997411]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy50" unique_id=1317093419]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy51" type="StaticBody2D" parent="enemies" unique_id=967396613]
+position = Vector2(920, 1064)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy51" unique_id=2137494282]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy51" unique_id=1209434812]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy51/Area2D" unique_id=5467233]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy51" unique_id=1466914095]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy52" type="StaticBody2D" parent="enemies" unique_id=723820294]
+position = Vector2(952, 1064)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy52" unique_id=439733083]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy52" unique_id=1108075515]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy52/Area2D" unique_id=1404431209]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy52" unique_id=238554148]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy53" type="StaticBody2D" parent="enemies" unique_id=1321620261]
+position = Vector2(312, 1384)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy53" unique_id=2062517672]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy53" unique_id=1996650833]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy53/Area2D" unique_id=1408230811]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy53" unique_id=978689790]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy54" type="StaticBody2D" parent="enemies" unique_id=68781933]
+position = Vector2(344, 1384)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy54" unique_id=365244265]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy54" unique_id=217169021]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy54/Area2D" unique_id=1498978994]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy54" unique_id=1062210589]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy55" type="StaticBody2D" parent="enemies" unique_id=1198535494]
+position = Vector2(376, 1384)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy55" unique_id=2133304497]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy55" unique_id=1903763832]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy55/Area2D" unique_id=1335358515]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy55" unique_id=296807927]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy56" type="StaticBody2D" parent="enemies" unique_id=1924231049]
+position = Vector2(408, 1384)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy56" unique_id=103151086]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy56" unique_id=1748370790]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy56/Area2D" unique_id=602074918]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy56" unique_id=75965518]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy57" type="StaticBody2D" parent="enemies" unique_id=1742957657]
+position = Vector2(440, 1384)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy57" unique_id=574070165]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy57" unique_id=647120478]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy57/Area2D" unique_id=219279073]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy57" unique_id=322767719]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy58" type="StaticBody2D" parent="enemies" unique_id=373735082]
+position = Vector2(472, 1384)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy58" unique_id=340288965]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy58" unique_id=1852573043]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy58/Area2D" unique_id=897498737]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy58" unique_id=1666095291]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy59" type="StaticBody2D" parent="enemies" unique_id=1754263660]
+position = Vector2(792, 1384)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy59" unique_id=554400250]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy59" unique_id=879565477]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy59/Area2D" unique_id=822201806]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy59" unique_id=289637922]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy60" type="StaticBody2D" parent="enemies" unique_id=830099824]
+position = Vector2(824, 1384)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy60" unique_id=722121459]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy60" unique_id=1379658828]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy60/Area2D" unique_id=1112628611]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy60" unique_id=854663536]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy61" type="StaticBody2D" parent="enemies" unique_id=1467420365]
+position = Vector2(856, 1384)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy61" unique_id=1654204993]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy61" unique_id=2027604044]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy61/Area2D" unique_id=989730443]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy61" unique_id=465923207]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy62" type="StaticBody2D" parent="enemies" unique_id=573610508]
+position = Vector2(888, 1384)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy62" unique_id=242783196]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy62" unique_id=8996173]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy62/Area2D" unique_id=813669067]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy62" unique_id=1054326429]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy63" type="StaticBody2D" parent="enemies" unique_id=1097026065]
+position = Vector2(920, 1384)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy63" unique_id=1644121845]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy63" unique_id=924552876]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy63/Area2D" unique_id=459541821]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy63" unique_id=1838896200]
+position = Vector2(-3.8146973e-06, 1.5258789e-05)
+scale = Vector2(4.000001, 3.9999962)
+sprite_frames = SubResource("SpriteFrames_5nhn4")
+
+[node name="Enemy64" type="StaticBody2D" parent="enemies" unique_id=99675916]
+position = Vector2(952, 1384)
+script = ExtResource("6_4ew63")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy64" unique_id=293907798]
+shape = SubResource("RectangleShape2D_dv2v8")
+
+[node name="Area2D" type="Area2D" parent="enemies/Enemy64" unique_id=1099728871]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy64/Area2D" unique_id=154503897]
+shape = SubResource("CircleShape2D_jen0v")
+
+[node name="EVIL" type="AnimatedSprite2D" parent="enemies/Enemy64" unique_id=996960125]
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=1122627636]
-offset_left = 312.0
-offset_top = 112.0
-offset_right = 944.0
-offset_bottom = 368.0
+offset_left = -536.0
+offset_top = 384.0
+offset_right = 96.0
+offset_bottom = 640.0
 text = "LEVEL UNDER CONSTRUCTION"
 editable = false
+
+[node name="Food" type="Node2D" parent="." unique_id=1950573854]
+
+[node name="foods313" parent="Food" unique_id=1392180074 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 144)
+
+[node name="foods314" parent="Food" unique_id=1827863364 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 144)
+
+[node name="foods315" parent="Food" unique_id=838052315 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 144)
+
+[node name="foods316" parent="Food" unique_id=668225650 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 144)
+
+[node name="foods317" parent="Food" unique_id=922768206 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 144)
+
+[node name="foods318" parent="Food" unique_id=1262567476 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 144)
+
+[node name="foods319" parent="Food" unique_id=1283484964 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 144)
+
+[node name="foods320" parent="Food" unique_id=1747270239 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 144)
+
+[node name="foods321" parent="Food" unique_id=1200694245 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 144)
+
+[node name="foods322" parent="Food" unique_id=2011560863 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 144)
+
+[node name="foods323" parent="Food" unique_id=1673037806 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 144)
+
+[node name="foods324" parent="Food" unique_id=504121863 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 144)
+
+[node name="foods325" parent="Food" unique_id=1535576047 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 144)
+
+[node name="foods326" parent="Food" unique_id=340540659 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 144)
+
+[node name="foods327" parent="Food" unique_id=1536897283 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 144)
+
+[node name="foods328" parent="Food" unique_id=1447277584 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 144)
+
+[node name="foods329" parent="Food" unique_id=818283203 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 144)
+
+[node name="foods704" parent="Food" unique_id=1435931124 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 184)
+
+[node name="foods705" parent="Food" unique_id=1613726695 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 184)
+
+[node name="foods706" parent="Food" unique_id=1097410652 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 184)
+
+[node name="foods707" parent="Food" unique_id=1905723067 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 184)
+
+[node name="foods708" parent="Food" unique_id=557024683 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 184)
+
+[node name="foods709" parent="Food" unique_id=1472522946 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 184)
+
+[node name="foods710" parent="Food" unique_id=198808492 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 184)
+
+[node name="foods711" parent="Food" unique_id=296006414 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 184)
+
+[node name="foods712" parent="Food" unique_id=1806376946 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 184)
+
+[node name="foods713" parent="Food" unique_id=48279576 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 184)
+
+[node name="foods714" parent="Food" unique_id=2117661702 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 184)
+
+[node name="foods715" parent="Food" unique_id=484062064 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 184)
+
+[node name="foods716" parent="Food" unique_id=1008271381 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 184)
+
+[node name="foods717" parent="Food" unique_id=1565624162 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 184)
+
+[node name="foods718" parent="Food" unique_id=1651176459 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 184)
+
+[node name="foods719" parent="Food" unique_id=2064472553 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 184)
+
+[node name="foods720" parent="Food" unique_id=1196879360 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 184)
+
+[node name="foods721" parent="Food" unique_id=102667578 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 344)
+
+[node name="foods722" parent="Food" unique_id=1065029367 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 344)
+
+[node name="foods723" parent="Food" unique_id=1870867859 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 344)
+
+[node name="foods724" parent="Food" unique_id=1679174311 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 344)
+
+[node name="foods725" parent="Food" unique_id=2020352290 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 344)
+
+[node name="foods726" parent="Food" unique_id=340299353 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 344)
+
+[node name="foods727" parent="Food" unique_id=1814593061 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 344)
+
+[node name="foods728" parent="Food" unique_id=923444630 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 344)
+
+[node name="foods729" parent="Food" unique_id=1500940728 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 344)
+
+[node name="foods730" parent="Food" unique_id=1367602552 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 344)
+
+[node name="foods731" parent="Food" unique_id=969534057 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 344)
+
+[node name="foods732" parent="Food" unique_id=459053971 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 344)
+
+[node name="foods733" parent="Food" unique_id=1609471398 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 344)
+
+[node name="foods734" parent="Food" unique_id=1692762727 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 344)
+
+[node name="foods735" parent="Food" unique_id=1415570698 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 344)
+
+[node name="foods736" parent="Food" unique_id=379675049 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 344)
+
+[node name="foods737" parent="Food" unique_id=627102443 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 344)
+
+[node name="foods738" parent="Food" unique_id=2041690131 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 424)
+
+[node name="foods739" parent="Food" unique_id=607079738 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 424)
+
+[node name="foods740" parent="Food" unique_id=1461587021 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 424)
+
+[node name="foods741" parent="Food" unique_id=1817848680 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 424)
+
+[node name="foods742" parent="Food" unique_id=430926135 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 424)
+
+[node name="foods743" parent="Food" unique_id=1853536648 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 424)
+
+[node name="foods744" parent="Food" unique_id=235925287 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 424)
+
+[node name="foods745" parent="Food" unique_id=97802864 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 424)
+
+[node name="foods746" parent="Food" unique_id=163908467 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 424)
+
+[node name="foods747" parent="Food" unique_id=551025117 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 424)
+
+[node name="foods748" parent="Food" unique_id=285660341 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 424)
+
+[node name="foods749" parent="Food" unique_id=623843310 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 424)
+
+[node name="foods750" parent="Food" unique_id=602995789 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 424)
+
+[node name="foods751" parent="Food" unique_id=289982971 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 424)
+
+[node name="foods752" parent="Food" unique_id=1119908498 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 424)
+
+[node name="foods753" parent="Food" unique_id=1301017104 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 424)
+
+[node name="foods754" parent="Food" unique_id=792299097 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 424)
+
+[node name="foods755" parent="Food" unique_id=2045676250 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 584)
+
+[node name="foods756" parent="Food" unique_id=57507963 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 584)
+
+[node name="foods757" parent="Food" unique_id=19097359 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 584)
+
+[node name="foods758" parent="Food" unique_id=1497448351 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 584)
+
+[node name="foods759" parent="Food" unique_id=320060768 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 584)
+
+[node name="foods760" parent="Food" unique_id=1938968715 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 584)
+
+[node name="foods761" parent="Food" unique_id=209514062 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 584)
+
+[node name="foods762" parent="Food" unique_id=735777722 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 584)
+
+[node name="foods763" parent="Food" unique_id=911164440 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 584)
+
+[node name="foods764" parent="Food" unique_id=1688300050 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 584)
+
+[node name="foods765" parent="Food" unique_id=1745297694 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 584)
+
+[node name="foods766" parent="Food" unique_id=1111474653 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 584)
+
+[node name="foods767" parent="Food" unique_id=38721044 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 584)
+
+[node name="foods768" parent="Food" unique_id=451813610 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 584)
+
+[node name="foods769" parent="Food" unique_id=74286837 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 584)
+
+[node name="foods770" parent="Food" unique_id=123886604 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 584)
+
+[node name="foods771" parent="Food" unique_id=189245414 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 584)
+
+[node name="foods772" parent="Food" unique_id=967754316 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 664)
+
+[node name="foods773" parent="Food" unique_id=1449592833 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 664)
+
+[node name="foods774" parent="Food" unique_id=1393786284 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 664)
+
+[node name="foods775" parent="Food" unique_id=615322420 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 664)
+
+[node name="foods776" parent="Food" unique_id=702016039 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 664)
+
+[node name="foods777" parent="Food" unique_id=744447702 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 664)
+
+[node name="foods778" parent="Food" unique_id=1395548103 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 664)
+
+[node name="foods779" parent="Food" unique_id=266859180 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 664)
+
+[node name="foods780" parent="Food" unique_id=227110782 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 664)
+
+[node name="foods781" parent="Food" unique_id=1253456210 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 664)
+
+[node name="foods782" parent="Food" unique_id=251098999 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 664)
+
+[node name="foods783" parent="Food" unique_id=1647220003 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 664)
+
+[node name="foods784" parent="Food" unique_id=818449113 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 664)
+
+[node name="foods785" parent="Food" unique_id=2109058281 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 664)
+
+[node name="foods786" parent="Food" unique_id=1260862657 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 664)
+
+[node name="foods787" parent="Food" unique_id=1548839195 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 664)
+
+[node name="foods788" parent="Food" unique_id=1406335937 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 664)
+
+[node name="foods789" parent="Food" unique_id=1874903276 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 824)
+
+[node name="foods790" parent="Food" unique_id=1512472931 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 824)
+
+[node name="foods791" parent="Food" unique_id=2006524655 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 824)
+
+[node name="foods792" parent="Food" unique_id=1350523200 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 824)
+
+[node name="foods793" parent="Food" unique_id=35941403 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 824)
+
+[node name="foods794" parent="Food" unique_id=1900470123 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 824)
+
+[node name="foods795" parent="Food" unique_id=1670659715 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 824)
+
+[node name="foods796" parent="Food" unique_id=406420706 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 824)
+
+[node name="foods797" parent="Food" unique_id=324487124 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 824)
+
+[node name="foods798" parent="Food" unique_id=1826949436 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 824)
+
+[node name="foods799" parent="Food" unique_id=550177567 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 824)
+
+[node name="foods800" parent="Food" unique_id=50292644 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 824)
+
+[node name="foods801" parent="Food" unique_id=45971529 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 824)
+
+[node name="foods802" parent="Food" unique_id=1072230319 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 824)
+
+[node name="foods803" parent="Food" unique_id=1185869012 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 824)
+
+[node name="foods804" parent="Food" unique_id=1341098484 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 824)
+
+[node name="foods805" parent="Food" unique_id=1095638769 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 824)
+
+[node name="foods806" parent="Food" unique_id=849788819 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 904)
+
+[node name="foods807" parent="Food" unique_id=1767301957 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 904)
+
+[node name="foods808" parent="Food" unique_id=1777415832 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 904)
+
+[node name="foods809" parent="Food" unique_id=684816775 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 904)
+
+[node name="foods810" parent="Food" unique_id=1096615726 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 904)
+
+[node name="foods811" parent="Food" unique_id=178859428 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 904)
+
+[node name="foods812" parent="Food" unique_id=1708301975 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 904)
+
+[node name="foods813" parent="Food" unique_id=63902747 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 904)
+
+[node name="foods814" parent="Food" unique_id=778641339 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 904)
+
+[node name="foods815" parent="Food" unique_id=521799929 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 904)
+
+[node name="foods816" parent="Food" unique_id=933396338 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 904)
+
+[node name="foods817" parent="Food" unique_id=884264479 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 904)
+
+[node name="foods818" parent="Food" unique_id=135407526 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 904)
+
+[node name="foods819" parent="Food" unique_id=1817877570 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 904)
+
+[node name="foods820" parent="Food" unique_id=108780827 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 904)
+
+[node name="foods821" parent="Food" unique_id=925523302 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 904)
+
+[node name="foods822" parent="Food" unique_id=1710830520 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 904)
+
+[node name="foods823" parent="Food" unique_id=915152088 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 984)
+
+[node name="foods824" parent="Food" unique_id=696765870 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 984)
+
+[node name="foods825" parent="Food" unique_id=1789240302 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 984)
+
+[node name="foods826" parent="Food" unique_id=82194837 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 984)
+
+[node name="foods827" parent="Food" unique_id=523130824 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 984)
+
+[node name="foods828" parent="Food" unique_id=1802357792 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 984)
+
+[node name="foods829" parent="Food" unique_id=2004013694 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 984)
+
+[node name="foods830" parent="Food" unique_id=172480932 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 984)
+
+[node name="foods831" parent="Food" unique_id=770447332 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 984)
+
+[node name="foods832" parent="Food" unique_id=335158318 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 984)
+
+[node name="foods833" parent="Food" unique_id=233600439 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 984)
+
+[node name="foods834" parent="Food" unique_id=496679869 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 984)
+
+[node name="foods835" parent="Food" unique_id=604314764 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 984)
+
+[node name="foods836" parent="Food" unique_id=1442919231 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 984)
+
+[node name="foods837" parent="Food" unique_id=319944934 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 984)
+
+[node name="foods838" parent="Food" unique_id=260926005 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 984)
+
+[node name="foods839" parent="Food" unique_id=224714638 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 984)
+
+[node name="foods840" parent="Food" unique_id=977658087 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 1144)
+
+[node name="foods841" parent="Food" unique_id=444766502 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 1144)
+
+[node name="foods842" parent="Food" unique_id=17172760 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 1144)
+
+[node name="foods843" parent="Food" unique_id=580966160 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 1144)
+
+[node name="foods844" parent="Food" unique_id=1228114436 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 1144)
+
+[node name="foods845" parent="Food" unique_id=457175600 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 1144)
+
+[node name="foods846" parent="Food" unique_id=953290388 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 1144)
+
+[node name="foods847" parent="Food" unique_id=291860504 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 1144)
+
+[node name="foods848" parent="Food" unique_id=760070108 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 1144)
+
+[node name="foods849" parent="Food" unique_id=1805324895 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 1144)
+
+[node name="foods850" parent="Food" unique_id=869993086 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 1144)
+
+[node name="foods851" parent="Food" unique_id=35652607 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 1144)
+
+[node name="foods852" parent="Food" unique_id=2007376592 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 1144)
+
+[node name="foods853" parent="Food" unique_id=1495443271 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 1144)
+
+[node name="foods854" parent="Food" unique_id=149173122 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 1144)
+
+[node name="foods855" parent="Food" unique_id=129201158 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 1144)
+
+[node name="foods856" parent="Food" unique_id=785523804 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 1144)
+
+[node name="foods857" parent="Food" unique_id=1420887742 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 1224)
+
+[node name="foods858" parent="Food" unique_id=2011860988 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 1224)
+
+[node name="foods859" parent="Food" unique_id=1239213451 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 1224)
+
+[node name="foods860" parent="Food" unique_id=318235357 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 1224)
+
+[node name="foods861" parent="Food" unique_id=2069565208 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 1224)
+
+[node name="foods862" parent="Food" unique_id=1373174461 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 1224)
+
+[node name="foods863" parent="Food" unique_id=1925567535 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 1224)
+
+[node name="foods864" parent="Food" unique_id=122263078 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 1224)
+
+[node name="foods865" parent="Food" unique_id=106644892 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 1224)
+
+[node name="foods866" parent="Food" unique_id=381846483 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 1224)
+
+[node name="foods867" parent="Food" unique_id=278334777 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 1224)
+
+[node name="foods868" parent="Food" unique_id=553654948 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 1224)
+
+[node name="foods869" parent="Food" unique_id=1348538632 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 1224)
+
+[node name="foods870" parent="Food" unique_id=2121920710 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 1224)
+
+[node name="foods871" parent="Food" unique_id=41994043 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 1224)
+
+[node name="foods872" parent="Food" unique_id=81272949 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 1224)
+
+[node name="foods873" parent="Food" unique_id=1126783528 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 1224)
+
+[node name="foods874" parent="Food" unique_id=1712908890 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 1304)
+
+[node name="foods875" parent="Food" unique_id=1039799125 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 1304)
+
+[node name="foods876" parent="Food" unique_id=448848633 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 1304)
+
+[node name="foods877" parent="Food" unique_id=271253247 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 1304)
+
+[node name="foods878" parent="Food" unique_id=1224608344 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 1304)
+
+[node name="foods879" parent="Food" unique_id=220418830 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 1304)
+
+[node name="foods880" parent="Food" unique_id=861352917 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 1304)
+
+[node name="foods881" parent="Food" unique_id=1092724345 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 1304)
+
+[node name="foods882" parent="Food" unique_id=272910098 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 1304)
+
+[node name="foods883" parent="Food" unique_id=1546430969 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 1304)
+
+[node name="foods884" parent="Food" unique_id=818359248 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 1304)
+
+[node name="foods885" parent="Food" unique_id=1876619763 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 1304)
+
+[node name="foods886" parent="Food" unique_id=984883429 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 1304)
+
+[node name="foods887" parent="Food" unique_id=2009752058 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 1304)
+
+[node name="foods888" parent="Food" unique_id=1617799667 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 1304)
+
+[node name="foods889" parent="Food" unique_id=292428911 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 1304)
+
+[node name="foods890" parent="Food" unique_id=654196478 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 1304)
+
+[node name="foods330" parent="Food" unique_id=1776858913 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 224)
+
+[node name="foods331" parent="Food" unique_id=1368035773 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 224)
+
+[node name="foods332" parent="Food" unique_id=968057832 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 224)
+
+[node name="foods333" parent="Food" unique_id=601482455 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 224)
+
+[node name="foods334" parent="Food" unique_id=886678433 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 224)
+
+[node name="foods335" parent="Food" unique_id=71716358 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 224)
+
+[node name="foods336" parent="Food" unique_id=1206596218 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 224)
+
+[node name="foods337" parent="Food" unique_id=271824155 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 224)
+
+[node name="foods338" parent="Food" unique_id=1703079815 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 224)
+
+[node name="foods339" parent="Food" unique_id=1503899266 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 224)
+
+[node name="foods340" parent="Food" unique_id=869190892 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 224)
+
+[node name="foods341" parent="Food" unique_id=1921953560 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 224)
+
+[node name="foods342" parent="Food" unique_id=1299970733 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 224)
+
+[node name="foods343" parent="Food" unique_id=1682219327 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 224)
+
+[node name="foods344" parent="Food" unique_id=1702631953 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 224)
+
+[node name="foods345" parent="Food" unique_id=1123640288 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 224)
+
+[node name="foods346" parent="Food" unique_id=815791909 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 224)
+
+[node name="foods347" parent="Food" unique_id=1421172112 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 224)
+
+[node name="foods348" parent="Food" unique_id=82566758 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 224)
+
+[node name="foods349" parent="Food" unique_id=1627491490 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 224)
+
+[node name="foods350" parent="Food" unique_id=1663331539 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 224)
+
+[node name="foods351" parent="Food" unique_id=1119035097 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 224)
+
+[node name="foods352" parent="Food" unique_id=2024853403 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 224)
+
+[node name="foods353" parent="Food" unique_id=1560844048 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 224)
+
+[node name="foods354" parent="Food" unique_id=699538466 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 224)
+
+[node name="foods355" parent="Food" unique_id=1660410129 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 224)
+
+[node name="foods356" parent="Food" unique_id=21322366 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 224)
+
+[node name="foods357" parent="Food" unique_id=1475950508 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 224)
+
+[node name="foods358" parent="Food" unique_id=2100130622 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 224)
+
+[node name="foods359" parent="Food" unique_id=446703047 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 224)
+
+[node name="foods360" parent="Food" unique_id=1764898165 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 224)
+
+[node name="foods361" parent="Food" unique_id=1759648944 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 224)
+
+[node name="foods362" parent="Food" unique_id=828051127 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 224)
+
+[node name="foods363" parent="Food" unique_id=167104249 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 224)
+
+[node name="foods364" parent="Food" unique_id=1953171814 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 304)
+
+[node name="foods365" parent="Food" unique_id=1515901780 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 304)
+
+[node name="foods366" parent="Food" unique_id=73540739 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 304)
+
+[node name="foods367" parent="Food" unique_id=930174831 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 304)
+
+[node name="foods368" parent="Food" unique_id=763285259 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 304)
+
+[node name="foods369" parent="Food" unique_id=2061103173 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 304)
+
+[node name="foods370" parent="Food" unique_id=387347985 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 304)
+
+[node name="foods371" parent="Food" unique_id=2047228912 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 304)
+
+[node name="foods372" parent="Food" unique_id=1590522666 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 304)
+
+[node name="foods373" parent="Food" unique_id=725516730 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 304)
+
+[node name="foods374" parent="Food" unique_id=1552994822 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 304)
+
+[node name="foods375" parent="Food" unique_id=592639528 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 304)
+
+[node name="foods376" parent="Food" unique_id=506456680 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 304)
+
+[node name="foods377" parent="Food" unique_id=89092157 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 304)
+
+[node name="foods378" parent="Food" unique_id=1074918702 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 304)
+
+[node name="foods379" parent="Food" unique_id=1896168457 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 304)
+
+[node name="foods380" parent="Food" unique_id=826217006 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 304)
+
+[node name="foods381" parent="Food" unique_id=2108116225 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 384)
+
+[node name="foods382" parent="Food" unique_id=657025645 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 384)
+
+[node name="foods383" parent="Food" unique_id=1250221004 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 384)
+
+[node name="foods384" parent="Food" unique_id=2087119390 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 384)
+
+[node name="foods385" parent="Food" unique_id=313805195 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 384)
+
+[node name="foods386" parent="Food" unique_id=1790438795 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 384)
+
+[node name="foods387" parent="Food" unique_id=1604581718 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 384)
+
+[node name="foods388" parent="Food" unique_id=22528412 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 384)
+
+[node name="foods389" parent="Food" unique_id=1937280209 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 384)
+
+[node name="foods390" parent="Food" unique_id=1643271106 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 384)
+
+[node name="foods391" parent="Food" unique_id=1528079960 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 384)
+
+[node name="foods392" parent="Food" unique_id=239459419 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 384)
+
+[node name="foods393" parent="Food" unique_id=249594716 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 384)
+
+[node name="foods394" parent="Food" unique_id=1328820418 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 384)
+
+[node name="foods395" parent="Food" unique_id=1075471721 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 384)
+
+[node name="foods396" parent="Food" unique_id=1261993687 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 384)
+
+[node name="foods397" parent="Food" unique_id=1128404240 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 384)
+
+[node name="foods398" parent="Food" unique_id=115533876 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 384)
+
+[node name="foods399" parent="Food" unique_id=1648244060 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 384)
+
+[node name="foods400" parent="Food" unique_id=567256454 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 384)
+
+[node name="foods401" parent="Food" unique_id=291977863 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 384)
+
+[node name="foods402" parent="Food" unique_id=723427787 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 384)
+
+[node name="foods403" parent="Food" unique_id=2064854884 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 384)
+
+[node name="foods404" parent="Food" unique_id=632427494 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 384)
+
+[node name="foods405" parent="Food" unique_id=246663029 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 384)
+
+[node name="foods406" parent="Food" unique_id=1122066704 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 384)
+
+[node name="foods407" parent="Food" unique_id=346218780 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 384)
+
+[node name="foods408" parent="Food" unique_id=2050380331 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 384)
+
+[node name="foods409" parent="Food" unique_id=1276356263 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 384)
+
+[node name="foods410" parent="Food" unique_id=1299104406 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 384)
+
+[node name="foods411" parent="Food" unique_id=1540756682 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 384)
+
+[node name="foods412" parent="Food" unique_id=492069471 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 384)
+
+[node name="foods413" parent="Food" unique_id=1741984215 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 384)
+
+[node name="foods414" parent="Food" unique_id=172552776 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 384)
+
+[node name="foods415" parent="Food" unique_id=985186275 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 464)
+
+[node name="foods416" parent="Food" unique_id=194398631 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 464)
+
+[node name="foods417" parent="Food" unique_id=1514120911 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 464)
+
+[node name="foods418" parent="Food" unique_id=99625596 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 464)
+
+[node name="foods419" parent="Food" unique_id=458733683 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 464)
+
+[node name="foods420" parent="Food" unique_id=2125607523 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 464)
+
+[node name="foods421" parent="Food" unique_id=725306114 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 464)
+
+[node name="foods422" parent="Food" unique_id=783661604 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 464)
+
+[node name="foods423" parent="Food" unique_id=2068742909 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 464)
+
+[node name="foods424" parent="Food" unique_id=388743693 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 464)
+
+[node name="foods425" parent="Food" unique_id=970133627 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 464)
+
+[node name="foods426" parent="Food" unique_id=1839984477 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 464)
+
+[node name="foods427" parent="Food" unique_id=837742562 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 464)
+
+[node name="foods428" parent="Food" unique_id=80683284 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 464)
+
+[node name="foods429" parent="Food" unique_id=1620604899 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 464)
+
+[node name="foods430" parent="Food" unique_id=258642329 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 464)
+
+[node name="foods431" parent="Food" unique_id=626330887 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 464)
+
+[node name="foods432" parent="Food" unique_id=314479108 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 544)
+
+[node name="foods433" parent="Food" unique_id=510142024 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 544)
+
+[node name="foods434" parent="Food" unique_id=728866070 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 544)
+
+[node name="foods435" parent="Food" unique_id=1100126078 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 544)
+
+[node name="foods436" parent="Food" unique_id=1402227648 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 544)
+
+[node name="foods437" parent="Food" unique_id=1848295699 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 544)
+
+[node name="foods438" parent="Food" unique_id=1993791119 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 544)
+
+[node name="foods439" parent="Food" unique_id=680084363 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 544)
+
+[node name="foods440" parent="Food" unique_id=1941927034 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 544)
+
+[node name="foods441" parent="Food" unique_id=807000353 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 544)
+
+[node name="foods442" parent="Food" unique_id=1596167376 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 544)
+
+[node name="foods443" parent="Food" unique_id=980225764 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 544)
+
+[node name="foods444" parent="Food" unique_id=1164114034 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 544)
+
+[node name="foods445" parent="Food" unique_id=901907424 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 544)
+
+[node name="foods446" parent="Food" unique_id=178133846 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 544)
+
+[node name="foods447" parent="Food" unique_id=1043587678 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 544)
+
+[node name="foods448" parent="Food" unique_id=1365447826 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 544)
+
+[node name="foods449" parent="Food" unique_id=819567379 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 544)
+
+[node name="foods450" parent="Food" unique_id=1316602992 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 544)
+
+[node name="foods451" parent="Food" unique_id=1425149929 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 544)
+
+[node name="foods452" parent="Food" unique_id=52934186 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 544)
+
+[node name="foods453" parent="Food" unique_id=1406416271 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 544)
+
+[node name="foods454" parent="Food" unique_id=1810734386 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 544)
+
+[node name="foods455" parent="Food" unique_id=85171256 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 544)
+
+[node name="foods456" parent="Food" unique_id=1756920923 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 544)
+
+[node name="foods457" parent="Food" unique_id=1020265174 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 544)
+
+[node name="foods458" parent="Food" unique_id=1173241213 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 544)
+
+[node name="foods459" parent="Food" unique_id=1695993988 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 544)
+
+[node name="foods460" parent="Food" unique_id=1114352694 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 544)
+
+[node name="foods461" parent="Food" unique_id=1724714593 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 544)
+
+[node name="foods462" parent="Food" unique_id=1373714540 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 544)
+
+[node name="foods463" parent="Food" unique_id=1430348082 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 544)
+
+[node name="foods464" parent="Food" unique_id=1654905735 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 544)
+
+[node name="foods465" parent="Food" unique_id=159856797 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 544)
+
+[node name="foods466" parent="Food" unique_id=1784783800 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 624)
+
+[node name="foods467" parent="Food" unique_id=603966568 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 624)
+
+[node name="foods468" parent="Food" unique_id=1488292772 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 624)
+
+[node name="foods469" parent="Food" unique_id=558964385 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 624)
+
+[node name="foods470" parent="Food" unique_id=11582855 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 624)
+
+[node name="foods471" parent="Food" unique_id=1721136766 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 624)
+
+[node name="foods472" parent="Food" unique_id=499181002 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 624)
+
+[node name="foods473" parent="Food" unique_id=1356893763 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 624)
+
+[node name="foods474" parent="Food" unique_id=1543030842 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 624)
+
+[node name="foods475" parent="Food" unique_id=110530615 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 624)
+
+[node name="foods476" parent="Food" unique_id=627721938 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 624)
+
+[node name="foods477" parent="Food" unique_id=2102065665 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 624)
+
+[node name="foods478" parent="Food" unique_id=336354281 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 624)
+
+[node name="foods479" parent="Food" unique_id=1348826997 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 624)
+
+[node name="foods480" parent="Food" unique_id=868676251 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 624)
+
+[node name="foods481" parent="Food" unique_id=385418405 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 624)
+
+[node name="foods482" parent="Food" unique_id=31274415 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 624)
+
+[node name="foods483" parent="Food" unique_id=1439800581 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 704)
+
+[node name="foods484" parent="Food" unique_id=507533227 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 704)
+
+[node name="foods485" parent="Food" unique_id=894333978 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 704)
+
+[node name="foods486" parent="Food" unique_id=629521356 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 704)
+
+[node name="foods487" parent="Food" unique_id=675221729 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 704)
+
+[node name="foods488" parent="Food" unique_id=1157743858 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 704)
+
+[node name="foods489" parent="Food" unique_id=1710429719 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 704)
+
+[node name="foods490" parent="Food" unique_id=1717668867 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 704)
+
+[node name="foods491" parent="Food" unique_id=1102672498 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 704)
+
+[node name="foods492" parent="Food" unique_id=680971343 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 704)
+
+[node name="foods493" parent="Food" unique_id=523878834 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 704)
+
+[node name="foods494" parent="Food" unique_id=1554777324 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 704)
+
+[node name="foods495" parent="Food" unique_id=1500907731 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 704)
+
+[node name="foods496" parent="Food" unique_id=1293279689 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 704)
+
+[node name="foods497" parent="Food" unique_id=2063751892 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 704)
+
+[node name="foods498" parent="Food" unique_id=276850756 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 704)
+
+[node name="foods499" parent="Food" unique_id=1282572963 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 704)
+
+[node name="foods500" parent="Food" unique_id=1528700047 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 784)
+
+[node name="foods501" parent="Food" unique_id=764544374 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 784)
+
+[node name="foods502" parent="Food" unique_id=1937088933 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 784)
+
+[node name="foods503" parent="Food" unique_id=226290595 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 784)
+
+[node name="foods504" parent="Food" unique_id=2137240175 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 784)
+
+[node name="foods505" parent="Food" unique_id=1772978403 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 784)
+
+[node name="foods506" parent="Food" unique_id=1140934206 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 784)
+
+[node name="foods507" parent="Food" unique_id=1148460341 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 784)
+
+[node name="foods508" parent="Food" unique_id=1910190608 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 784)
+
+[node name="foods509" parent="Food" unique_id=778151006 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 784)
+
+[node name="foods510" parent="Food" unique_id=1653418434 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 784)
+
+[node name="foods511" parent="Food" unique_id=1702711252 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 784)
+
+[node name="foods512" parent="Food" unique_id=1216600985 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 784)
+
+[node name="foods513" parent="Food" unique_id=780897913 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 784)
+
+[node name="foods514" parent="Food" unique_id=152070626 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 784)
+
+[node name="foods515" parent="Food" unique_id=2064975368 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 784)
+
+[node name="foods516" parent="Food" unique_id=975223689 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 784)
+
+[node name="foods517" parent="Food" unique_id=868985437 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 864)
+
+[node name="foods518" parent="Food" unique_id=356150499 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 864)
+
+[node name="foods519" parent="Food" unique_id=241879046 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 864)
+
+[node name="foods520" parent="Food" unique_id=126891436 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 864)
+
+[node name="foods521" parent="Food" unique_id=1412040367 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 864)
+
+[node name="foods522" parent="Food" unique_id=1631141054 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 864)
+
+[node name="foods523" parent="Food" unique_id=1851155845 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 864)
+
+[node name="foods524" parent="Food" unique_id=808392438 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 864)
+
+[node name="foods525" parent="Food" unique_id=1648284013 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 864)
+
+[node name="foods526" parent="Food" unique_id=749903863 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 864)
+
+[node name="foods527" parent="Food" unique_id=533589967 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 864)
+
+[node name="foods528" parent="Food" unique_id=469485037 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 864)
+
+[node name="foods529" parent="Food" unique_id=501392103 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 864)
+
+[node name="foods530" parent="Food" unique_id=12405107 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 864)
+
+[node name="foods531" parent="Food" unique_id=380535420 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 864)
+
+[node name="foods532" parent="Food" unique_id=1987359837 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 864)
+
+[node name="foods533" parent="Food" unique_id=508011818 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 864)
+
+[node name="foods534" parent="Food" unique_id=1003859806 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 944)
+
+[node name="foods535" parent="Food" unique_id=1813231886 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 944)
+
+[node name="foods536" parent="Food" unique_id=1005058027 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 944)
+
+[node name="foods537" parent="Food" unique_id=1514076685 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 944)
+
+[node name="foods538" parent="Food" unique_id=1928284021 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 944)
+
+[node name="foods539" parent="Food" unique_id=2139211328 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 944)
+
+[node name="foods540" parent="Food" unique_id=1768467468 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 944)
+
+[node name="foods541" parent="Food" unique_id=1845619667 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 944)
+
+[node name="foods542" parent="Food" unique_id=1786655639 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 944)
+
+[node name="foods543" parent="Food" unique_id=240667884 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 944)
+
+[node name="foods544" parent="Food" unique_id=1578323946 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 944)
+
+[node name="foods545" parent="Food" unique_id=2041036399 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 944)
+
+[node name="foods546" parent="Food" unique_id=2084447233 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 944)
+
+[node name="foods547" parent="Food" unique_id=943046643 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 944)
+
+[node name="foods548" parent="Food" unique_id=1840623277 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 944)
+
+[node name="foods549" parent="Food" unique_id=2049280764 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 944)
+
+[node name="foods550" parent="Food" unique_id=505029302 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 944)
+
+[node name="foods551" parent="Food" unique_id=30195305 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 944)
+
+[node name="foods552" parent="Food" unique_id=1570694364 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 944)
+
+[node name="foods553" parent="Food" unique_id=1004438470 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 944)
+
+[node name="foods554" parent="Food" unique_id=482766511 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 944)
+
+[node name="foods555" parent="Food" unique_id=1983349331 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 944)
+
+[node name="foods556" parent="Food" unique_id=756564977 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 944)
+
+[node name="foods557" parent="Food" unique_id=1024971122 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 944)
+
+[node name="foods558" parent="Food" unique_id=1672704628 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 944)
+
+[node name="foods559" parent="Food" unique_id=365164291 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 944)
+
+[node name="foods560" parent="Food" unique_id=717385039 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 944)
+
+[node name="foods561" parent="Food" unique_id=1254086135 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 944)
+
+[node name="foods562" parent="Food" unique_id=584383738 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 944)
+
+[node name="foods563" parent="Food" unique_id=1887945791 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 944)
+
+[node name="foods564" parent="Food" unique_id=354565856 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 944)
+
+[node name="foods565" parent="Food" unique_id=162465640 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 944)
+
+[node name="foods566" parent="Food" unique_id=1424433967 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 944)
+
+[node name="foods567" parent="Food" unique_id=117543572 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 944)
+
+[node name="foods568" parent="Food" unique_id=847634585 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 1024)
+
+[node name="foods569" parent="Food" unique_id=1104395680 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 1024)
+
+[node name="foods570" parent="Food" unique_id=1731086685 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 1024)
+
+[node name="foods571" parent="Food" unique_id=1977671018 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 1024)
+
+[node name="foods572" parent="Food" unique_id=626793114 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 1024)
+
+[node name="foods573" parent="Food" unique_id=1488812202 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 1024)
+
+[node name="foods574" parent="Food" unique_id=642432607 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 1024)
+
+[node name="foods575" parent="Food" unique_id=2114327745 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 1024)
+
+[node name="foods576" parent="Food" unique_id=2032621866 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 1024)
+
+[node name="foods577" parent="Food" unique_id=763829893 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 1024)
+
+[node name="foods578" parent="Food" unique_id=1419120042 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 1024)
+
+[node name="foods579" parent="Food" unique_id=258890193 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 1024)
+
+[node name="foods580" parent="Food" unique_id=1903254814 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 1024)
+
+[node name="foods581" parent="Food" unique_id=269295980 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 1024)
+
+[node name="foods582" parent="Food" unique_id=198063163 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 1024)
+
+[node name="foods583" parent="Food" unique_id=1382172543 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 1024)
+
+[node name="foods584" parent="Food" unique_id=639140336 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 1024)
+
+[node name="foods585" parent="Food" unique_id=1804941220 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 1104)
+
+[node name="foods586" parent="Food" unique_id=1425621045 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 1104)
+
+[node name="foods587" parent="Food" unique_id=1340964178 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 1104)
+
+[node name="foods588" parent="Food" unique_id=879311786 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 1104)
+
+[node name="foods589" parent="Food" unique_id=1823044990 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 1104)
+
+[node name="foods590" parent="Food" unique_id=725938525 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 1104)
+
+[node name="foods591" parent="Food" unique_id=1649742256 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 1104)
+
+[node name="foods592" parent="Food" unique_id=689505080 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 1104)
+
+[node name="foods593" parent="Food" unique_id=802235268 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 1104)
+
+[node name="foods594" parent="Food" unique_id=1421022336 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 1104)
+
+[node name="foods595" parent="Food" unique_id=1005049811 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 1104)
+
+[node name="foods596" parent="Food" unique_id=2112247831 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 1104)
+
+[node name="foods597" parent="Food" unique_id=802054437 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 1104)
+
+[node name="foods598" parent="Food" unique_id=2112049491 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 1104)
+
+[node name="foods599" parent="Food" unique_id=462862894 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 1104)
+
+[node name="foods600" parent="Food" unique_id=34663220 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 1104)
+
+[node name="foods601" parent="Food" unique_id=1451229168 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 1104)
+
+[node name="foods602" parent="Food" unique_id=1040811273 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 1104)
+
+[node name="foods603" parent="Food" unique_id=232522345 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 1104)
+
+[node name="foods604" parent="Food" unique_id=35933074 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 1104)
+
+[node name="foods605" parent="Food" unique_id=104027583 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 1104)
+
+[node name="foods606" parent="Food" unique_id=812289634 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 1104)
+
+[node name="foods607" parent="Food" unique_id=974994133 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 1104)
+
+[node name="foods608" parent="Food" unique_id=2027699755 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 1104)
+
+[node name="foods609" parent="Food" unique_id=401180580 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 1104)
+
+[node name="foods610" parent="Food" unique_id=2068373917 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 1104)
+
+[node name="foods611" parent="Food" unique_id=1659464956 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 1104)
+
+[node name="foods612" parent="Food" unique_id=446887130 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 1104)
+
+[node name="foods613" parent="Food" unique_id=605082855 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 1104)
+
+[node name="foods614" parent="Food" unique_id=1289375300 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 1104)
+
+[node name="foods615" parent="Food" unique_id=988908711 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 1104)
+
+[node name="foods616" parent="Food" unique_id=212419277 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 1104)
+
+[node name="foods617" parent="Food" unique_id=1847987075 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 1104)
+
+[node name="foods618" parent="Food" unique_id=782289607 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 1104)
+
+[node name="foods619" parent="Food" unique_id=2122288212 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 1184)
+
+[node name="foods620" parent="Food" unique_id=1134672287 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 1184)
+
+[node name="foods621" parent="Food" unique_id=389157714 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 1184)
+
+[node name="foods622" parent="Food" unique_id=832180734 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 1184)
+
+[node name="foods623" parent="Food" unique_id=790439883 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 1184)
+
+[node name="foods624" parent="Food" unique_id=1921463471 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 1184)
+
+[node name="foods625" parent="Food" unique_id=1785509606 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 1184)
+
+[node name="foods626" parent="Food" unique_id=1775531885 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 1184)
+
+[node name="foods627" parent="Food" unique_id=930868018 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 1184)
+
+[node name="foods628" parent="Food" unique_id=886936511 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 1184)
+
+[node name="foods629" parent="Food" unique_id=647356435 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 1184)
+
+[node name="foods630" parent="Food" unique_id=1909975993 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 1184)
+
+[node name="foods631" parent="Food" unique_id=1586002171 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 1184)
+
+[node name="foods632" parent="Food" unique_id=213084056 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 1184)
+
+[node name="foods633" parent="Food" unique_id=1207950056 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 1184)
+
+[node name="foods634" parent="Food" unique_id=2120190834 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 1184)
+
+[node name="foods635" parent="Food" unique_id=1263308288 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 1184)
+
+[node name="foods636" parent="Food" unique_id=1383695919 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 1264)
+
+[node name="foods637" parent="Food" unique_id=457749857 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 1264)
+
+[node name="foods638" parent="Food" unique_id=904111049 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 1264)
+
+[node name="foods639" parent="Food" unique_id=1923984132 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 1264)
+
+[node name="foods640" parent="Food" unique_id=599487131 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 1264)
+
+[node name="foods641" parent="Food" unique_id=705040020 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 1264)
+
+[node name="foods642" parent="Food" unique_id=15733615 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 1264)
+
+[node name="foods643" parent="Food" unique_id=931710973 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 1264)
+
+[node name="foods644" parent="Food" unique_id=589593458 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 1264)
+
+[node name="foods645" parent="Food" unique_id=541220114 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 1264)
+
+[node name="foods646" parent="Food" unique_id=1297744236 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 1264)
+
+[node name="foods647" parent="Food" unique_id=801832974 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 1264)
+
+[node name="foods648" parent="Food" unique_id=102476898 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 1264)
+
+[node name="foods649" parent="Food" unique_id=1628317872 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 1264)
+
+[node name="foods650" parent="Food" unique_id=517327379 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 1264)
+
+[node name="foods651" parent="Food" unique_id=1228994321 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 1264)
+
+[node name="foods652" parent="Food" unique_id=1717837631 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 1264)
+
+[node name="foods653" parent="Food" unique_id=2057559902 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 1264)
+
+[node name="foods654" parent="Food" unique_id=652005996 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 1264)
+
+[node name="foods655" parent="Food" unique_id=2043806153 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 1264)
+
+[node name="foods656" parent="Food" unique_id=1418590960 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 1264)
+
+[node name="foods657" parent="Food" unique_id=905877480 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 1264)
+
+[node name="foods658" parent="Food" unique_id=1389575663 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 1264)
+
+[node name="foods659" parent="Food" unique_id=511777188 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 1264)
+
+[node name="foods660" parent="Food" unique_id=1230877572 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 1264)
+
+[node name="foods661" parent="Food" unique_id=821979636 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 1264)
+
+[node name="foods662" parent="Food" unique_id=1504472177 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 1264)
+
+[node name="foods663" parent="Food" unique_id=1403524884 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 1264)
+
+[node name="foods664" parent="Food" unique_id=2010726228 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 1264)
+
+[node name="foods665" parent="Food" unique_id=1031749342 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 1264)
+
+[node name="foods666" parent="Food" unique_id=732217512 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 1264)
+
+[node name="foods667" parent="Food" unique_id=1423844013 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 1264)
+
+[node name="foods668" parent="Food" unique_id=1242991365 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 1264)
+
+[node name="foods669" parent="Food" unique_id=1659422672 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 1264)
+
+[node name="foods670" parent="Food" unique_id=521847513 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 1344)
+
+[node name="foods671" parent="Food" unique_id=676875171 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 1344)
+
+[node name="foods672" parent="Food" unique_id=2035794769 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 1344)
+
+[node name="foods673" parent="Food" unique_id=993758210 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 1344)
+
+[node name="foods674" parent="Food" unique_id=1336977330 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 1344)
+
+[node name="foods675" parent="Food" unique_id=1856084215 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 1344)
+
+[node name="foods676" parent="Food" unique_id=1429703531 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 1344)
+
+[node name="foods677" parent="Food" unique_id=996220641 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 1344)
+
+[node name="foods678" parent="Food" unique_id=1635603481 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 1344)
+
+[node name="foods679" parent="Food" unique_id=1458680966 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 1344)
+
+[node name="foods680" parent="Food" unique_id=1564265773 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 1344)
+
+[node name="foods681" parent="Food" unique_id=547045367 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 1344)
+
+[node name="foods682" parent="Food" unique_id=1033052063 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 1344)
+
+[node name="foods683" parent="Food" unique_id=1187906630 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 1344)
+
+[node name="foods684" parent="Food" unique_id=2051533543 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 1344)
+
+[node name="foods685" parent="Food" unique_id=289848617 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 1344)
+
+[node name="foods686" parent="Food" unique_id=1374782260 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 1344)
+
+[node name="foods687" parent="Food" unique_id=371281355 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(312, 1424)
+
+[node name="foods688" parent="Food" unique_id=1974684682 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(352, 1424)
+
+[node name="foods689" parent="Food" unique_id=70312719 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(392, 1424)
+
+[node name="foods690" parent="Food" unique_id=1493491175 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(432, 1424)
+
+[node name="foods691" parent="Food" unique_id=1964622764 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(472, 1424)
+
+[node name="foods692" parent="Food" unique_id=1920871544 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(512, 1424)
+
+[node name="foods693" parent="Food" unique_id=1135431740 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(552, 1424)
+
+[node name="foods694" parent="Food" unique_id=1601361295 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(592, 1424)
+
+[node name="foods695" parent="Food" unique_id=110863479 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(632, 1424)
+
+[node name="foods696" parent="Food" unique_id=984009376 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(672, 1424)
+
+[node name="foods697" parent="Food" unique_id=1034846902 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(712, 1424)
+
+[node name="foods698" parent="Food" unique_id=2046257890 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(752, 1424)
+
+[node name="foods699" parent="Food" unique_id=195364545 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(792, 1424)
+
+[node name="foods700" parent="Food" unique_id=725381607 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(832, 1424)
+
+[node name="foods701" parent="Food" unique_id=2118149613 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(872, 1424)
+
+[node name="foods702" parent="Food" unique_id=1296587937 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(912, 1424)
+
+[node name="foods703" parent="Food" unique_id=167085083 groups=["food"] instance=ExtResource("8_4ew63")]
+position = Vector2(952, 1424)
+
+[node name="BACKTOTOP" type="Node2D" parent="." unique_id=1152374622]
+
+[node name="back to top8" type="StaticBody2D" parent="BACKTOTOP" unique_id=2057228488]
+position = Vector2(304, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top8" unique_id=1305380362]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top8" unique_id=1706738025]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top8" unique_id=1074999983]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top8/Area2D" unique_id=751741988]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top9" type="StaticBody2D" parent="BACKTOTOP" unique_id=309555413]
+position = Vector2(336, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top9" unique_id=114605008]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top9" unique_id=1045172629]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top9" unique_id=1538015319]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top9/Area2D" unique_id=1023379235]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top10" type="StaticBody2D" parent="BACKTOTOP" unique_id=1989280317]
+position = Vector2(368, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top10" unique_id=1278783290]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top10" unique_id=1418659169]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top10" unique_id=919850875]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top10/Area2D" unique_id=845598775]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top11" type="StaticBody2D" parent="BACKTOTOP" unique_id=545285679]
+position = Vector2(400, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top11" unique_id=1930680729]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top11" unique_id=183561505]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top11" unique_id=1654508342]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top11/Area2D" unique_id=2124733371]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top12" type="StaticBody2D" parent="BACKTOTOP" unique_id=1828808861]
+position = Vector2(432, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top12" unique_id=92058884]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top12" unique_id=305639282]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top12" unique_id=62128421]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top12/Area2D" unique_id=417055555]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top13" type="StaticBody2D" parent="BACKTOTOP" unique_id=1612678424]
+position = Vector2(464, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top13" unique_id=1501373875]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top13" unique_id=826288163]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top13" unique_id=2050035485]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top13/Area2D" unique_id=1430190465]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top14" type="StaticBody2D" parent="BACKTOTOP" unique_id=660428858]
+position = Vector2(496, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top14" unique_id=1740656428]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top14" unique_id=196745803]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top14" unique_id=2129473288]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top14/Area2D" unique_id=911294997]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top15" type="StaticBody2D" parent="BACKTOTOP" unique_id=1379127656]
+position = Vector2(528, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top15" unique_id=327111640]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top15" unique_id=613822960]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top15" unique_id=941059292]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top15/Area2D" unique_id=1254666281]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top16" type="StaticBody2D" parent="BACKTOTOP" unique_id=1440309785]
+position = Vector2(560, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top16" unique_id=608475654]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top16" unique_id=1234563920]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top16" unique_id=2130776556]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top16/Area2D" unique_id=611044428]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top17" type="StaticBody2D" parent="BACKTOTOP" unique_id=201725591]
+position = Vector2(592, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top17" unique_id=1238328365]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top17" unique_id=525864417]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top17" unique_id=515185468]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top17/Area2D" unique_id=1522130146]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top18" type="StaticBody2D" parent="BACKTOTOP" unique_id=611586048]
+position = Vector2(624, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top18" unique_id=791970864]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top18" unique_id=1200748123]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top18" unique_id=779727766]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top18/Area2D" unique_id=445800222]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top19" type="StaticBody2D" parent="BACKTOTOP" unique_id=438192394]
+position = Vector2(656, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top19" unique_id=1922663431]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top19" unique_id=544591532]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top19" unique_id=735094565]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top19/Area2D" unique_id=1757131259]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top20" type="StaticBody2D" parent="BACKTOTOP" unique_id=537808289]
+position = Vector2(688, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top20" unique_id=2070094375]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top20" unique_id=10974583]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top20" unique_id=2415931]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top20/Area2D" unique_id=690483811]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top21" type="StaticBody2D" parent="BACKTOTOP" unique_id=951531063]
+position = Vector2(720, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top21" unique_id=512834754]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top21" unique_id=660113359]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top21" unique_id=1890273586]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top21/Area2D" unique_id=969656905]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top22" type="StaticBody2D" parent="BACKTOTOP" unique_id=194180414]
+position = Vector2(752, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top22" unique_id=1264614968]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top22" unique_id=633352721]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top22" unique_id=1164567588]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top22/Area2D" unique_id=397816706]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top23" type="StaticBody2D" parent="BACKTOTOP" unique_id=1016719669]
+position = Vector2(784, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top23" unique_id=1378307406]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top23" unique_id=339935596]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top23" unique_id=1851219315]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top23/Area2D" unique_id=1989015794]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top24" type="StaticBody2D" parent="BACKTOTOP" unique_id=981394906]
+position = Vector2(816, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top24" unique_id=389910862]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top24" unique_id=374481563]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top24" unique_id=1785810032]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top24/Area2D" unique_id=2064598225]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top25" type="StaticBody2D" parent="BACKTOTOP" unique_id=1079722648]
+position = Vector2(848, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top25" unique_id=1583169106]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top25" unique_id=661971204]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top25" unique_id=1579767889]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top25/Area2D" unique_id=359899380]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top26" type="StaticBody2D" parent="BACKTOTOP" unique_id=258180864]
+position = Vector2(880, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top26" unique_id=1857927204]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top26" unique_id=630048723]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top26" unique_id=1866312673]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top26/Area2D" unique_id=323881190]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top27" type="StaticBody2D" parent="BACKTOTOP" unique_id=1572306723]
+position = Vector2(912, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top27" unique_id=127670194]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top27" unique_id=1862614389]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top27" unique_id=1243537443]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top27/Area2D" unique_id=1263677334]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
+
+[node name="back to top28" type="StaticBody2D" parent="BACKTOTOP" unique_id=1010065832]
+position = Vector2(944, 1496)
+script = ExtResource("9_p24lo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top28" unique_id=1724073981]
+position = Vector2(8, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_3iti4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top28" unique_id=1680280654]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_jen0v")
+
+[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top28" unique_id=1155500122]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top28/Area2D" unique_id=985879621]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_5nhn4")
 
 [connection signal="area_entered" from="enemies/Enemy17/Area2D" to="enemies/Enemy17" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy18/Area2D" to="enemies/Enemy18" method="_on_area_2d_area_entered"]
@@ -641,6 +3510,18 @@ editable = false
 [connection signal="area_entered" from="enemies/Enemy26/Area2D" to="enemies/Enemy26" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy27/Area2D" to="enemies/Enemy27" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy28/Area2D" to="enemies/Enemy28" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy65/Area2D" to="enemies/Enemy65" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy66/Area2D" to="enemies/Enemy66" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy67/Area2D" to="enemies/Enemy67" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy68/Area2D" to="enemies/Enemy68" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy69/Area2D" to="enemies/Enemy69" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy70/Area2D" to="enemies/Enemy70" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy71/Area2D" to="enemies/Enemy71" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy72/Area2D" to="enemies/Enemy72" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy73/Area2D" to="enemies/Enemy73" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy74/Area2D" to="enemies/Enemy74" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy75/Area2D" to="enemies/Enemy75" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy76/Area2D" to="enemies/Enemy76" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy29/Area2D" to="enemies/Enemy29" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy30/Area2D" to="enemies/Enemy30" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy31/Area2D" to="enemies/Enemy31" method="_on_area_2d_area_entered"]
@@ -650,3 +3531,51 @@ editable = false
 [connection signal="area_entered" from="enemies/Enemy35/Area2D" to="enemies/Enemy35" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy36/Area2D" to="enemies/Enemy36" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy37/Area2D" to="enemies/Enemy37" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy38/Area2D" to="enemies/Enemy38" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy39/Area2D" to="enemies/Enemy39" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy40/Area2D" to="enemies/Enemy40" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy41/Area2D" to="enemies/Enemy41" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy42/Area2D" to="enemies/Enemy42" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy43/Area2D" to="enemies/Enemy43" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy44/Area2D" to="enemies/Enemy44" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy45/Area2D" to="enemies/Enemy45" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy46/Area2D" to="enemies/Enemy46" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy47/Area2D" to="enemies/Enemy47" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy48/Area2D" to="enemies/Enemy48" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy49/Area2D" to="enemies/Enemy49" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy50/Area2D" to="enemies/Enemy50" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy51/Area2D" to="enemies/Enemy51" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy52/Area2D" to="enemies/Enemy52" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy53/Area2D" to="enemies/Enemy53" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy54/Area2D" to="enemies/Enemy54" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy55/Area2D" to="enemies/Enemy55" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy56/Area2D" to="enemies/Enemy56" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy57/Area2D" to="enemies/Enemy57" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy58/Area2D" to="enemies/Enemy58" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy59/Area2D" to="enemies/Enemy59" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy60/Area2D" to="enemies/Enemy60" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy61/Area2D" to="enemies/Enemy61" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy62/Area2D" to="enemies/Enemy62" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy63/Area2D" to="enemies/Enemy63" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="enemies/Enemy64/Area2D" to="enemies/Enemy64" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top8/Area2D" to="BACKTOTOP/back to top8" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top9/Area2D" to="BACKTOTOP/back to top9" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top10/Area2D" to="BACKTOTOP/back to top10" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top11/Area2D" to="BACKTOTOP/back to top11" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top12/Area2D" to="BACKTOTOP/back to top12" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top13/Area2D" to="BACKTOTOP/back to top13" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top14/Area2D" to="BACKTOTOP/back to top14" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top15/Area2D" to="BACKTOTOP/back to top15" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top16/Area2D" to="BACKTOTOP/back to top16" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top17/Area2D" to="BACKTOTOP/back to top17" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top18/Area2D" to="BACKTOTOP/back to top18" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top19/Area2D" to="BACKTOTOP/back to top19" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top20/Area2D" to="BACKTOTOP/back to top20" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top21/Area2D" to="BACKTOTOP/back to top21" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top22/Area2D" to="BACKTOTOP/back to top22" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top23/Area2D" to="BACKTOTOP/back to top23" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top24/Area2D" to="BACKTOTOP/back to top24" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top25/Area2D" to="BACKTOTOP/back to top25" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top26/Area2D" to="BACKTOTOP/back to top26" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top27/Area2D" to="BACKTOTOP/back to top27" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="BACKTOTOP/back to top28/Area2D" to="BACKTOTOP/back to top28" method="_on_area_2d_area_entered"]
