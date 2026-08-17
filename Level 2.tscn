@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c4d4efmffids4" path="res://evil_thing.png" id="7_bi3nv"]
 [ext_resource type="PackedScene" uid="uid://brdyttm2vckhq" path="res://foods.tscn" id="8_4ew63"]
 [ext_resource type="Script" uid="uid://vooqb71nrpal" path="res://back_to_top.gd" id="9_p24lo"]
-[ext_resource type="Texture2D" uid="uid://doq0tfmh1evbl" path="res://icon.svg" id="10_3iti4"]
+[ext_resource type="Texture2D" uid="uid://mw2c81dh25py" path="res://backtotop.png" id="10_p24lo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p24lo"]
 size = Vector2(42, 42)
@@ -90,11 +90,33 @@ animations = [{
 "speed": 6.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jen0v"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3iti4"]
 size = Vector2(32, 32)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5nhn4"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_6khxn"]
 radius = 24.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkvpn"]
+atlas = ExtResource("10_p24lo")
+region = Rect2(0, 0, 544, 544)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwv6u"]
+atlas = ExtResource("10_p24lo")
+region = Rect2(0, 544, 544, 544)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dv2v8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkvpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwv6u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=566336308]
 
@@ -1331,14 +1353,6 @@ shape = SubResource("CircleShape2D_jen0v")
 position = Vector2(-3.8146973e-06, 1.5258789e-05)
 scale = Vector2(4.000001, 3.9999962)
 sprite_frames = SubResource("SpriteFrames_5nhn4")
-
-[node name="TextEdit" type="TextEdit" parent="." unique_id=1122627636]
-offset_left = -536.0
-offset_top = 384.0
-offset_right = 96.0
-offset_bottom = 640.0
-text = "LEVEL UNDER CONSTRUCTION"
-editable = false
 
 [node name="Food" type="Node2D" parent="." unique_id=1950573854]
 
@@ -3078,425 +3092,425 @@ position = Vector2(952, 1424)
 
 [node name="BACKTOTOP" type="Node2D" parent="." unique_id=1152374622]
 
-[node name="back to top8" type="StaticBody2D" parent="BACKTOTOP" unique_id=2057228488]
-position = Vector2(304, 1496)
+[node name="back to top" type="StaticBody2D" parent="." unique_id=1485564044]
+position = Vector2(304, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top8" unique_id=1305380362]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top" unique_id=1386076723]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top8" unique_id=1706738025]
+[node name="Area2D" type="Area2D" parent="back to top" unique_id=1493799167]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top/Area2D" unique_id=7644485]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top8" unique_id=1074999983]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top" unique_id=797944693]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top8/Area2D" unique_id=751741988]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top9" type="StaticBody2D" parent="BACKTOTOP" unique_id=309555413]
-position = Vector2(336, 1496)
+[node name="back to top2" type="StaticBody2D" parent="." unique_id=355189771]
+position = Vector2(336, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top9" unique_id=114605008]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top2" unique_id=1511632312]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top9" unique_id=1045172629]
+[node name="Area2D" type="Area2D" parent="back to top2" unique_id=184213421]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top2/Area2D" unique_id=271018035]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top9" unique_id=1538015319]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top2" unique_id=1873636696]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top9/Area2D" unique_id=1023379235]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top10" type="StaticBody2D" parent="BACKTOTOP" unique_id=1989280317]
-position = Vector2(368, 1496)
+[node name="back to top3" type="StaticBody2D" parent="." unique_id=72202622]
+position = Vector2(368, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top10" unique_id=1278783290]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top3" unique_id=248969765]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top10" unique_id=1418659169]
+[node name="Area2D" type="Area2D" parent="back to top3" unique_id=2029790658]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top3/Area2D" unique_id=1105386037]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top10" unique_id=919850875]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top3" unique_id=373426723]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top10/Area2D" unique_id=845598775]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top11" type="StaticBody2D" parent="BACKTOTOP" unique_id=545285679]
-position = Vector2(400, 1496)
+[node name="back to top4" type="StaticBody2D" parent="." unique_id=630371672]
+position = Vector2(400, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top11" unique_id=1930680729]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top4" unique_id=241226127]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top11" unique_id=183561505]
+[node name="Area2D" type="Area2D" parent="back to top4" unique_id=44988635]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top4/Area2D" unique_id=2080314477]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top11" unique_id=1654508342]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top4" unique_id=1442479480]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top11/Area2D" unique_id=2124733371]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top12" type="StaticBody2D" parent="BACKTOTOP" unique_id=1828808861]
-position = Vector2(432, 1496)
+[node name="back to top5" type="StaticBody2D" parent="." unique_id=1303991323]
+position = Vector2(432, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top12" unique_id=92058884]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top5" unique_id=1272524409]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top12" unique_id=305639282]
+[node name="Area2D" type="Area2D" parent="back to top5" unique_id=129430867]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top5/Area2D" unique_id=1889334584]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top12" unique_id=62128421]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top5" unique_id=1741028687]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top12/Area2D" unique_id=417055555]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top13" type="StaticBody2D" parent="BACKTOTOP" unique_id=1612678424]
-position = Vector2(464, 1496)
+[node name="back to top6" type="StaticBody2D" parent="." unique_id=1750825986]
+position = Vector2(464, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top13" unique_id=1501373875]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top6" unique_id=1575651418]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top13" unique_id=826288163]
+[node name="Area2D" type="Area2D" parent="back to top6" unique_id=1772350496]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top6/Area2D" unique_id=751529823]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top13" unique_id=2050035485]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top6" unique_id=1834617830]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top13/Area2D" unique_id=1430190465]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top14" type="StaticBody2D" parent="BACKTOTOP" unique_id=660428858]
-position = Vector2(496, 1496)
+[node name="back to top7" type="StaticBody2D" parent="." unique_id=806007438]
+position = Vector2(496, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top14" unique_id=1740656428]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top7" unique_id=475684906]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top14" unique_id=196745803]
+[node name="Area2D" type="Area2D" parent="back to top7" unique_id=583698908]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top7/Area2D" unique_id=1488289414]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top14" unique_id=2129473288]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top7" unique_id=324914256]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top14/Area2D" unique_id=911294997]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top15" type="StaticBody2D" parent="BACKTOTOP" unique_id=1379127656]
-position = Vector2(528, 1496)
+[node name="back to top8" type="StaticBody2D" parent="." unique_id=1863597370]
+position = Vector2(528, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top15" unique_id=327111640]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top8" unique_id=69533367]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top15" unique_id=613822960]
+[node name="Area2D" type="Area2D" parent="back to top8" unique_id=1301104915]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top8/Area2D" unique_id=1077397332]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top15" unique_id=941059292]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top8" unique_id=247200640]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top15/Area2D" unique_id=1254666281]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top16" type="StaticBody2D" parent="BACKTOTOP" unique_id=1440309785]
-position = Vector2(560, 1496)
+[node name="back to top9" type="StaticBody2D" parent="." unique_id=188184962]
+position = Vector2(560, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top16" unique_id=608475654]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top9" unique_id=844551176]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top16" unique_id=1234563920]
+[node name="Area2D" type="Area2D" parent="back to top9" unique_id=535310735]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top9/Area2D" unique_id=259113645]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top16" unique_id=2130776556]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top9" unique_id=1438358118]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top16/Area2D" unique_id=611044428]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top17" type="StaticBody2D" parent="BACKTOTOP" unique_id=201725591]
-position = Vector2(592, 1496)
+[node name="back to top10" type="StaticBody2D" parent="." unique_id=1544814497]
+position = Vector2(592, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top17" unique_id=1238328365]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top10" unique_id=1952340629]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top17" unique_id=525864417]
+[node name="Area2D" type="Area2D" parent="back to top10" unique_id=818227249]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top10/Area2D" unique_id=609429867]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top17" unique_id=515185468]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top10" unique_id=1360484277]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top17/Area2D" unique_id=1522130146]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top18" type="StaticBody2D" parent="BACKTOTOP" unique_id=611586048]
-position = Vector2(624, 1496)
+[node name="back to top11" type="StaticBody2D" parent="." unique_id=664736131]
+position = Vector2(624, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top18" unique_id=791970864]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top11" unique_id=480179043]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top18" unique_id=1200748123]
+[node name="Area2D" type="Area2D" parent="back to top11" unique_id=844224893]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top11/Area2D" unique_id=1643318045]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top18" unique_id=779727766]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top11" unique_id=115864546]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top18/Area2D" unique_id=445800222]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top19" type="StaticBody2D" parent="BACKTOTOP" unique_id=438192394]
-position = Vector2(656, 1496)
+[node name="back to top12" type="StaticBody2D" parent="." unique_id=1629116061]
+position = Vector2(656, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top19" unique_id=1922663431]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top12" unique_id=1388956633]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top19" unique_id=544591532]
+[node name="Area2D" type="Area2D" parent="back to top12" unique_id=225010172]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top12/Area2D" unique_id=543276270]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top19" unique_id=735094565]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top12" unique_id=75243466]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top19/Area2D" unique_id=1757131259]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top20" type="StaticBody2D" parent="BACKTOTOP" unique_id=537808289]
-position = Vector2(688, 1496)
+[node name="back to top13" type="StaticBody2D" parent="." unique_id=292676166]
+position = Vector2(688, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top20" unique_id=2070094375]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top13" unique_id=1504761620]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top20" unique_id=10974583]
+[node name="Area2D" type="Area2D" parent="back to top13" unique_id=768637900]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top13/Area2D" unique_id=1298885548]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top20" unique_id=2415931]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top13" unique_id=31690150]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top20/Area2D" unique_id=690483811]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top21" type="StaticBody2D" parent="BACKTOTOP" unique_id=951531063]
-position = Vector2(720, 1496)
+[node name="back to top14" type="StaticBody2D" parent="." unique_id=300811382]
+position = Vector2(720, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top21" unique_id=512834754]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top14" unique_id=1345853942]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top21" unique_id=660113359]
+[node name="Area2D" type="Area2D" parent="back to top14" unique_id=343473126]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top14/Area2D" unique_id=2062630215]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top21" unique_id=1890273586]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top14" unique_id=657689799]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top21/Area2D" unique_id=969656905]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top22" type="StaticBody2D" parent="BACKTOTOP" unique_id=194180414]
-position = Vector2(752, 1496)
+[node name="back to top15" type="StaticBody2D" parent="." unique_id=1047891885]
+position = Vector2(752, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top22" unique_id=1264614968]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top15" unique_id=1606279285]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top22" unique_id=633352721]
+[node name="Area2D" type="Area2D" parent="back to top15" unique_id=1153303427]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top15/Area2D" unique_id=1593886080]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top22" unique_id=1164567588]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top15" unique_id=1663041245]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top22/Area2D" unique_id=397816706]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top23" type="StaticBody2D" parent="BACKTOTOP" unique_id=1016719669]
-position = Vector2(784, 1496)
+[node name="back to top16" type="StaticBody2D" parent="." unique_id=1343762576]
+position = Vector2(784, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top23" unique_id=1378307406]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top16" unique_id=464606284]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top23" unique_id=339935596]
+[node name="Area2D" type="Area2D" parent="back to top16" unique_id=1486514055]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top16/Area2D" unique_id=423914072]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top23" unique_id=1851219315]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top16" unique_id=1768888893]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top23/Area2D" unique_id=1989015794]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top24" type="StaticBody2D" parent="BACKTOTOP" unique_id=981394906]
-position = Vector2(816, 1496)
+[node name="back to top17" type="StaticBody2D" parent="." unique_id=1927405032]
+position = Vector2(816, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top24" unique_id=389910862]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top17" unique_id=564257946]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top24" unique_id=374481563]
+[node name="Area2D" type="Area2D" parent="back to top17" unique_id=1360711949]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top17/Area2D" unique_id=837054486]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top24" unique_id=1785810032]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top17" unique_id=246313618]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top24/Area2D" unique_id=2064598225]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top25" type="StaticBody2D" parent="BACKTOTOP" unique_id=1079722648]
-position = Vector2(848, 1496)
+[node name="back to top18" type="StaticBody2D" parent="." unique_id=2126843558]
+position = Vector2(848, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top25" unique_id=1583169106]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top18" unique_id=1677661059]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top25" unique_id=661971204]
+[node name="Area2D" type="Area2D" parent="back to top18" unique_id=570800252]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top18/Area2D" unique_id=791822949]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top25" unique_id=1579767889]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top18" unique_id=1279861906]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top25/Area2D" unique_id=359899380]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top26" type="StaticBody2D" parent="BACKTOTOP" unique_id=258180864]
-position = Vector2(880, 1496)
+[node name="back to top19" type="StaticBody2D" parent="." unique_id=953524784]
+position = Vector2(880, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top26" unique_id=1857927204]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top19" unique_id=150881619]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top26" unique_id=630048723]
+[node name="Area2D" type="Area2D" parent="back to top19" unique_id=133453723]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top19/Area2D" unique_id=708407241]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top26" unique_id=1866312673]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top19" unique_id=1588983736]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top26/Area2D" unique_id=323881190]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top27" type="StaticBody2D" parent="BACKTOTOP" unique_id=1572306723]
-position = Vector2(912, 1496)
+[node name="back to top20" type="StaticBody2D" parent="." unique_id=1901732647]
+position = Vector2(912, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top27" unique_id=127670194]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top20" unique_id=762204998]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top27" unique_id=1862614389]
+[node name="Area2D" type="Area2D" parent="back to top20" unique_id=711949463]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top20/Area2D" unique_id=234621708]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top27" unique_id=1243537443]
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top20" unique_id=15981949]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top27/Area2D" unique_id=1263677334]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
-
-[node name="back to top28" type="StaticBody2D" parent="BACKTOTOP" unique_id=1010065832]
-position = Vector2(944, 1496)
+[node name="back to top21" type="StaticBody2D" parent="." unique_id=931107859]
+position = Vector2(944, 1464)
 script = ExtResource("9_p24lo")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="BACKTOTOP/back to top28" unique_id=1724073981]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top21" unique_id=709082751]
 position = Vector2(8, 8)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_3iti4")
+shape = SubResource("RectangleShape2D_3iti4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top28" unique_id=1680280654]
+[node name="Area2D" type="Area2D" parent="back to top21" unique_id=998401494]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back to top21/Area2D" unique_id=873396399]
 position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_jen0v")
+shape = SubResource("CircleShape2D_6khxn")
 
-[node name="Area2D" type="Area2D" parent="BACKTOTOP/back to top28" unique_id=1155500122]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BACKTOTOP/back to top28/Area2D" unique_id=985879621]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5nhn4")
+[node name="BACKTOTOP" type="AnimatedSprite2D" parent="back to top21" unique_id=492637752]
+position = Vector2(7.999997, 7.9999638)
+scale = Vector2(0.058823526, 0.058823746)
+sprite_frames = SubResource("SpriteFrames_dv2v8")
 
 [connection signal="area_entered" from="enemies/Enemy17/Area2D" to="enemies/Enemy17" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy18/Area2D" to="enemies/Enemy18" method="_on_area_2d_area_entered"]
@@ -3558,24 +3572,24 @@ shape = SubResource("CircleShape2D_5nhn4")
 [connection signal="area_entered" from="enemies/Enemy62/Area2D" to="enemies/Enemy62" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy63/Area2D" to="enemies/Enemy63" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="enemies/Enemy64/Area2D" to="enemies/Enemy64" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top8/Area2D" to="BACKTOTOP/back to top8" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top9/Area2D" to="BACKTOTOP/back to top9" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top10/Area2D" to="BACKTOTOP/back to top10" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top11/Area2D" to="BACKTOTOP/back to top11" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top12/Area2D" to="BACKTOTOP/back to top12" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top13/Area2D" to="BACKTOTOP/back to top13" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top14/Area2D" to="BACKTOTOP/back to top14" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top15/Area2D" to="BACKTOTOP/back to top15" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top16/Area2D" to="BACKTOTOP/back to top16" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top17/Area2D" to="BACKTOTOP/back to top17" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top18/Area2D" to="BACKTOTOP/back to top18" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top19/Area2D" to="BACKTOTOP/back to top19" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top20/Area2D" to="BACKTOTOP/back to top20" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top21/Area2D" to="BACKTOTOP/back to top21" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top22/Area2D" to="BACKTOTOP/back to top22" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top23/Area2D" to="BACKTOTOP/back to top23" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top24/Area2D" to="BACKTOTOP/back to top24" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top25/Area2D" to="BACKTOTOP/back to top25" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top26/Area2D" to="BACKTOTOP/back to top26" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top27/Area2D" to="BACKTOTOP/back to top27" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="BACKTOTOP/back to top28/Area2D" to="BACKTOTOP/back to top28" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top/Area2D" to="back to top" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top2/Area2D" to="back to top2" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top3/Area2D" to="back to top3" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top4/Area2D" to="back to top4" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top5/Area2D" to="back to top5" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top6/Area2D" to="back to top6" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top7/Area2D" to="back to top7" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top8/Area2D" to="back to top8" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top9/Area2D" to="back to top9" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top10/Area2D" to="back to top10" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top11/Area2D" to="back to top11" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top12/Area2D" to="back to top12" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top13/Area2D" to="back to top13" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top14/Area2D" to="back to top14" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top15/Area2D" to="back to top15" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top16/Area2D" to="back to top16" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top17/Area2D" to="back to top17" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top18/Area2D" to="back to top18" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top19/Area2D" to="back to top19" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top20/Area2D" to="back to top20" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="back to top21/Area2D" to="back to top21" method="_on_area_2d_area_entered"]
