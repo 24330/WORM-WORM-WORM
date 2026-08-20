@@ -5,17 +5,56 @@
 [ext_resource type="Script" uid="uid://cd5t570kom77r" path="res://enemy.gd" id="5_g6ks6"]
 [ext_resource type="Script" uid="uid://dvv6rqqll3adg" path="res://playa.gd" id="5_tflyj"]
 [ext_resource type="Script" uid="uid://r5crbgb2rems" path="res://text_edit.gd" id="5_ubiuv"]
+[ext_resource type="Script" uid="uid://bwjmp2mxgiikm" path="res://worm_stocks.gd" id="6_b73lq"]
 [ext_resource type="Script" uid="uid://cvvo7jqavcmyd" path="res://lives.gd" id="6_tflyj"]
 [ext_resource type="Texture2D" uid="uid://c4d4efmffids4" path="res://evil_thing.png" id="7_vifsq"]
 [ext_resource type="Texture2D" uid="uid://ctfryryi2qgtc" path="res://wall or something idk.png" id="8_vifsq"]
 [ext_resource type="Script" uid="uid://vooqb71nrpal" path="res://back_to_top.gd" id="9_q3fp0"]
 [ext_resource type="Texture2D" uid="uid://mw2c81dh25py" path="res://backtotop.png" id="10_4qivu"]
+[ext_resource type="Texture2D" uid="uid://calh2nxtpwux8" path="res://GAMBLE2.png" id="11_4qivu"]
+[ext_resource type="Script" uid="uid://bm17ttermsp8p" path="res://gambling_man.gd" id="12_b73lq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubiuv"]
 size = Vector2(42, 42)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g6ks6"]
 radius = 32.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvvi7"]
+atlas = ExtResource("11_4qivu")
+region = Rect2(0, 0, 1216, 1216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e45xj"]
+atlas = ExtResource("11_4qivu")
+region = Rect2(1216, 0, 1216, 1216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8n52"]
+atlas = ExtResource("11_4qivu")
+region = Rect2(0, 1216, 1216, 1216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8410r"]
+atlas = ExtResource("11_4qivu")
+region = Rect2(1216, 1216, 1216, 1216)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_inu5y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvvi7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e45xj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8n52")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8410r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tflyj"]
 size = Vector2(32, 32)
@@ -1604,7 +1643,6 @@ position = Vector2(920, 1312)
 [node name="Playa" type="CharacterBody2D" parent="." unique_id=1204611772 groups=["player"]]
 position = Vector2(608, 8)
 script = ExtResource("5_tflyj")
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Playa" unique_id=1642465474]
 position = Vector2(8.000019, -16.000002)
@@ -1628,7 +1666,6 @@ offset_top = 24.0
 offset_right = -400.0
 offset_bottom = 96.0
 script = ExtResource("5_ubiuv")
-metadata/_edit_use_anchors_ = true
 
 [node name="lives" type="TextEdit" parent="Playa/Camera2D" unique_id=1603021979]
 z_index = 10
@@ -1637,7 +1674,24 @@ offset_top = 112.0
 offset_right = -400.0
 offset_bottom = 184.0
 script = ExtResource("6_tflyj")
-metadata/_edit_use_anchors_ = true
+
+[node name="Worm stocks" type="TextEdit" parent="Playa" unique_id=586175413]
+offset_left = -536.0
+offset_top = 200.0
+offset_right = -400.0
+offset_bottom = 272.0
+script = ExtResource("6_b73lq")
+
+[node name="Timer" type="Timer" parent="Playa/Worm stocks" unique_id=1083044484]
+wait_time = 0.517
+autostart = true
+
+[node name="Gambling man" type="AnimatedSprite2D" parent="Playa" unique_id=1830903876]
+z_index = 100
+position = Vector2(472, 184)
+scale = Vector2(0.16447368, 0.16447368)
+sprite_frames = SubResource("SpriteFrames_inu5y")
+script = ExtResource("12_b73lq")
 
 [node name="Enemy" type="Node2D" parent="." unique_id=1839517401]
 
@@ -2519,6 +2573,7 @@ position = Vector2(7.999997, 7.9999638)
 scale = Vector2(0.058823526, 0.058823746)
 sprite_frames = SubResource("SpriteFrames_dvvi7")
 
+[connection signal="timeout" from="Playa/Worm stocks/Timer" to="Playa/Worm stocks" method="_on_timer_timeout"]
 [connection signal="area_entered" from="Enemy/Enemy1/Area2D" to="Enemy/Enemy1" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy2/Area2D" to="Enemy/Enemy2" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Enemy/Enemy3/Area2D" to="Enemy/Enemy3" method="_on_area_2d_area_entered"]
