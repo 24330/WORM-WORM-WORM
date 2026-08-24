@@ -9,9 +9,12 @@
 [ext_resource type="Script" uid="uid://cvvo7jqavcmyd" path="res://lives.gd" id="6_tflyj"]
 [ext_resource type="Texture2D" uid="uid://c4d4efmffids4" path="res://evil_thing.png" id="7_vifsq"]
 [ext_resource type="Texture2D" uid="uid://ctfryryi2qgtc" path="res://wall or something idk.png" id="8_vifsq"]
+[ext_resource type="Texture2D" uid="uid://u83swpfm07e8" path="res://BIG WIN.png" id="9_6nrkb"]
 [ext_resource type="Script" uid="uid://vooqb71nrpal" path="res://back_to_top.gd" id="9_q3fp0"]
 [ext_resource type="Texture2D" uid="uid://mw2c81dh25py" path="res://backtotop.png" id="10_4qivu"]
+[ext_resource type="Script" uid="uid://cvuyh484na35o" path="res://big_win.gd" id="10_jkvpn"]
 [ext_resource type="Texture2D" uid="uid://calh2nxtpwux8" path="res://GAMBLE2.png" id="11_4qivu"]
+[ext_resource type="Texture2D" uid="uid://d3mr12dly675y" path="res://BIG_LOSS.png" id="11_dwv6u"]
 [ext_resource type="Script" uid="uid://bm17ttermsp8p" path="res://gambling_man.gd" id="12_b73lq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubiuv"]
@@ -53,6 +56,47 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5tbt"]
+atlas = ExtResource("11_dwv6u")
+region = Rect2(0, 0, 1120, 560)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_airpx"]
+atlas = ExtResource("11_dwv6u")
+region = Rect2(0, 1120, 1120, 560)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inu5y"]
+atlas = ExtResource("9_6nrkb")
+region = Rect2(0, 0, 1120, 560)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s532v"]
+atlas = ExtResource("9_6nrkb")
+region = Rect2(0, 1120, 1120, 560)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n5tbt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5tbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_airpx")
+}],
+"loop": true,
+"name": &"BIG LOSS",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inu5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s532v")
+}],
+"loop": true,
+"name": &"BIG WIN",
 "speed": 5.0
 }]
 
@@ -1676,14 +1720,14 @@ offset_bottom = 184.0
 script = ExtResource("6_tflyj")
 
 [node name="Worm stocks" type="TextEdit" parent="Playa" unique_id=586175413]
-offset_left = -536.0
+offset_left = -568.0
 offset_top = 200.0
 offset_right = -400.0
 offset_bottom = 272.0
 script = ExtResource("6_b73lq")
 
 [node name="Timer" type="Timer" parent="Playa/Worm stocks" unique_id=1083044484]
-wait_time = 0.517
+wait_time = 0.3
 autostart = true
 
 [node name="Gambling man" type="AnimatedSprite2D" parent="Playa" unique_id=1830903876]
@@ -1692,6 +1736,14 @@ position = Vector2(472, 184)
 scale = Vector2(0.16447368, 0.16447368)
 sprite_frames = SubResource("SpriteFrames_inu5y")
 script = ExtResource("12_b73lq")
+
+[node name="BIG WIN" type="AnimatedSprite2D" parent="Playa" unique_id=1633336811]
+z_index = 6
+position = Vector2(-8, 24)
+scale = Vector2(0.7285714, 0.7285714)
+sprite_frames = SubResource("SpriteFrames_n5tbt")
+animation = &"BIG WIN"
+script = ExtResource("10_jkvpn")
 
 [node name="Enemy" type="Node2D" parent="." unique_id=1839517401]
 
