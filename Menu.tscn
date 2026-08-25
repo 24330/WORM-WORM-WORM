@@ -41,6 +41,11 @@ position = Vector2(272, 236)
 scale = Vector2(0.1428571, 0.13095239)
 texture = ExtResource("2_ylpcl")
 
+[node name="Dirt7" type="Sprite2D" parent="." unique_id=1502270949]
+position = Vector2(328, 340)
+scale = Vector2(0.1428571, 0.13095239)
+texture = ExtResource("2_ylpcl")
+
 [node name="Button" type="Button" parent="." unique_id=1902640629]
 offset_left = 288.0
 offset_top = -96.0
@@ -95,6 +100,15 @@ offset_right = 424.0
 offset_bottom = 280.0
 text = "right arrow
       right"
+editable = false
+
+[node name="TextEdit6" type="TextEdit" parent="." unique_id=1868050519]
+offset_left = 280.0
+offset_top = 296.0
+offset_right = 376.0
+offset_bottom = 384.0
+text = "     S key
+  GAMBLE"
 editable = false
 
 [connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

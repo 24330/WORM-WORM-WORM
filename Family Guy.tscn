@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://es75ymtjvyw1"]
+
+[ext_resource type="Script" uid="uid://dt6mok40j5gyk" path="res://family_guy.gd" id="1_tm3yn"]
+[ext_resource type="Texture2D" uid="uid://bvb4q7b8ov4gj" path="res://AD BREAK.png" id="1_tsd4a"]
+[ext_resource type="Script" uid="uid://cffj6eafud42k" path="res://timer_2.gd" id="3_v2tx1"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_vlqg4"]
+file = "FamilyGuyFinalMoments.ogv"
+
+[node name="Node2D" type="Node2D" unique_id=2015988216]
+script = ExtResource("1_tm3yn")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2098395761]
+position = Vector2(584, 320)
+
+[node name="Famy guiy" type="VideoStreamPlayer" parent="." unique_id=453513616]
+offset_left = 232.0
+offset_top = 8.0
+offset_right = 872.0
+offset_bottom = 368.0
+stream = SubResource("VideoStreamTheora_vlqg4")
+autoplay = true
+
+[node name="AD break" type="Sprite2D" parent="." unique_id=1677415263]
+position = Vector2(560.00006, 752)
+scale = Vector2(0.9166667, 0.9166667)
+texture = ExtResource("1_tsd4a")
+
+[node name="Timer" type="Timer" parent="." unique_id=1173718391]
+autostart = true
+
+[node name="Timer2" type="TextEdit" parent="." unique_id=666780064]
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 120.0
+script = ExtResource("3_v2tx1")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Timer2" method="_on_timer_timeout"]
