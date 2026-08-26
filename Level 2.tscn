@@ -17,12 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://u83swpfm07e8" path="res://BIG WIN.png" id="15_qgn3e"]
 [ext_resource type="Script" uid="uid://cvuyh484na35o" path="res://big_win.gd" id="16_bd26s"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p24lo"]
-size = Vector2(42, 42)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_3iti4"]
-radius = 32.0
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6khxn"]
 size = Vector2(32, 440)
 
@@ -100,7 +94,7 @@ animations = [{
 size = Vector2(42, 42)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6tmhu"]
-radius = 32.0
+radius = 24.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dvvi7"]
 atlas = ExtResource("12_iewej")
@@ -208,45 +202,6 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D" unique_id=566336308]
-
-[node name="Playa" type="CharacterBody2D" parent="." unique_id=1254072393 groups=["player"]]
-visible = false
-position = Vector2(640, 8)
-script = ExtResource("1_aky0p")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Playa" unique_id=1053980332]
-position = Vector2(8.000019, -16.000002)
-scale = Vector2(0.14285715, 0.14285715)
-texture = ExtResource("2_tuelc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Playa" unique_id=1689010728]
-shape = SubResource("RectangleShape2D_p24lo")
-
-[node name="Area2D" type="Area2D" parent="Playa" unique_id=1402491642 groups=["player"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Playa/Area2D" unique_id=1867653854]
-shape = SubResource("CircleShape2D_3iti4")
-
-[node name="Camera2D" type="Camera2D" parent="Playa" unique_id=1559229455]
-
-[node name="Dirt ate" type="TextEdit" parent="Playa/Camera2D" unique_id=1726811701]
-z_index = 10
-offset_left = -536.0
-offset_top = 24.0
-offset_right = -400.0
-offset_bottom = 96.0
-script = ExtResource("3_cl68u")
-metadata/_edit_use_anchors_ = true
-
-[node name="lives" type="TextEdit" parent="Playa/Camera2D" unique_id=822532528]
-z_index = 10
-offset_left = -536.0
-offset_top = 112.0
-offset_right = -400.0
-offset_bottom = 184.0
-script = ExtResource("4_xtqvv")
-metadata/_edit_use_anchors_ = true
 
 [node name="WALLS" type="Node2D" parent="." unique_id=1243039535]
 
@@ -3235,7 +3190,7 @@ script = ExtResource("13_1kwph")
 
 [node name="BIG WIN" type="AnimatedSprite2D" parent="Playa2" unique_id=200160540]
 z_index = 6
-position = Vector2(-8, 24)
+position = Vector2(24, 16)
 scale = Vector2(0.7285714, 0.7285714)
 sprite_frames = SubResource("SpriteFrames_0iw1x")
 animation = &"BIG WIN"

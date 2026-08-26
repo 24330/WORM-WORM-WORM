@@ -21,7 +21,7 @@
 size = Vector2(42, 42)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g6ks6"]
-radius = 32.0
+radius = 24.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dvvi7"]
 atlas = ExtResource("11_4qivu")
@@ -1725,6 +1725,7 @@ offset_top = 200.0
 offset_right = -400.0
 offset_bottom = 272.0
 script = ExtResource("6_b73lq")
+metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="Playa/Worm stocks" unique_id=1083044484]
 wait_time = 0.3
@@ -1739,7 +1740,7 @@ script = ExtResource("12_b73lq")
 
 [node name="BIG WIN" type="AnimatedSprite2D" parent="Playa" unique_id=1633336811]
 z_index = 6
-position = Vector2(-8, 24)
+position = Vector2(-8, 8)
 scale = Vector2(0.7285714, 0.7285714)
 sprite_frames = SubResource("SpriteFrames_n5tbt")
 animation = &"BIG WIN"
