@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://o3q6dqjfu3rr"]
+
+[ext_resource type="Script" uid="uid://cg3dq868pv7qb" path="res://ad_break_2.gd" id="1_o2qcu"]
+[ext_resource type="Texture2D" uid="uid://dngla0npn1sl1" path="res://Baby Worm.png" id="1_wtj16"]
+[ext_resource type="Script" uid="uid://caddatsibyjbf" path="res://animated_sprite_2d.gd" id="2_6wwi7"]
+[ext_resource type="Texture2D" uid="uid://bvb4q7b8ov4gj" path="res://AD BREAK.png" id="2_fb0o1"]
+[ext_resource type="Script" uid="uid://c2o3mv557butu" path="res://TIMER.gd" id="4_cbtow"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb0o1"]
+atlas = ExtResource("1_wtj16")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wwi7"]
+atlas = ExtResource("1_wtj16")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cbtow"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb0o1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wwi7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=457532204]
+script = ExtResource("1_o2qcu")
+
+[node name="Baby Worm" type="AnimatedSprite2D" parent="." unique_id=356863081]
+position = Vector2(0, -48)
+scale = Vector2(2.40625, 2.40625)
+sprite_frames = SubResource("SpriteFrames_cbtow")
+script = ExtResource("2_6wwi7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1518645294]
+
+[node name="AD break" type="Sprite2D" parent="." unique_id=931875157]
+position = Vector2(16.000008, 416.00018)
+scale = Vector2(0.7786458, 0.7786458)
+texture = ExtResource("2_fb0o1")
+
+[node name="Timer2" type="TextEdit" parent="." unique_id=152511072]
+offset_left = -568.0
+offset_top = -312.0
+offset_right = -432.0
+offset_bottom = -200.0
+script = ExtResource("4_cbtow")
+
+[node name="Timer" type="Timer" parent="." unique_id=21476851]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="Timer2" method="_on_timer_timeout"]
