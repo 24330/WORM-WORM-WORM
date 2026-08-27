@@ -12,8 +12,8 @@ scale = Vector2(1.7142857, 0.97619045)
 texture = ExtResource("1_5yleq")
 
 [node name="Dirt" type="Sprite2D" parent="." unique_id=546016626]
-position = Vector2(324, 20.000004)
-scale = Vector2(0.2738095, 0.13095236)
+position = Vector2(324, 24.000006)
+scale = Vector2(0.2738095, 0.14285712)
 texture = ExtResource("2_ylpcl")
 
 [node name="Dirt2" type="Sprite2D" parent="." unique_id=103090245]
@@ -88,9 +88,10 @@ self_modulate = Color(0, 0, 0, 1)
 offset_left = 232.0
 offset_top = -24.0
 offset_right = 416.0
-offset_bottom = 64.0
+offset_bottom = 72.0
 text = "                 goal
-              eat dirt"
+              eat dirt
+    dont touch red guys"
 editable = false
 
 [node name="TextEdit4" type="TextEdit" parent="." unique_id=1043285080]
